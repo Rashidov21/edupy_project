@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="26" viewBox="0 0 46 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Cash" class="cls-1" d="M825,2399H782v26h46v-26h-3Zm0,23H785v-20h40v20Zm-31-3h22a7,7,0,0,0,0-14H794A7,7,0,0,0,794,2419Zm0-11h22a4,4,0,0,1,0,8H794A4,4,0,0,1,794,2408Zm11,5.5a1.5,1.5,0,1,0-1.5-1.5A1.5,1.5,0,0,0,805,2413.5Z" transform="translate(-782 -2399)"/>
+</svg>

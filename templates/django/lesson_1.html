@@ -1,0 +1,340 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+   {% block meta %}
+    <meta name="description" content="Django bilan qisqa tanishuv django xaqida, django,djangoni o'rganish">
+    {% endblock %}
+    {% block title %}
+    <title>eduPy |Django bilan qisqa tanishuv </title>
+    {% endblock %}
+{% block content %}
+<section id="lesson">
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="text-center">
+				<h3><strong>Django bilan qisqa tanishuv</strong></h3>
+			</div>
+		<br>
+				<p>Django tez sur'atlar bilan rivojlanayotgan yangiliklar muhitida ishlab chiqilganligi sababli, u bilan veb-saytlarni ishlab chiqishdagi  umumiy vazifalarni tez va oson xal qilish mumkin. Bu erda Djangoda ma'lumotlar bazasiga ega web dasturni qanday yozishni norasmiy  tarzda ko'rib chiqamiz</p><br>
+				<p>Bizning  maqsad Djangoning qanday ishlashini tushunish uchun sizga etarli texnik ma'lumotlarni berishdir.Eslatib o'tamiz bu Djangoning rasmiy qo'llanmasi emas , shunday bo'lsada bu erda boshlang'ichlar va djangoda tajribasi borlar uchun yetarlicha ma'lumot mavjud .<a href="https://docs.djangoproject.com" target="_blank">Djangoning rasmiy qo'llanmasi.</a> Agar Djangoni o'rganish va biror loyihani boshlashga niyat qilgan bo'lsangiz unda <a href="#">Djangoni boshlashingiz</a> yoki Django <a href="#">hujjatlari bilan batafsilroq tanishishingiz</a> mumkin.</p>
+
+				<div class="text-center">
+					<h3><strong>Modelni loyihalash</strong></h3>
+				</div>
+				
+				<p>Ma'lumotlar modeli sintaksisi baza uchun ma'lumotlaringizni taqdim etishning ko'plab usullarini taklif qiladi. Bu sizga turli xil ma'lumotlar bazalarini  muammolarsiz ishlatish imkonini beradi. </p>
+				
+				<p>Siz Django-ni ma'lumotlar bazasidan foydalanmasdan ishlatishingiz mumkin ,chunki framework ob'ektga aloqador xaritalash,"Object relational mapping" (ORM) bilan birga xamoxang ishlaydi.Siz Python kodlari yordamida ma'lumotlar bazasini tuzilishini tavsiflaysiz.Qolganini (baza bilan ishlashni) ORM va Django o'z zimmasiga oladi.Qisqa misol:</p>
+				
+
+
+
+	<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>mysite/news/models.py</p></div>
+	<pre id="sublime">
+
+<b class="text-danger">from</b> django.db <b class="text-danger">import</b> models
+
+<b class="text-info">class</b> <b class="text-success">Reporter(models.Model)</b>:
+    full_name = models.<b class="text-success">CharField</b>(<b class="text-warning">max_length</b>=70)
+
+<b class="text-info">def __str__</b>(<b class="text-warning">self</b>):
+        <b class="text-danger">return</b> <b class="text-warning">self</b>.full_name
+
+<b class="text-info">class</b> <b class="text-success">Article(models.Model)</b>:
+    pub_date = models.<b class="text-success">DateField()</b>
+    headline = models.<b class="text-success">CharField(</b> <b class="text-warning">max_length</b>=200)
+    content = models.<b class="text-success">TextField()</b>
+    reporter = models.<b class="text-success">ForeignKey(</b> Reporter, <b class="text-warning">on_delete</b>=models.CASCADE)
+
+    <b class="text-info">def __str__</b>(<b class="text-warning">self</b>):
+         <b class="text-danger">return</b> <b class="text-warning">self</b>.headline
+
+	
+	</pre>
+	<div class="text-center">
+	<h3><strong>Ma'lumotlar bazasida jadvallarini yaratish</strong></h3>
+</div>
+<p>Endi jadvallarni avtomatik ravishda yaratish uchun Django buyruq satri yordam dasturlarini ishga tushiring:</p>
+<p>
+<pre id="console">
+$ python manage.py makemigrations
+$ python manage.py migrate
+</pre>	
+<p>Makemigrations buyrug'i barcha mavjud modellarni skanerdan o'tkazadi va hozirda mavjud bo'lmagan jadvallar uchun migratsiyalarni yaratadi. migrate buyrug'i esa migratsiyani boshlaydi va ma'lumotlar bazasida jadvallar yaratadi va qo'shimcha ravishda sxemalarni boshqarish tizimini yanada rivojlantiradi.</p>
+<div class="text-center">
+	<h3>Erkin API-dan bahramand bo'ling</h3>
+</div>
+<p>Ma'lumotlani boshqarish (qo'shish, o'chirish, taxrirlash) uchun sanoqli soniyalar ichida bepul va kuchli Python API yaratiladi, kod yozishga xojat qolmaydi:</p>
+
+
+
+<pre class="col-md-12">
+# Yuqorida "news" ilovasi ichida yozgan modellarimizni import qilamiz
+>>> <b class="text-danger">from</b> news.models <b class="text-danger">import</b> Article, Reporter
+
+# Ma'lumotlar omborida hozircha bitta xam muxbir(Reporter) yo'q.
+>>> Reporter.objects.all()
+QuerySet []
+
+# Yangi muxbir qo'shamiz.
+>>> r = Reporter(full_name='John Smith')
+
+# Qo'shilgan muxbirni ma'lumotlar bazasiga saqlaymiz.Buning uchun save() metodini chaqirish kifoya.
+>>> r.save()
+
+# Endi ma'lumot IDga ega.
+>>> r.id
+1
+
+# Endi yangi muxbir ma'lumotlar bazasida mavjud.
+>>> Reporter.objects.all()
+QuerySet [Reporter: John Smith]
+
+#Ma'lumotlar ombori jadvalidagi maydonlar Pythonda ob'ekt atributlari sifatida namoyish etiladi.
+>>> r.full_name
+'John Smith'
+
+# Django ma'lumotlar bazasidan ma'lumot qidirish uchun boy API bilan ta'minlangan.
+>>> Reporter.objects.get(id=1)
+Reporter: John Smith
+>>> Reporter.objects.get(full_name__startswith='John')
+Reporter: John Smith
+>>> Reporter.objects.get(full_name__contains='mith')
+Reporter: John Smith
+>>> Reporter.objects.get(id=2)
+Traceback (most recent call last):
+    ...
+DoesNotExist: Reporter matching query does not exist.
+
+#Maqola qo'shamiz.
+>>> <b class="text-danger">from</b> datetime <b class="text-danger">import</b> date
+>>> a = Article(pub_date=date.today(), headline='Django is cool',
+...     content='Yeah.', reporter=r)
+>>> a.save()
+
+#Maqola ma'lumotlar bazasiga qo'shildi.
+>>> Article.objects.all()
+QuerySet [Article: Django is cool]
+
+# Maqola ob'ektlari orqali, maqolaga tegishli muxbir(Reporter) ob'ektlariga API yordamida  kirish huquqiga egamiz.
+>>> r = a.reporter
+>>> r.full_name
+'John Smith'
+
+# Va aksincha: Reportyor ob'ektlari Article ob'ektlariga APIsiga kirish huquqiga ega.
+>>> r.article_set.all()
+QuerySet [Article: Django is cool]
+
+#API kerakli narsalarga qarab samarali ishlaydi
+# Pastdagi usul "Jon" bilan boshlangan muxbirning barcha maqolalarini filtirlab topadi.
+>>> Article.objects.filter(reporter__full_name__startswith='John')
+QuerySet [Article: Django is cool]
+
+# Ob'ektning xususiyatlarini o'zgartirish,taxrirlash  yana save() chaqirish orqali  bajariladi
+>>> r.full_name = 'Billy Goat'
+>>> r.save()
+
+# Obyektni o'chirish uchun delete() methodi ishlatiladi.
+>>> r.delete()
+</pre>
+<div class="text-center">
+	<h3><strong>Djangoda Dinamik admin boshqaruv interfeysi. Bu nafaqat qurilish materiallari, balki butun boshli uyning o'zi</strong></h3>
+</div>
+<p>Sizning modellaringiz aniqlangandan so'ng, Django avtomatik ravishda professional va foydalanishga tayyor admin boshqaruv interfeysni yaratishi mumkin.Admin boshqaruv interfeysi (paneli) admin huququga ega foydalanuvchiga ob'ektlarni qo'shish, o'zgartirish va o'chirishga imkon beradigan loyixa ichidagi yana bir veb-sayt hisoblanadi. Faqatgina zarur qadam bu sizning modelingizni admin panelidan ro'yxatdan o'tkazish :</p>
+
+<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>mysite/news/models.py</p></div>
+<pre id="sublime">
+
+<b class="text-info">class</b> <b class="text-success">Article(models.Model)</b>:
+    pub_date = models.<b class="text-success">DateField()</b>
+    headline = models.<b class="text-success">CharField(</b> <b class="text-warning">max_length</b>=200)
+    content = models.<b class="text-success">TextField()</b>
+    reporter = models.<b class="text-success">ForeignKey(</b> Reporter, <b class="text-warning">on_delete</b>=models.CASCADE)
+
+    <b class="text-info">def __str__</b>(<b class="text-warning">self</b>):
+         <b class="text-danger">return</b> <b class="text-warning">self</b>.headline	
+</pre>
+
+	<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>mysite/news/admin.py</p></div>
+<pre id="sublime">
+
+
+<b class="text-danger">from</b> django.contrib <b class="text-danger">import</b> admin
+<b class="text-danger">from . import</b> models
+
+admin.site.register(models.Article)
+</pre>
+<p>Ushbu echimning g'oyasi shundaki, sizning saytingiz, sayt xodimlari tomonidan yoki  ehtimol faqat siz tomoningizdan saytni boshqarish uchun boshqarish huququiga ega foydalanuvchilar kira oladigan ichki interfeyslarni (admin paneli) yaratish bilan shug'ullanishning hojati yo'q.</p>
+<p>Djangoda web dasturlarini yaratishda odatiy ish jarayonlaridan biri bu xodimlar (yoki mijozlar) ma'lumotlarni kiritishni boshlashlari uchun  modellarni yaratish va admin panelini tezroq ishga tushirishdir.Admin interfeysi tayyor, siz loyihaning jamoatchilik(publikatsiya) qismida ishlashni davom ettirishingiz mumkin</p>
+<div class="text-center">
+	<h3><strong>Djangoda URL<small>larni</small>loyixalash</strong></h3>
+</div>
+<p>Toza va chiroyli URL sxemasi yuqori sifatli veb-ilovaning muhim qismidir. Django URL-ning chiroyli ko'rinishda bo'lishini qo'llab-quvvatlaydi va URL-ga hech qanday ortiqcha  qo'shimchalar qilmaydi(masalan .php yoki .asp.) </p>
+<p>Ilovaning URL manzillarini yaratish uchun Python URLconf modulini yaratishingiz kerak. Sizning ilovangiz tarkibidagi jadval URL manzillari bu Python-ning "qayta qo'ng'iroq qilish" funksiyalari o'rtasidagi oddiy xaritadir. URLconflar shuningdek URL manzillarini Python kodidan ajratish uchun xizmat qiladi.</p>
+<p>Yuqorida ko'rganimiz Reporter/Article uchun ,URLconflar shunday korinishga ega bo'lishi mumkin:</p>
+<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>mysite/news/urls.py</p></div>
+<pre id="sublime">
+<b class="text-danger">from</b> django.urls <b class="text-danger">import</b> path
+
+<b class="text-danger">from . import</b> views
+
+urlpatterns = [
+    path('articles/&ltint:year>/', views.year_archive),
+    path('articles/&ltint:year>/&ltint:month>/', views.month_archive),
+    path('articles/&ltint:year>/&ltint:month>/&ltint:pk>/', views.article_detail),
+]	
+</pre>
+<p>Yuqoridagi kod URL yo'llarini Python funktsiyalari bilan bog'laydi ("views").URL satrlaridagi parametr teglari (masalan &ltint:year>) qiymatlarni Python funktsiyalariga jo'natish uchun  foydalanadi. Foydalanuvchi sahifani so'raganda, Django har bir url yo'llarni tartib bilan 'aylanib' chiqadi va  so'ralgan URLga mos keladigan birinchi url yo'lni ishga tushiradi. (Agar ularning hech biri so'ralgan urlga mos bo'lmasa, Django 404 (Page not found)maxsus xatolikni keltirib chiqaradi.) Bu juda tez sodir bo'ladi, chunki yo'llar yuklab olish vaqtida muntazam ifodalarga qo'shiladi</p>
+
+<p>Qachonki so'ralgan URL manzil bizning URL  shablonlarimizdan biriga mos kelsa, Django ma'lum bir "taqdimot"ni qo'zg'atadi (views, bu oddiy Python funksiya ekanligini eslatib o'tamiz). Har bir 'taqdimot'(views)  URL shabloni orqali jo'natilgan qiymatlarni o'z ichiga olgan so'rov ob'ektini qabul qiladi.</p>
+
+<p>Masalan, agar foydalanuvchi ushbu  «/article/2005/05/39323/» URL-manzilni so'ragan bo'lsa, Django ushbu URL-manzilga bog'langan  news.views.article_detail(request, year=2005, month=5, pk=39323) funksiyasini chaqiradi </p>	
+
+<div class="text-center">
+	<h3><strong>Djangoda taqdimot 'views'lar yozish</strong></h3>
+</div>
+<p>Har bir views ikkita xatti-harakatlardan birini bajarish uchun javobgardir: HttpResponse-  so'ralgan saxifani foydalanuvchiga ko'rsatilishi, yoki Http404 kabi  istisnoni (xatolik) keltirib chiqaradi. Qolganlari o'zingizga bog'liq.</p>
+<p>Odatda, taqdimot parametrlarga muvofiq  ma'lumotlar omboridan kerakli ma'lumotni  html saxifaga yuklaydi yoki shunchaki statik bo'lgan html saxifani  ko'rsatadi. Year_archive uchun taqdimotning namunasi:</p>
+<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>mysite/news/views.py</p></div>
+<pre id="sublime">
+<b class="text-danger">from</b> django.shortcuts <b class="text-danger">import</b> render
+
+<b class="text-danger">from</b> .models <b class="text-danger">import</b> Article
+
+<b class="text-info">def year_archive</b>(<b class="text-warning">request, year</b>):
+    a_list = Article.objects.<b class="text-info">filter</b>(<b class="text-warning">pub_date__year=year</b>)
+    context = {<b class="text-warning">'year'</b>: year, <b class="text-warning">'article_list'</b>: a_list}
+    <b class="text-info">return render</b>(request, <b class="text-warning">'news/year_archive.html'</b>, context)
+</pre>
+<p>Ushbu misolda kuchli imkoniyatlarga ega bo'lgan , ammo boshlang'ichlar tomonidan xam ishlatish uchun etarlicha sodda va oson qilib ishlangan Django <a href="#">shablon tizimi ishlatiladi</a>.</p>
+<div class="text-center">
+	<h3><strong>Djangoda shablonlar(html saxifa) tayyorlash </strong></h3>
+</div>
+<p>Yuqoridagi kod news/year_archive.html shablonini(saxifani) yuklaydi.</p>
+<p>Django shablonlarni ortiqcha 'ovorogarchiliksiz' qidirish imkoniyatiga ega. Django sozlamalarida DIRS yordamida qidirish uchun kataloglar ro'yxatini ko'rsatasiz. Agar shablon birinchi katalogda mavjud bo'lmasa, ikkinchisi tekshiriladi va hokazo.</p>
+
+<p>Aytaylik news/year_archive.html saxifasi topildi. Saxifa shunday ko'rinishga ega bo'lishi mumkin:</p>
+<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>mysite/news/templates/news/year_archive.html</p></div>
+<pre id="html">
+{% templatetag openblock %} extends "base.html" {% templatetag closeblock %}
+
+{% templatetag openblock %} block title Articles for {% templatetag openvariable %} year {% templatetag closevariable%} endblock {% templatetag closeblock %}
+
+{% templatetag openblock %} block menu {% templatetag closeblock %}
+&lth2>Articles for   {% templatetag openvariable %} year  {% templatetag closevariable %} &lt/h2>
+
+{% templatetag openblock %} for article in article_list {% templatetag closeblock %}
+    &ltp>{% templatetag openvariable %} article.headline {% templatetag closevariable%}&lt/p>
+    &ltp>By {% templatetag openvariable %} article.reporter.full_name {% templatetag closevariable%}&lt/p>
+    &ltp>Published {% templatetag openvariable %} article.pub_date|date:"F j, Y" {% templatetag closevariable%}&lt/p>
+{% templatetag openblock %} endfor {% templatetag closeblock %}
+{% templatetag openblock %} endblock {% templatetag closeblock %}
+</pre>
+<p>O'zgaruvchilar ikki qavslar bilan o'ralgan. {% templatetag openvariable %} article.headline {% templatetag closevariable%} "maqola sarlavhasi  ko'rsatish"degan ma'noni anglatadi. Biroq, nuqtalar nafaqat atributlarni topish uchun ishlatiladi. Bundan tashqari, ular lug'at qiymatlarini (python dict) qidirish, indeksni qidirish va funksiyalarni xam chaqirishlari mumkin.</p>
+
+<p>Izoh: {% templatetag openvariable %}article.pub_date|date: "F j, Y"{% templatetag closevariable%} UNIX uslubida "pipe" dan foydalanadi ("|"belgisi). Bunga shablon filtri, ya'ni o'zgaruvchining qiymatini filtrlash usuli deyiladi. Bunday holda, sana  Pythondagi sana va vaqt  formatida formatlanadi.</p>
+
+<p>Siz xohlaganingizcha ko'plab filtrlarni birlashtira olasiz.Yana bir qulaylik <a href="#">maxsus o'zingizni filtringizni</a> xam yozishingiz mumkin.</p>
+
+
+<p> Django "shablonlarni meros qilib olish" kontseptsiyasidan foydalanadi. Buning uchun {% templatetag openblock %} extends "base.html"{% templatetag closeblock %} tegini ishlatamiz va u quyidagilarni anglatadi: "avval kerakli bo'sh bloklar ochilgan ({% templatetag openblock %} block content {% templatetag closeblock %} {% templatetag openblock %} endblock {% templatetag closeblock %}) base.html" nomli shablonni yuklab olinadi va bo'sh bloklarni year_archive.html bloklari bilan to'ldiriladi." Muxtasar qilib aytganda, bu shablonlarda ortiqcha ishlarni (bir xil html teglar yozishni) sezilarli darajada kamaytirishga imkon beradi: har bir shablon faqat ushbu shablonga xos ma'lumotlar bilan ishlaydi.</p>
+<p>Bu erda "base.html" shabloni <a href="#">statik fayllardan foydalanilgan</a> xolda shunday ko'rinishi mumkin:</p>
+
+<pre id="html">
+	{% templatetag openblock %} load static {% templatetag closeblock %}
+&lthtml>
+&lthead>
+    &lttitle>{% templatetag openblock %} block title {% templatetag closeblock %} {% templatetag openblock %} endblock {% templatetag closeblock %}&lt/title>
+&lt/head>
+&ltbody>
+    &ltimg src="{% templatetag openblock %} static 'images/sitelogo.png' {% templatetag closeblock %}" alt="Logo">
+    {% templatetag openblock %} block content {% templatetag closeblock %}
+
+    {% templatetag openblock %} endblock {% templatetag closeblock %}
+&lt/body>
+&lt/html>
+</pre>
+<p>Sodda qilib aytganda, saytning  barcha saxifadagi bir xil va o'zgarmas qismlarini (header,footer) bitta html saxifaga tushirib olib qolgan saxifalarni shu saxifadan 'meros' olgan xolda kengaytiramiz.</p>
+<p>
+    <video width="80%"  controls="controls">
+       <source src="simple.mp4">  
+    </video>
+</p>
+
+{% if querys%}
+<h3>Mavzu yuzasidan savollar</h3>
+<p>Javoblar <a href="#">reytinga</a> ta'sir qiladi</p>
+<form action="{% url 'edu:query_result'%}" id="ajax_contact" method="post">
+ <h4 class="text-warning" id="form_messages"></h4> 
+<ul class="mr-5" id="ul_testing" style="transition:2s">
+{% for q in querys %}
+<p><h5><strong> {{ q.query }} </strong> </h5></p>
+{% for v in q.variant_set.all %}
+
+  <li><input type="radio" name="query_{{ q.number}}" value="{{ v.id }}">{{ v }}</li>
+{% endfor %}
+{% endfor %}
+<br>
+<input type="hidden" name="user_id" value="{{ user.id}}">
+{% csrf_token %}
+<input type="submit" id="btn" value="Ok" class="btn btn-lg btn-success" style="float:center; width:50%;">
+</ul>
+</form>
+{% if next_lesson == 'end '%}
+<a  id="next_lesson" href="{% url 'edu:student_account' user.id %}" class="btn btn-lg btn-success" style="float:center; width:50%;">Tamom</a>
+{% else %}
+<a style="display:none" id="next_lesson" href="{% url 'edu:django' next_lesson.url next_lesson.number next_lesson.slug %}" class="btn btn-lg btn-success" style="float:center; width:50%;">Keyingi dars</a>
+{% endif %}
+<a href="#next_lesson" id="my_btn" style="display: none">ok</a>
+
+
+{% endif %}
+
+<div class="footer-post" style="float:right;">
+	<p>Foydalanilgan manbalar: <a href="https://docs.djangoproject.com" target="_blank">docs.djangoproject.com</a><br>
+		<a href="https://django.fun" target="_blank">django.fun</a></p>
+</div>
+
+
+
+	</div>
+		<div class="col-md-3">
+			<div class="container">
+			     <ul class="list-group mt-5">
+					  <li class="list-group-item" style=";"><a href="#">Python Kirish.Pythonnni o'rnatish</a></li>
+					  <li class="list-group-item"><a href="">Python interpretatori  <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">O'zgaruvchilar <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">Satrlar <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">Sonlar <i class="fa fa-lock"></i></a></li>
+					    <li class="list-group-item" style=";"><a href="#">Python Kirish.Pythonnni o'rnatish</a></li>
+					  <li class="list-group-item"><a href="">Python interpretatori  <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">O'zgaruvchilar <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">Satrlar <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">Sonlar <i class="fa fa-lock"></i></a></li>
+					    <li class="list-group-item" style=";"><a href="#">Python Kirish.Pythonnni o'rnatish</a></li>
+					  <li class="list-group-item"><a href="">Python interpretatori  <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">O'zgaruvchilar <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">Satrlar <i class="fa fa-lock"></i></a></li>
+					  <li class="list-group-item"><a href="">Sonlar <i class="fa fa-lock"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<style>
+	#lesson{
+		margin-top:150px;
+		margin-bottom:100px;
+	}
+	#sublime{
+		background-color:#282923;
+		color:white;
+	}
+	#html{
+
+		color:white;
+		background-color:#282911;
+	}
+</style>
+{% endblock %}

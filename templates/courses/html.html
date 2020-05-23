@@ -1,0 +1,104 @@
+{% extends 'wrappers/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="mt-auto header-top-height"></div>
+        <main class="container mb-auto">
+            <h3 class="mt-3 main-header-text-title"><span> <b>eduPy</b> Dasturlash bo'yicha onlayn o'quv markaz</span>&lt;html/&gt;
+              <p class="sub-page-breadcrumb"><a href="#">Bosh sahifa</a> - Kurslar</p>
+            </h3>
+
+        </main>
+        <div class="mt-auto"></div>
+    
+    <section class="padding-100-0-50 position-relative">
+        <div class="container pt-5 pb-5">
+                 <div class="row justify-content-between mr-tp-50">
+                <div class="col-md-6">
+                    <p>
+                          <img src="/static/svg/frontend.png" class="mb-5 w-100 h-50" alt="">
+                        <a class="side-text-right-button" href="{% url 'edu:courses' %}">Kursga yozilish</a>
+                    </p>
+                  
+                  
+                </div>
+                <div class="col-md-6 side-text-right-container">
+                    <h2 class="side-text-right-title">HTML "browser" tili kursi   <span class="badge badge-pill">BEPUL</span></h2>
+                    <p class="side-text-right-text">
+                        HTML bu skript til bo’lib bu orqali saytni karkazlari tuziladi. HTML saytni asosiy qismini tuzishini bilgan holda sayt tuzishni o’rganmoqchi bo’lgan odam birinchi bo’lib HTML ni o’rganishi kerak shuning uchun siz sayt tuzishni o’rganmoqchi bo’lsangiz ushbu tilni o’rganishingizga to’g’ri keladi. HTML tilida kod yozish juda qulay oddiy NotePad bo’lsa bo’ldi va brauzer siz ushbulardan foydalanib saytlar tuzishingiz mumkin. Shunday ekan HTML saytning asosini tashkil qiladi. Siz ushbu tilni o’rganishni hoziroq boshlang.
+                      </p>
+                        <br>
+                        <br>   
+                         <ul class="web-hosting-options">
+                            <li><i class="fa fa-book"></i> Kengaytirilgan adabiyotlar</li>
+                            <li><i class="fa fa-film"></i> Videogayd , Matn va Screenshotlar bilan </li>
+                            <li><i class="fa fa-tasks"></i> Doimiy topshiriqlar. Har yangi mavzudan so'ng </li>
+                            
+                            <li><i class="fab fa-telegram"></i> Telegram orqali tushunmagan joyingizni so'rang! </li>
+                            <li><i class="fa fa-users"></i> Boshqa talabalar bilan tajriba almashish </li>
+                    </ul>
+                        <p>
+                        
+                </div>
+
+              
+
+            </div><!-- end row -->
+            <div class="row mt-5 mb-5"> 
+
+                <div class="container">
+                    <h4 class=" side-text-right-title">Qo'shimcha:</h4>
+                </div>
+                <div class="col-md-6">
+                     <div class="container">
+                        <ul class="web-hosting-options">
+                            <li><i class="fa fa-clock"></i> Intensiv (doimiy) kurs</li>
+                            <li><i class="fa fa-user"></i> Doimiy guruh rahbari bilan aloqa </li>
+                            <li><i class="fa fa-tasks"></i> Doimiy topshiriqlar. Har yangi mavzudan so'ng </li>
+                            
+                            <li><i class="fab fa-telegram"></i> Telegram orqali guruhdoshlar bilan aloqa </li>
+                            <li><i class="fa fa-handshake"></i> Shaxsiy loyihalar tuzish</li>
+                            <li><i class="fa fa-graduation-cap"></i> Yaxshi o'zlashtirgan talabalarni ish bilan ta'minlash</li>
+                            <li><i class="fa fa-mouse-pointer"></i> Shaxsiy loyihalarga ko'maklashish</li>
+                    </ul>
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container">
+                        <p class="side-text-right-text">
+                            Agar siz WEB dasturchi bo'lishni istasangiz unda ilk qadamingiz bu HTML dan boshlanadi. Bizni bepul kursimizda ushbu tilni to'liq o'rganing. Biz ushbu tilni eng oxirgi 5-versiyasidan darslar beramiz. Ko'proq ma'lumotni <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank">Wikipediyadan</a> oling.
+                        </p>
+                      <p>
+                          <a class="side-text-right-button" href="{% url 'edu:courses' %}">Kursga yozilish</a>
+                      </p>
+                    </div>
+                </div>
+               
+            </div>
+
+        </div>
+    </section>
+<section class="footer-section-banner">
+        <div class="container">
+            <div class="row free-trial-footer-banner">
+                <div class="col-md-8">
+                    <h5 class="free-trial-footer-banner-title">Bepul sinov kurslarini boshlash uchun hoziroq ro'yhatdan o'ting</h5>
+                    <p class="free-trial-footer-banner-text">Chegirmalar vaqti chegaralangan. Dasturlashni o'rganmoqchimisiz? Unda hoziroq ro'yhatdan o'ting. </p>
+                </div>
+
+                <div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <div class="mb-auto">
+                        <a class="sign-btn" href="{% url 'edu:signup' %}">Ro'yhatdan o'tish</a>
+                        <a class="log-btn" href="{% url 'edu:signin' %}">Kirish</a>
+                    </div>
+                    <div class="mt-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

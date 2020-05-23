@@ -1,0 +1,356 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+{% block content %}
+<!-- <div class="mt-auto header-top-height"></div> -->
+<!--         <main class="container mb-auto">
+            <h3 class="mt-3 main-header-text-title"><span> <b>eduPy</b> Dasturlash bo'yicha onlayn o'quv markaz</span>Mening profilim
+              <p class="sub-page-breadcrumb"><a href="#">Bosh sahifa</a> - Kurslar</p>
+            </h3>
+
+        </main>
+        <div class="mt-auto"></div> -->
+<style>
+    #student-profile{
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom:100px;
+
+    }
+    .student-info{
+        list-style-type: square;
+
+    }
+    .info-box{
+      margin-top: 10px;
+      max-width: 100%;
+      opacity: 1;
+      border-radius: 5px;
+      padding: 10px;
+    }
+.info-box .progress {
+    background: rgba(0, 0, 0, .2);
+    margin: 5px -10px 5px 0;
+    height: 2px;
+}
+.info-box .progress, .info-box .progress .progress-bar {
+    border-radius: 0;
+}
+.info-box .progress .progress-bar {
+    background: #fff;
+}
+.info-box-icon {
+    float: left;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 74px;
+    background: rgba(0, 0, 0, .2);
+}
+.info-box-icon.push-bottom {
+    margin-top: 20px;
+}
+.info-box-icon>img {
+    max-width: 100%
+    color:#fff;
+  }
+.info-box-content {
+    padding: 10px 10px 10px 0;
+    margin-left: 90px;
+}
+.info-box-number {
+    font-weight: 300;
+    font-size: 21px;
+}
+.info-box-text, .progress-description {
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-weight: 300;
+}
+.progress-description {
+    margin: 5px;
+}
+.img-responsive{
+  max-width: 150px;
+  max-height: 150px;
+  margin-bottom: 25px;
+}
+.box-title{
+  color: #171F32;
+}
+</style>
+<section id="student-profile">
+    <div class="container">
+      <div class="row justify-content-start futures-version-2">
+          <div class="col-md-3">
+              <div class="box box-default mt-5 mb-3">
+               <div class="box-body">              
+                  <img class="card-img-bottom img-responsive mt-25" src="/static/svg/boradatiymujikusericon.svg" alt="Card image cap">
+                    <h4 class="box-title">Qobiljon Mo'minov</h4>
+                  <p class="box-text">
+                      <ul class="student-info">
+                          <LI>Tug'ilgan sanasi: <i class="fa fa-calendar"></i> 2004.04.12</LI>
+                          <LI>Manzil: <i class="fa fa-map-marker"></i> Navoiy</LI>
+                          <LI>Yo'nalishi: <i class="fa fa-book"></i> Python, Python-Django</LI>
+                      </ul>
+                      <br></p>
+                  <a href="#" class="btn btn-outline btn-primary" data-toggle="modal" data-target="#modal-info"><i class="fa fa-edit"></i>    O'zgartirish</a>
+              </div>
+              <!-- /.box-body -->
+            </div>
+          </div>
+          <div class="col-md-6">
+                <div class="row justify-content-between mr-tp-50">
+                    <div class="table-responsive">
+                        <table class="table pricing_table_domain">
+                            <thead>
+                                <tr>
+                                    <th>Guruh</th>
+                                    <th>Ismi</th>
+                                    <th>Topshiriq</th>
+                                    <th>Topshirdi</th>
+                                    <th>Tekshirish</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Python N1</th>
+                                    <td>To'raqul</td>
+                                    <td>N:4</td>
+                                    <td>Ha</td>
+                                    <td><a href="#"><i class="fa fa-search"></i></a></td>
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+          </div>
+          <div class="col-md-3">
+                 <div id="student-profile"></div>
+                  <!-- general form elements -->
+          <div class="box">
+            <div class="box-header with-border">
+              <h4 class="box-title">Topshiriqni yuklang</h4>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" class="form-element">
+              <div class="box-body">
+                    <div class="form-group">
+                  <label>Kursni tanlang</label>
+                  <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select>
+                </div>
+                   <div class="form-group">
+                  <label>Guruhni tanlang</label>
+                  <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">Faylni tanlang</label>
+                  <input type="file" id="exampleInputFile">
+
+                  <p class="help-block text-warning">Faqat texnologiya fayl kengaytmasida qabul qilinadi!</p>
+                </div>
+                 <div class="box-footer">
+                <button type="submit" class="btn btn-success">Topshirish</button>
+              </div>
+              </div>
+          </div>
+      </div>
+        <div class="container">
+            <div class="row text-light">
+                 <div class="col-xl-3 col-md-6 col">
+                    <div class="info-box bg-info">
+                      <span class="info-box-icon push-bottom rounded"><i class="fa fa-users"></i></span>
+
+                      <div class="info-box-content">
+                        <span class="info-box-text">Guruhlar</span>
+                        <span class="info-box-number">1</span>
+
+                        <div class="progress">
+                          <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                        <span class="progress-description">
+                              3 talabalar  <i class="fa fa-users text-light"></i>
+                            </span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+
+                  <div class="col-xl-3 col-md-6 col">
+                    <div class="info-box bg-success">
+                      <span class="info-box-icon push-bottom rounded-circle">
+                        <i class="fa fa-check"></i></span>
+                      <div class="info-box-content">
+                        <span class="info-box-text">Darslar</span>
+                        <span class="info-box-number">12</span>
+
+                        <div class="progress">
+                          <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                        <span class="progress-description">
+                             faollik  o'rtacha  <i class="fa fa-star text-light"></i>
+                            </span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+            
+              <div class="col-xl-3 col-md-6 col">
+                <div class="info-box bg-primary">
+                  <span class="info-box-icon push-bottom rounded-left"><i class="fa fa-download"></i></span>
+
+                  <div class="info-box-content">
+                    <span class="info-box-text">Yuklab olindi</span>
+                    <span class="info-box-number">12</span>
+
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 50%"></div>
+                    </div>
+                    <span class="progress-description">
+                          faollik  yaxshi  <i class="fa fa-star text-light"></i>
+                        </span>
+                  </div>
+                  <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+              </div>
+               <div class="col-xl-3 col-md-6 col">
+                    <div class="info-box bg-danger">
+                      <span class="info-box-icon push-bottom rounded-right"><i class="fa fa-window-close"></i></span>
+
+                      <div class="info-box-content">
+                        <span class="info-box-text">Dars qoniqtirmadi</span>
+                        <span class="info-box-number">3</span>
+
+                        <div class="progress">
+                          <div class="progress-bar" style="width: 10%"></div>
+                        </div>
+                        <span class="progress-description">
+                              3 ta talaba  <i class="fa fa-thumbs-down text-light"></i>
+                            </span>
+                      </div>
+                      <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                  </div>
+            </div>
+              
+          </div>
+    </div>
+</section>
+    
+             <div class="modal modal-info fade" id="modal-info">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Shaxsiy ma'lumotlar</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span></button>
+                      </div>
+                      <div class="modal-body">
+                            <div class="box-body">
+                  <div class="row">
+                    <div class="col-12">
+                        <div class="form-group row">
+                          <label for="example-text-input" class="col-sm-2 col-form-label">Ism</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="text" value="*" id="example-text-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-search-input" class="col-sm-2 col-form-label">Familya</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="text" value="*" id="example-search-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-date-input" class="col-sm-2 col-form-label">Tug'ilgan sana</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="date" value="2000-00-00" id="example-date-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-email-input" class="col-sm-2 col-form-label">Email</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="email" value="*" id="example-email-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-url-input" class="col-sm-2 col-form-label">Manzil</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="url" value="Masalan : Andijon" id="example-url-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-tel-input" class="col-sm-2 col-form-label">Telefon</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="tel" value="+99(555)-555-5555" id="example-tel-input">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="example-url-input" class="col-sm-2 col-form-label">Texnologiya</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" type="url" value="Masalan : Python " id="example-url-input">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputFile">Foto</label>
+                          <input type="file" id="exampleInputFile">
+
+                          <p class="help-block text-warning">Faqat png, jpg, jpeg  formatlarida qabul qilinadi!</p>
+                        </div>
+                     
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                  <!-- /.row -->
+                </div>      
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline btn-light" data-dismiss="modal">Yopish</button>
+                        <button type="button" class="btn btn-outline btn-light float-right">O'zgarishlarni saqlash</button>
+                      </div>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+              </div>
+              <!-- /.modal -->
+
+
+    <script>
+    var editor = ace.edit("editorJS");
+    editor.setTheme("ace/theme/solarized_light");
+    editor.getSession().setMode("ace/mode/javascript");
+
+    var editor = ace.edit("editorHTML");
+    editor.setTheme("ace/theme/solarized_light");
+    editor.getSession().setMode("ace/mode/html");
+
+    var editor = ace.edit("editorCSS");
+    editor.setTheme("ace/theme/solarized_light");
+    editor.getSession().setMode("ace/mode/css");
+  </script>
+  
+  {% endblock %}

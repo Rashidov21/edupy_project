@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="20" viewBox="0 0 44 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Binoculars" class="cls-1" d="M300,1705a10,10,0,1,0-17.129,7h-9.742a9.991,9.991,0,1,0-7.129,3h25v-0.05A10.009,10.009,0,0,0,300,1705Zm-41,0a7,7,0,1,1,7,7A7,7,0,0,1,259,1705Zm31,7a7,7,0,1,1,7-7A7,7,0,0,1,290,1712Z" transform="translate(-256 -1695)"/>
+</svg>

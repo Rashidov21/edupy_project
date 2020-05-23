@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="149px" height="112px" viewBox="0 0 149 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Game Controller</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Game-Controller" transform="translate(1.000000, 2.000000)">
+            <path d="M84.1,10.6 L93.8,10.6 C99.3,4.4 107.3,0.4 116.3,0.4 C127.1,0.4 136.6,6.1 141.9,14.7 C144.7,19.2 146.3,24.6 146.3,30.3 C146.3,37 144.1,43.1 140.4,48.1 L141.6,88.3 C141.7,88.9 141.7,89.6 141.7,90.2 C141.7,97.3 137.2,103.7 130.3,106 C124.3,108 118,106.4 113.7,102.3 C112,100.7 110.6,98.7 109.7,96.4 L101.3,74.9 L98.8,68.4 C97.1,73.4 92.4,77.1 86.8,77.1 C83.7,77.1 80.8,76 78.6,74.1 C78.1,73.7 77.5,73.2 77.1,72.6 C76,71.3 75.1,69.8 74.6,68.1 L72.8,68.1 C71.2,73.3 66.4,77.1 60.7,77.1 C57.6,77.1 54.8,76 52.6,74.1 C52.4,74 52.3,73.9 52.1,73.7 C50.7,72.4 49.5,70.7 48.8,68.8 L37.7,97.1 C35.1,103.6 28.9,107.5 22.3,107.5 C20.5,107.5 18.8,107.2 17,106.6 C14.6,105.8 12.6,104.5 10.9,102.9 C7.2,99.4 5.2,94.2 5.8,88.9 L7,48.7 C3.3,43.7 1.1,37.6 1.1,30.9 C1.1,14.3 14.5,0.9 31.1,0.9 C39.7,0.9 47.4,4.5 52.9,10.3 L84.1,10.3" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M141.6,88.5 C141.7,89.1 141.7,89.8 141.7,90.4 C141.7,97.5 137.2,103.9 130.3,106.2 C124.3,108.2 118,106.6 113.7,102.5 C113.5,102 113.2,101.6 113.1,101.1 L102.1,73.2 C101.9,73.9 101.6,74.5 101.3,75.1 L98.8,68.6 C97.1,73.6 92.4,77.3 86.8,77.3 C83.7,77.3 80.8,76.2 78.6,74.3 C78.4,73.8 78.2,73.3 78,72.8 L77.1,72.8 C76,71.5 75.1,70 74.6,68.3 L72.8,68.3 C71.2,73.5 66.4,77.3 60.7,77.3 C57.6,77.3 54.8,76.2 52.6,74.3 C52.5,74.1 52.4,73.8 52.3,73.5 L52.2,73.9 C50.8,72.6 49.6,70.9 48.9,69 L37.8,97.3 C35.2,103.8 29,107.7 22.4,107.7 C20.6,107.7 18.9,107.4 17.1,106.8 C14.7,106 12.7,104.7 11,103.1 C9.6,100.3 8.9,97 9.3,93.6 L10.5,53.4 C6.8,48.4 4.6,42.3 4.6,35.6 C4.6,19 18,5.6 34.6,5.6 C43.2,5.6 50.9,9.2 56.4,15 L97.4,15 C102.9,8.8 110.9,4.8 119.9,4.8 C128.7,4.8 136.6,8.6 142.1,14.6 C144.9,19.1 146.5,24.5 146.5,30.2 C146.5,36.9 144.3,43 140.6,48 L141.6,88.5 Z" id="Shape" fill="#DDECFE" fill-rule="nonzero"></path>
+            <path d="M142.6,45.1 C139,57.6 127.5,66.8 113.8,66.8 C106,66.8 98.8,63.8 93.5,58.9 L97.6,54.8 C102.7,58.8 109.1,61.2 116.1,61.2 C127.6,61.1 137.6,54.6 142.6,45.1 Z" id="Shape" fill="#B8D9FF" fill-rule="nonzero"></path>
+            <path d="M3.7,45.1 C7.3,57.6 18.8,66.8 32.5,66.8 C40.3,66.8 47.5,63.8 52.8,58.9 L48.7,54.8 C43.6,58.8 37.2,61.2 30.2,61.2 C18.7,61.1 8.7,54.6 3.7,45.1 Z" id="Shape" fill="#B8D9FF" fill-rule="nonzero"></path>
+            <path d="M140.4,48.2 L141.6,88.4 C142.5,96.2 137.8,103.6 130.4,106.1 C122.1,108.9 113,104.7 109.7,96.5 L92.5,52.7" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle id="Oval" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" cx="116.3" cy="30.4" r="30"></circle>
+            <path d="M6.9,49 L5.7,89.2 C4.8,97 9.5,104.4 16.9,106.9 C25.2,109.7 34.3,105.5 37.6,97.3 L54.8,53.5" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M19.5,3.5 C19.7,3.4 19.9,3.3 20.1,3.3" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M25,1.8 C26.9,1.4 28.9,1.2 30.9,1.2 C47.4,1.2 60.9,14.6 60.9,31.2 C60.9,47.7 47.5,61.2 30.9,61.2 C14.3,61.2 0.9,47.8 0.9,31.2 C0.9,21.8 5.2,13.4 12,7.9" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M98.3,25.3 C98.9,25.1 99.5,25 100.1,25 C103.5,25 106.2,27.8 106.2,31.1 C106.2,34.4 103.4,37.2 100.1,37.2 C96.8,37.2 94,34.4 94,31.1 C94,30.9 94,30.7 94,30.5" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M124.7,31.2 C124.7,27.8 127.5,25.1 130.8,25.1 C131.3,25.1 131.9,25.2 132.3,25.3" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M136.9,29.9 C137,30.3 137,30.8 137,31.2 C137,34.6 134.2,37.3 130.9,37.3 C130,37.3 129.2,37.1 128.5,36.8" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle id="Oval" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" cx="115.5" cy="15.8" r="6.1"></circle>
+            <circle id="Oval" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" cx="115.5" cy="46.5" r="6.1"></circle>
+            <polyline id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="21.3 35.8 17.1 35.8 17.1 26.6 26.4 26.6 26.4 17.4 35.6 17.4 35.6 26.6"></polyline>
+            <polyline id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="40.5 26.6 44.8 26.6 44.8 35.8 35.6 35.8 35.6 45 26.4 45 26.4 35.8"></polyline>
+            <path d="M70.9,22 L80.1,22" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M84.8,10.4 L85.3,10.4" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M52.6,10.4 L78.7,10.4" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="86.7" cy="64.6" r="12.7"></circle>
+            <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="60.6" cy="64.6" r="12.7"></circle>
+            <circle id="Oval" fill="#7DB7FF" fill-rule="nonzero" cx="88.6" cy="66.6" r="10.7"></circle>
+            <circle id="Oval" fill="#7DB7FF" fill-rule="nonzero" cx="62.5" cy="66.6" r="10.7"></circle>
+            <path d="M79.4,54.2 C81.5,52.8 84,51.9 86.7,51.9 C93.7,51.9 99.4,57.6 99.4,64.6 C99.4,71.6 93.7,77.3 86.7,77.3 C79.7,77.3 74,71.6 74,64.6" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M66.7,76.2 C65.1,76.9 63.4,77.3 61.6,77.3 C54.6,77.3 48.9,71.6 48.9,64.6 C48.9,57.6 54.6,51.9 61.6,51.9 C68.5,51.9 73.8,57.4 73.9,64.3" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,227 @@
+{% extends 'wrappers/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="mt-auto header-top-height"></div>
+        <main class="container mb-auto">
+            <h3 class="mt-3 main-header-text-title"><span>Python va boshqa dasturlash tillarini online o'rgatuvchi tizim</span>&lt;edupy/&gt;
+	  <span class="sub-page-breadcrumb"><a href="#">Bosh sahifa</a> - Biz haqimizda</span>
+	  </h3>
+
+        </main>
+        <div class="mt-auto"></div>
+    </div>
+
+<!--     <section class="our-pertners padding-20-0 mr-tp-0">
+        <div class="container">
+            <h2 class="d-none">our pertners</h2>
+            <div class="owl-carousel pertners-carousel owl-theme">
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo1.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo2.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo3.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo4.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo5.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo1.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo2.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo3.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo4.png" alt="" /> </a>
+                </div>
+                <div class="item">
+                    <a href="#"> <img src="img/pertners/logo5.png" alt="" /> </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="padding-40-0-100 position-relative">
+        <div class="container">
+            <div class="row justify-content-between">
+
+                <div class="col-md-4 side-text-right-container">
+                    <h2 class="side-text-right-title f-size25">Bizning maqsad va vazifalarimiz,<br>Online ta'lim,foydali,qiziqarli</h2>
+                    <p class="side-text-right-text f-size16">
+                        Maqsadimiz yurtimizning barcha dasturlash va til o'rganishga qiziqishi bor yoshlariga eng sifatli,qiziqarli va yuqori darajadagi online darslarni taqdim etish. Asosiy e'tibor <b>Python</b> dasturlash tiliga qaratilgan.Biroq biz bu bilan chegaralanib qolmay  PHP, Javascript, Java kabi  dasturlash tillari uchun xam sof o'zbek tilida yuqori sifatli darsliklar qo'shib boramiz.Bundan tashqari kurslarimiz sonini ingliz, koreys tillari bilan xam kengaytirish maqsadidamiz 
+                        <br>
+                    </p>
+                    <p>
+                        <a class="side-text-right-button" href="{% url 'edu:courses' %}">Biz bilan o'rganing</a>
+                    </p>
+                </div>
+
+                <div class="col-md-7 our-services-carousel-container">
+                    <div class="our-services-carousel">
+                          <div class="carousel-cell">
+                            <div class="our-services-coresol-box">
+                                <i class="fa fa-file-powerpoint mb-3"></i>
+                                <h5>Python</h5>
+                                <p>Yaqin yillarda ichida reytingning eng yuqori pog'onasida<br>Eng talab ko'payatgan til</p>
+                                <a href="{% url 'edu:course_view' 'python' %}"></a>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="our-services-coresol-box">
+                                <i class="fa fa-code mb-3"></i>
+                                <h5>Python_Django</h5>
+                                <p>Instagram va You-Tube ni '" Ko'tarib"' turgan web frameworkni o'rganing</p>
+                                <a href="{% url 'edu:course_view' 'python' %}"></a>
+                            </div>
+                        </div>
+                        <div class="carousel-cell">
+                            <div class="our-services-coresol-box">
+                                <i class="fab fa-html5 mb-3"></i>
+                                <h5>HTML</h5>
+                                <p>WEB dasturlashga qiziqadiganlar uchun ilk qadamlar va brauzer tilini o'rganing. </p>
+                                <a href="{% url 'edu:course_view' 'html' %}"></a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-cell">
+                            <div class="our-services-coresol-box">
+                                <i class="fab fa-css3 mb-3"></i>
+                                <h5>CSS</h5>
+                                <p>WEB sahifalaringizga "jon" bering , kaskad stillar jadvalini o'rganing! </p>
+                                <a href="{% url 'edu:course_view' 'css' %}"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-0-100 position-relative">
+        <div class="container">
+
+            <div class="row justify-content-between">
+
+                <div class="col-md-7 about-us-img-section">
+                    <img src="/static/svg/video-learningboys.svg" alt="" />
+                </div>
+
+                <div class="col-md-4 side-text-right-container d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <h2 class="side-text-right-title f-size25">Jamoamizda tajribali Python va web full-stack dasturchilar bor<br> </h2>
+                    <p class="side-text-right-text f-size16">
+              <b>Python</b>
+                       va <b>Django</b>da ishlaydigan tajribali dasturchi ustozlarimizdan tashqari yana  jamoamiz a'olari <b>HTML</b> ,<b>CSS</b>, <b>Bootstrap</b>, <b>Javascript</b>,<b>Jquery</b>,<b>Ajax</b>,<b>Java</b>, <b>PHP</b>,<b>C++</b> kabi dasturlash tillari ustalari bor<br> 
+                    </p>
+                    <p>
+                        <a class="side-text-right-button" href="{% url 'edu:page_views' 'courses' %}">Biz bilan o'rganing</a>
+                    </p>
+                    <div class="mt-auto"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+ <section class="padding-100-0-0 with-top-border">
+        <div class="container">
+            <h5 class="title-default-coodiv-two">Nimadan boshlash kerak ?</h5>
+
+            <div class="row justify-content-center mr-tp-40">
+                <div class="col-md-9">
+
+                    <div class="accordion" id="frequently-questions">
+
+                        <div class="questions-box">
+                            <div id="headingOne">
+                                <button class="btn questions-title" type="button" data-toggle="collapse" data-target="#questionone" aria-expanded="true" aria-controls="questionone">
+                                   Ro'yhatdan o'tish va darslar
+                                </button>
+                            </div>
+
+                            <div id="questionone" class="collapse show questions-reponse" aria-labelledby="headingOne" data-parent="#frequently-questions">
+                                A'zo bo'ling yoki oldindan ochgan profilingizga kiring. Profilingiz orqali yoki KURSLAR bo'limi orqali kerakli kursni tanlang. <br>Kursga yoziling va intensiv tarzda darslarni olib boring. Darslar vaqtlari kurslarga qarab farq qilishi mumkin. Muhimi o'z yo'nalishingizni <b>BEPUL</b> o'rganing.
+                             </div>
+                        </div>
+
+                        <div class="questions-box">
+                            <div id="headingtwo">
+                                <button class="btn questions-title collapsed" type="button" data-toggle="collapse" data-target="#questiontwo" aria-expanded="true" aria-controls="questiontwo">
+                                    Umumiy savollar.
+                                </button>
+                            </div>
+
+                            <div id="questiontwo" class="collapse questions-reponse" aria-labelledby="headingtwo" data-parent="#frequently-questions">
+                                <ul class="list-unstyled mt-5 mb-5">
+                                    <li class="quest text-primary ">Dars vaqtlari , davomiyligi  qanaqa?</li>
+                                    <li class="ans pl-5">Kurs turiga qarab farq qiladi, video davomiyligi max 20-30 minut, matn va rasmli kontentlardan istalgancha foydalanish mumkin.</li>
+                                    <li class="quest text-primary"> Topshiriqlar va oraliq nazorat ishlari qanday usulda yuritiladi?</li>
+                                    <li class="ans pl-5">Uyga vazifani navbatdagi dars boshlanishiga 4 soat qolguncha topshirish kerak. Oraliq nazorat imtihonlaridan o'ta olmaganlar uchun kelasi imtihon 3 kun ichida </li>
+                                    <li class="quest text-primary">Nega aynan shunday qilingan?</li>
+                                    <li class="ans pl-5">Bu yosh dasturchilarda Dedlayn muhimi ekanini va loyihani o'z vaqtida topshirish kerakligini singdirish uchun qilingan.</li>
+                                    <li class="quest text-primary">Ballar nima uchun kerak?</li>
+                                    <li class="ans pl-5"> Ballar yig'ish orqali avvalo kursni yaxshi o'zlashtirasiz va bu orqali chegirmalarga ega bo'lasiz. </li>
+                                    <li class="quest text-primary">Qachon ball beriladi ?</li>
+                                    <li class="ans pl-5">Kurs ichidagi testlarni yechish orqali (10-15 ball) <br>Online tarzda darslarni kuzatish orqali (2 ball har bir dars uchun) <br>Amaliy mashg'ulotni bajarish orqali (10 ball har bir topshiriqga) </li>
+                                    <li class="quest text-primary">Vazifani qilmasa bo'ladimi ?</li>
+                                    <li class="ans pl-5"> Avvalo o'ziga havola , lekin kurs rahbari sizni topshiriqlaringizni tekshirib kerakli ballarni qo'yishi uchun vazifani topshirish shart! Navbatdagi darsdan kamida 4 soat  oldin.</li>
+                                    <li class="quest text-primary">Talabalar chati (Telegram)</li>
+                                    <li class="ans pl-5">Kursdoshlaringiz bilan doimiy aloqada bo'ling ,tajriba almashing. Telegram orqali kurs uchun ochilgan chatlarga a'zo bo'ling.</li>
+                                    <li class="quest ">Boshqa savol bor...</li>
+                                    <li class="ans pl-5">Barcha savollar bilan istalgan aloqa usullaridan foydalansangiz bo'ladi, telefon, email, sayt orqali xabar qoldirish. </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="questions-box">
+                            <div id="headingtree">
+                                <button class="btn questions-title collapsed" type="button" data-toggle="collapse" data-target="#questiontree" aria-expanded="true" aria-controls="questiontree">
+                                    Forum va Chat qoidalari
+                                </button>
+                            </div>
+
+                            <div id="questiontree" class="collapse questions-reponse" aria-labelledby="headingtree" data-parent="#frequently-questions">
+                                Forum va Chatlarda faqat darsga oid savollar, muloqot mavzusi qatiiyan texnik bo'lishi shart! <br>Haqoratlar , mavzudan tashqari gaplar cheklanadi. Portal qoidalariga amal qilamagan talabalarni Administartorlar chetlatish huquqiga ega , jumladan Forum va Chatlarda ham.<br> Portal ma'lumotlari uning yuklovchilarining mulki hiosblanadi ularni o'g'irlash va noodatiy foydalanish qonun bilan taqib qilinadi! Qoidalar bilan Qoidalar bo'limida batafsil tanishing.
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="mb-5"></div>
+   <section class="footer-section-banner">
+        <div class="container">
+            <div class="row free-trial-footer-banner">
+                <div class="col-md-8">
+                    <h5 class="free-trial-footer-banner-title">Bepul sinov kurslarini boshlash uchun hoziroq ro'yhatdan o'ting</h5>
+                    <p class="free-trial-footer-banner-text">Chegirmalar vaqti chegaralangan. Dasturlashni o'rganmoqchimisiz? Unda hoziroq ro'yhatdan o'ting. </p>
+                </div>
+
+                <div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <div class="mb-auto">
+                        <a class="sign-btn" href="{% url 'edu:page_views' 'signup' %}">Ro'yhatdan o'tish</a>
+                        <a class="log-btn" href="{% url 'edu:page_views' 'signin' %}">Kirish</a>
+                    </div>
+                    <div class="mt-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+  {% endblock %}

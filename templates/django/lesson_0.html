@@ -1,0 +1,140 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+   {% block meta %}
+    <meta name="description" content="Django xaqida">
+    {% endblock %}
+    {% block title %}
+    <title>eduPy |Nima uchun Djangoni  o'rganishim kerak</title>
+    {% endblock %}
+{% block content %}
+<section id="lesson">
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<img src="/static/img/django/django.png" width="100%" height="75%" class="img-fluid" alt="Responsive image">
+	</div>
+	<div class="col-md-2"></div>
+
+</div>
+
+<p>Django — Python-da yozilgan Web-ilovalar uchun bepul va ochiq kodli <a href="https://ru.wikipedia.org/wiki/Фреймворк" target="_blank">web framework</a>. Framework esa veb-saytlarni tez va oson ishlab chiqishga yordam beradigan komponentlar to'plamidir.</p>
+
+<p>Web-saytlarni ishlab chiqishda har safar o'xshash komponentlar talab qilinadi: foydalanuvchilar bilan ishlash (kirish, chiqish, ro'yxatdan o'tish), sayt boshqaruv paneli, ma'lumot kiritish maydonlari (formalar), fayllarni yuklash  va boshqalar.</p>
+
+<p>Yaxshiyamki, biz uchun ko'plab dasturchilar qayg'urishdi va web-dasturlar yaratishimizda duch keladigan bir xil zerikarli muammolarni yechimini tez va oson topishimiz uchun ,tayyor yechimlarni taklif qiladigan frameworklar (Django va boshqalarni) ishlab chiqishdi.</p>
+
+
+<blockquote class="blockquote">
+  <p class="mb-0"></p>
+  <footer class="blockquote-footer" style="float:right;">Django web frameworklar ichida eng yaxshilaridan biri, balkim eng yaxshisidir
+ 
+  </footer>
+</blockquote>
+<br>
+<br>
+
+<div class="text-center">
+	<h3><strong>Djangodan foydalanayotgan dunyo 'gigantlari'</strong></h3>
+</div>
+<hr>
+<h5>Google</h5>
+<p>Googlening statistikasi hamma joyda ma'lum, biroq biz bir nechta raqamlarga to'xtalamiz.Bir oyda 12,477 milliard qidiruv so'rovlariga  'javob' beradi. Google AQSh qidiruv bozorining 67% ni egallaydi. Bir oylik unikal tashriflar-191 million kishi. Kompaniya xodimlari 53,891 kishi.</p>
+<hr>
+<h5>Instagram</h5>
+<p> Birinchi kuni 25 000 foydalanuvchilari obuna bo'lgani xabar berilgan. Bugungi kunda Instagram 200 milliondan ortiq kishi —va  har kuni 7 milliondan ortiq foydalanuvchi foydalanadi. Taxminan 20 milliard fotosurat  va har kuni 60 million postlar yuklanadi </p>
+<hr>
+<h5>Reddit (yangliklar sayti)</h5>
+<p>Saytga oyiga 112 million unikal tashriflar. Oyiga 5,46 milliard sahifa ko'rishlar. Redditga 2,89 million kishi obuna bo'lgan. Bularning barchasiga 28 kishidan tashkil topgan jamoa tomonidan xizmat ko'rsatiladi.</p>
+<hr>
+<h5>Dropbox (bulutli ma'lumotlarni saqlash)</h5>
+<p>	Xodimlar 110tadan iborat. 50 milliondan ortiq ro'yxatdan o'tgan foydalanuvchilar. Har bir 3 daqiqada bir milliondan ortiq fayllar bilan amallar (yuklash, ko'chirish,o'chirish) olib boriladi.500 million fayllar saqlanadi.</p>
+<hr>
+<h5>Mozilla (dasturiy ta'minot)</h5>
+<p>Bugungi kunda 500 milliondan ortiq kishi Mozilla loyihalaridan foydalanmoqda. Bu raqobatni hisobga olgan holda juda katta ko'rsatkich. Mozilla loyihalari mingdan ortiq ishlab chiqaruvchilar tomonidan amalga oshiriladi.</p>
+<hr>
+<h5><p>Djangoning qulayliklari</p></h5>
+<ul class="mr-5">
+	<li>Yuqori tezlik.Djangoda web dastur tayyorlash tezligi boshqa framevorklarga qaraganda 3-4 barobar tezroq amalga oshadi.Dasturning ishlash tezligi bilan xam (ko'p dasturchilarning norasmiy fikriga ko'ra 2-3 barobar tezroq) bemalol maqatana oladi</li>
+	<br>
+	<li>Django 'egiluvchan' framework.Dasturlashda duch keladigan xar qanday muammolar uchun yechimlar oldindan mavjud.Oddiy sayt qilish kerakmi muammosiz, internet magazin, kattaroq servislar yoki juda katta maqomdagi loyixalar qilish kerakmi muammosiz Django barchasiga oson moslashadi</li>
+	<br>
+	<li>
+		Ortiqcha narsalarga chalg'ishga xojat yoq butun e'tiborni loyixaga qaratib shunchaki xotirjam dasturlang
+	</li>
+	<br>
+	<li>
+	Django bu Python.Yengil tushunarli sintaksis va yuqori darajali natijalar.Pythonda butun e'tiborni kod yozishga qaratasiz dasturlash tilining sintaksisi bilan "pachakilashib" o'tirmaysiz 
+	</li>
+</ul>
+{% if querys%}
+<h3>Mavzu yuzasidan savollar</h3>
+<p>Javoblar <a href="#">reytinga</a> ta'sir qiladi</p>
+<form action="{% url 'edu:query_result'%}" id="ajax_contact" method="post">
+ <h4 class="text-warning" id="form_messages"></h4> 
+<ul class="mr-5" id="ul_testing" style="transition:2s">
+{% for q in querys %}
+<p><h5><strong> {{ q.query }} </strong> </h5></p>
+{% for v in q.variant_set.all %}
+
+  <li><input type="radio" name="query_{{ q.number}}" value="{{ v.id }}">{{ v }}</li>
+{% endfor %}
+{% endfor %}
+<br>
+<input type="hidden" name="user_id" value="{{ user.id}}">
+{% csrf_token %}
+<input type="submit" id="btn" value="Ok" class="btn btn-lg btn-success" style="float:center; width:50%;">
+</ul>
+</form>
+{% if next_lesson == 'end '%}
+<a  id="next_lesson" href="{% url 'edu:student_account' user.id %}" class="btn btn-lg btn-success" style="float:center; width:50%;">Tamom</a>
+{% else %}
+<a style="display:none" id="next_lesson" href="{% url 'edu:django' next_lesson.url next_lesson.number next_lesson.slug %}" class="btn btn-lg btn-success" style="float:center; width:50%;">Keyingi dars</a>
+{% endif %}
+<a href="#next_lesson" id="my_btn" style="display: none">ok</a>
+
+
+{% endif %}
+
+		</div>
+	<div class="col-md-3">
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <strong class="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    Hello, world! This is a toast message.
+  </div>
+</div>
+	          <ul class="list-group mt-5">
+          {% for l in lessons %}
+          {% if l.lock %}
+  <li class="list-group-item" style=";"><i class="fa fa-lock"></i> <a href="#">{{ l.title }}</a></li>
+  <!-- Note a custom script is used to activate toasts:
+$('.toast').toast();
+-->
+
+
+
+  {% else %}
+    <li class="list-group-item" style=";"><a href="{% url 'edu:django' l.number l.slug%}">{{ l.title }}</a></li>
+    {% endif %}
+ {% endfor %}
+</ul>
+{% include 'pages/ajax.html'%}
+
+
+	</div>		
+	</div>	
+</div>
+</section>
+
+
+
+{% endblock %}	

@@ -1,0 +1,283 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+   {% block meta %}
+    <meta name="description" content="Djangoni o'rnatish, Djangoda birinchi web dastur tuzish,djangoni o'rganish">
+    {% endblock %}
+    {% block title %}
+    <title>eduPy |Djangoda birinchi web dastur 1-qism</title>
+    {% endblock %}
+{% block content %}
+<section id="lesson">
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="text-center">
+				<h3><strong>Djangoda birinchi web dastur</strong></h3>
+			</div>
+		<br>
+				<p>Keling, amaliy mashg'ulotni boshlaylik.</p>
+
+<p>Ushbu darsda foydalanuvchilar tomonidan so'rovlarga ovoz berish uchun mo'ljallangan  web dasturini yaratish haqida gapiramiz.</p>
+
+<p>U ikki qismdan iborat bo'ladi:</p>
+<ul class="mr-5">
+	<li>
+    Foydalanuvchilar so'rovlarni ko'rib chiqishga va ularga ovoz berishga imkon beruvchi qismi (sayt).
+		
+	</li>
+	<br>
+	<li>
+		
+    So'rovlarni qo'shish, o'zgartirish va o'chirish imkonini beruvchi administrator paneli.
+	</li>
+	<br>
+
+</ul>
+<p>Django-ni <a href="{% url 'edu:django' 2 'djangoni-ornatish-qollanmasi'%}">allaqachon o'rnatgansiz</a> deb taxmin qilamiz. Djangoning qaysi versiyani o'rnatilganini buyruq satrida(terminal ,bash console) quyidagi buyruqni bajarish orqali bilib olishingiz mumkin ($prefiksi ko'rsatiladi):</p>
+<pre id="console">
+	<br>
+$ python -m django --version
+	<br>
+</pre>
+<p>Agar djangoni muvaffaqiyatli o'rnatgan bo'lsangiz unda django versiyasining raqami chiqadi.Aks xolda "Django degan modul topilmadi degan" xatolik ko'rasiz</p>
+
+<p>Ko'rib chiqing</p>
+<ul class="mr-5">
+	<li><a href="https://www.python.org/downloads/" target="_blank">Pythonni o'rnatish</a></li>
+	<li><a href="https://docs.djangoproject.com/en/3.0/faq/install/" target="_blank">Pythonning qaysi versiyalari Django bilan ishlashi mumkin</a></li>
+
+	<li><a href="https://docs.djangoproject.com/en/3.0/topics/install/" target="_blank">Djangoni o'rnatish (rasmiy qo'llanma)</a>
+	</li>
+	<br>
+</ul>
+<div class="text-center">
+	<h3><strong>Loyixani boshlash</strong></h3>
+</div>
+<p>Terminal orqali loyixani saqlaydigan katalogga o'ting.Masalan:</p>
+<pre id="console">
+	<br>
+$ cd C://user/UserName/desktop/djangoproject
+	<br>
+</pre>
+<p>Keyin django-admin buyrug'i yordamida loyixani boshlaymiz</p>
+<pre id="console">
+	<br>
+$ django-admin startproject mysite
+	<br>
+</pre>
+<p>Bu djangoproject katalogi ichida mysite katalogini yaratadi .Agar muammo yuz bersa <a href="https://django.fun/docs/django/en/3.0/faq/troubleshooting/#troubleshooting-django-admin" target="_blank">ushbu xavolani</a> o'qing</p>
+
+<p>Keling endi  startproject buyrug'i natijasi bilan tanishsak:</p>
+
+<pre id="console">
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+
+</pre>
+<p>Ushbu fayllar va kataloglar nima uchun kerakligi bilan tanishib chiqsak</p>
+<ul class="mr-5">
+<li>mysite/ - loyixa(web dastur) uchun konteyner katalog.Katalog nomi Django uchun xech qanday axamiyatga ega emas siz uni xoxlagan nom bilan nomlashingiz mumkin</li>
+<br>
+<li>manage.py - fayli loyixa bilan xar xil xarakatlarni amalga oshirishimiz uchun utilita vazifasini bajaradi</li>
+<br>
+<li>mysite/  ichki katalogi loyihangizning Python moduli. Uning nomi ushbu moduldan biror narsani import qilish uchun ishlatiladi (masalan, mysite.urls).</li>
+<br>
+<li>mysite/__init__.py:Bo'sh fayl. Pythonga ushbu katalog Python paketi ekanligi xaqida xabar beradi . Agar Pythonni o'rganishni endi boshlagan bo'lsangiz, Python <a href="https://docs.python.org/3/tutorial/modules.html#tut-packages" target="_blank"> paketlari haqida</a> ko'proq o'qing.</li>
+<br>
+<li>mysite/settings.py: Djangoning konfugratsiya va sozlamalari. <a href="https://django.fun/docs/django/en/3.0/topics/settings/" target="_blank">settings.py xaqida ko'proq</a></li>	
+<br>
+<li>mysite/urls.py Web dastur uchun urllar ko'rsatiladigan modul.Qisqa qilib aytganda web ilovani 'yurg`azishda' asosiy figuralardan biri</li>
+<br>
+<li>mysite/wsgi.py: WSGI uchun kirish nuqtasi.Web dasturni web serverga bog'lab ishga tushirish  uchun kerak. WSGI xaqida  ko'proq ma'lumotlarni <a href="https://django.fun/docs/django/en/3.0/howto/deployment/wsgi/" target="_blank"> bu yerdan </a>topishingiz mumkin</li>
+</ul>
+<div class="text-center">
+	<h3><strong>Django "ishlab chiqarish" serveri</strong></h3>
+</div>
+<p>Django loyihamiz ishlayotganini tekshirib ko'raylik. Buning uchun terminal,buyruq satri oraqli mysite tashqi katalogiga o'ting va quyidagi buyruqlarni bajaring:</p>
+<pre id="console">
+	<br>
+	$ python manage.py runserver
+	<br>
+</pre>
+<p>Buyruq satri yoki terminalingizda quyidagilarni ko'rishingiz mumkin</p>
+<pre id="console">
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+
+марта 27, 2020 - 15:50:53
+Django version 3.0, using settings 'mysite.settings'
+Starting development server at <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a>
+Quit the server with CONTROL-C.
+<br>
+</pre>
+<p>Siz Django 'ishlab chiqarish' (razrabotka) serverini ishga tushirdingiz:Bu faqat Pythonda yozilgan yengil web-server. Biz uni Django-ga uladik, shunda siz tezda loyihani ishlab chiqishingiz mumkin, Apache (Open Server, XAMP, Denwer) kabi ishchi serverlarni o'rnatishga harakat qilmaysiz, boshingizni qotirmaysiz.
+</p>
+
+<p>Endi ta'kidlash vaqti keldi: ushbu serverni 'jangovor' xar doim web dasturni "ko'tarib" turadigan server sifatida foydalanilmaydi. Bu faqat ishlab chiqishda (razrabotka vaqtida) foydalanish uchun mo'ljallangan. (Veb-serverlar emas, balki veb-ilovalar yaratish bilan shug'ullanyapmiz.)</p>
+
+<p>Endi server ishga tushirilganda brauzerda quyidagi manzil bilan sahifani oching <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> Siz "Congratulations" sahifasini ko'rishingiz kerak, 'raketasi' bilan. Hamma narsa xatoliksiz ishga  tushdi!</p>
+
+<div class="text-center">
+	<h3><strong>Djangoda Polls nomli web ilova yaratamiz </strong></h3>
+</div>
+
+<p>Endi  "loyiha" -uchun barcha narsa xozir bo'lgan bo'lsa, keyingi ishni boshlashimiz mumkin.</p>
+
+<p>Django-da yozilgan har bir ilova Python paketidan iborat bo'lib,u muayyan bitimga amal qiladi. Django avtomatik ravishda ilova uchun katalogning asosiy tuzilishini yaratadigan yordamchi utilita bilan ta'minlangan, shuning uchun  siz ilova kataloglarni yaratish uchun vaqt sarflamaysiz barcha e'tiborni kod yozishga  qaratishingiz mumkin.</p>
+<pre id="console">
+	<br>
+<i class="fa fa-file"></i> Loyihalar va ilovalar
+<br>
+ Loyiha va ilovalar o'rtasidagi farq nimada? Ilova bu loyixamiz ichidagi web-ilova xisoblanadi <br> masalan  saytimizda blog qismi bor,unda maqolalar,foydali maslaxatlar va kundalik yozuvlar,<br> komentlar, layklar mavjud deb xisoblaylik  buning uchun biz loyixamiz ichida blog uchun aloxida <br> katalog (papka) ochib barcha blog uchun aloqador fayllarni(urls.py, views.py , models.py va x/z) <br> shu katalogda saqlasak loyixamizda tartib saqlanadi va fayllar bir biriga "chalkashgan to'qayzor" <br> bo'lib ketmaydi web-ilova ishlatishning asl maqsadlaridan biri shu va yana ko'plab foydali <br> jixatlari bor<br> Loyiha esa muayyan sayt uchun Sozlamalar va ilovalar to'plamidir. <br> 
+ Loyiha bir nechta yoki undan ko'proq ilovalarni o'z ichiga olishi mumkin. <br>
+</pre>
+
+<p>Loyixa ichida web-ilova yaratish uchun buyruq satri orqali manage.py fayli turgan loyixa bosh katalogiga  o'tib ushbu buyruqni kiritamiz</p>
+
+<pre id="console">
+	<br>
+ $ python manage.py startapp polls
+	<br>
+</pre>
+<p>Bu buyruq loyixa ichida polls deb nomlangan katalog (web-ilovani)  xosil qiladi:</p>
+<pre id="console">
+polls/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+    <br>
+</pre>
+<div class="text-center">
+	<h3><strong>Djangoda birinchi taqdimotni(views) yozish</strong></h3>
+</div>
+<p id="index">Keling, birinchi taqdimotni yozaylik (view). polls katalogini oching va views.py fayliga  quyidagi Python kodini kiriting:</p>
+<pre id="console">
+<b class="text-danger">from</b> django.http <b class="text-danger">import</b> HttpResponse
+
+
+<b class="text-info">def index</b>(<b class="text-warning">request</b>):
+    
+	<b class="text-info">return HttpResponse</b>(<b class="text-warning">"Hello, world. You're at the polls index."</b>)
+	<br>
+</pre>
+<p>Bu Djangoda eng oddiy taqdimot.Taqdimot (view) bizga brauzerda "Hello, world. You're at the polls index." yozuvini chiqarib ko'rsatadi.Buning uchun oldin taqdimotni  URL yordamida 'chaqirishimiz' kerak va biz URLconf ga murojat  qilamiz.</p>
+<p>URLconf ishlatishiz uchun polls katalogida(web-ilovasida) urls.py nomli fayl yarating:</p>
+<pre id="console">
+polls/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+
+    <u>urls.py</u>
+    
+    views.py
+</pre>
+<p> Xozirgina xosil qilgan faylga ushbu kodni qo'shing polls/urls.py:</p>
+<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>polls/urls.py</p></div>
+<pre id="console">
+	
+<b class="text-danger">from</b> django.urls <b class="text-danger">import</b> path
+
+<b class="text-danger">from</b> . <b class="text-danger">import</b> views
+
+urlpatterns = [
+    <b class="text-info">path</b>('', views.index, name=<b class="text-warning">'index'</b>),
+]
+
+</pre>
+<p>Keyingi qadam,loyixaning bosh  URLconf<small>ida</small>	polls web-ilovamizning urls	<small>ini</small> ko'rsatishimiz.Ya'ni brauzerda mysite.com/polls manzili so'ralganda polls web ilovamizning URLconfi (urls.py) ishga tushsin. Buning uchun mysite/urls.py da django.urls<small>dan</small> include funksiyasini import qilish kerak</p>
+<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>mysite/urls.py</p></div>
+<pre id="console">
+	
+<b class="text-danger">from</b> django.contrib <b class="text-danger">import</b> admin
+<b class="text-danger">from</b> django.urls <b class="text-danger">import</b> path, include
+
+
+
+urlpatterns = [
+    <b class="text-info">path</b>('admin/', admin.site.urls),
+    <b class="text-info">path</b>('polls/',<b class="text-info">include</b>(<b class="text-warning">"polls.urls"</b>)),
+]
+
+
+</pre>
+<p> <a href="https://docs.djangoproject.com/en/3.0/ref/urls/" target="_blank">include()</a> funksiyasi loyixamizdagi (web-ilovalar ichidagi) boshqa URLconf larga murojaat qilish imkonini beradi.</p>
+
+<p>Include() asosiy vazifasi URL-larni qo'shish va ijro etishni osonlashtiradi.</p>
+
+<p>Endi URLconf-ga <a href="#index">indeks</a> taqdimoti(views) ulandi.Server ishlayotganiga   ishonch hosil qiling , agar server to'xtagan bo'lsa uni qaytadan ishga tushiring:</p>
+
+<pre id="console">
+	
+ $ python manage.py runserver
+
+</pre>
+
+<p>Brauzerda quyidagi manzilga o'ting <a href="http://localhost:8000/polls/" target="_blank">http://localhost:8000/polls/</a>, va ushbu matnni ko'rishimiz mumkin " Hello, world. You're at the polls index."</p>
+
+<pre id="console"> 
+	
+	<i class="fa fa-question"></i> Saxifa topilmadi
+
+	Agar saxifa topilmagani xaqidagi xatolikka duch kelsangiz brauzerda http://localhost:8000/ manzilini <br> 	emas aksincha <a href="http://localhost:8000/polls/" target="_blank">http://localhost:8000/polls/</a> manzilini so'rayotganingizni tekshiring
+
+</pre>
+
+<p><a href="https://docs.djangoproject.com/en/3.0/ref/urls/#path" target="_blank">path()</a> funksiyasi ikkita majburiy: <b class="text-info">route , view</b> va ikkita ixtiyoriy: <b class="text-primary">kwargs, name</b> argumentlar jo'natadi.Quyida ushbu argumentlar nima uchun kerakligini ko'rib chiqamiz</p>
+<p><h5>path(): route argumenti</h5></p>
+
+<p>route-URL manzilni  o'z ichiga olgan satr.Url  so'rovni(masalan mysite.com/polls) qayta ishlashda Django urlpatterns-dagi birinchi shablondan qidirishni boshlaydi va kerakli URLga mos keladigan biror narsani topguniga qadar har bir url manzillarni so'rov bilan taqqoslab, ro'yxatni pastga tushiradi.</p>
+
+<p>Url manzillar GET va POST parametrlarini yoki domen nomi qidiruvini amalga oshirmaydi. Misol uchun,https://www.example.com/myapp/, so'rovida  URLconf myApp/ web-ilovasidagi url manzillarni qidirishni boshlaydi. So'rov https://www.example.com/myapp/?Page=3. ga o'zgargan taqdirda xam URLconf  myapp/ ni qidiradi.</p>
+<hr>
+
+<p><h5>path(): view argumenti</h5></p>
+<p>Django tegishli shablonni topgach, HttpRequest obyekti qaytaradigan url manzil uchun biriktrilgan taqdimot(views) funktsiyasini  chaqiradi va  url manzildan  "qo'lga kiritilgan" qiymatni birinchi argument sifatida uzatadi.Bu masalaga keyinroq batafsil to'xtalamiz.</p>
+<hr>
+<p><h5>path(): kwargs argumenti</h5></p>
+<p>Python lug'ati (dict) yordamida taqdimotga(views) uzatiladigan qo'shimcha argumentlar.Darsimizning keyingi qismlarida bu xususiyatidan foydalanamiz.</p>
+<hr>
+<p><h5>path(): name argumenti</h5></p>
+<p>URL-manzil uchun o'ziga xos nom berish,  Django loyixamizning boshqa  'joylaridan' ayniqsa shablonlardan berilgan nom orqali URl-manzilimizga murojaat qilish imkonini beradi. Ushbu kuchli funksiya sizni loyihangizning URL shablonlariga faqat bitta faylga o'zgartirish kiritib  global o'zgarishlarni amalga oshirish imkonini beradi.</p>
+<p>Url so'rovlar va javoblar(views) asoslari xaqida boshlang'ich ma'lumotlarga ega bo'lgan bo'lsangiz, ma'lumotlar ombori bilan ishlashni boshlash uchun ushbu qo'llanmaning <a href="{% url 'edu:django' 4 'djangoda-birinchi-web-dastur-2-qism' %}">ikkinchi qismini</a> o'qing.</p>
+
+<hr>
+<div class="footer">
+	<p> <a href="{% url 'edu:django' 4 'djangoda-birinchi-web-dastur-2-qism' %}" style="float:left">Djangoda birinchi web dastur ikkinchi qism</a></p>
+</div>
+<div class="footer-post" style="float:right;">
+	<p>Foydalanilgan manbalar: <a href="https://docs.djangoproject.com">docs.djangoproject.com</a><br>
+		<a href="https://django.fun">django.fun</a></p>
+</div>
+</div>
+<div class="col-md-3">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>				
+</div>				
+</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,120 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+   {% block meta %}
+    <meta name="description" content="Djangoda birinchi web dastur 3-qism,Django bilan qisqa tanishuv django xaqida, django,djangoni o'rganish">
+    {% endblock %}
+    {% block title %}
+    <title>eduPy |Djangoda birinchi web dastur 3-qism </title>
+    {% endblock %}
+{% block content %}
+<section id="lesson">
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+
+<div class="text-center">
+	<h3><strong>Djangoda birinchi web dastur 3-qism </strong></h3>
+</div>
+
+<p>Ushbu qo'llanma sizni Django bilan tanishuvni <a href="{% url 'edu:django' 4 'djangoda-birinchi-web-dastur-2-qism' %}">ikkinchi qismida</a> to'xtalgan joydan  tanishtirishda davom etadi. Biz Web-poll ilovasini davom ettiramiz va ochiq interfeysni yaratishga e'tibor qaratamiz - "ko'rinishlar".</p>
+<p>Tez ko'rib chiqish</p>
+<p>Taqdimot, odatda, ma'lum bir funktsiyani bajaradigan va ma'lum bir shablonga ega bo'lgan Django ilovasidagi veb-sahifaning "turi" dir. Misol uchun, blog ilovasida quyidagi fikrlar bo'lishi mumkin:</p>
+<ul class="mr-5">
+	<li>Blogning asosiy sahifasi-eng so'nggi yozuvlarni ko'rsatadi.</li>
+	<li>"Detalization" sahifasi-bitta yozuvning alohida sahifasi.</li>
+	<li>Yilga asoslangan arxiv sahifasi - bu yilgi yozuvlar bilan barcha oylarni ko'rsatadi</li>
+	<li>Bir oyga asoslangan arxiv sahifasi-barcha kunlarni ushbu oyda yozuvlar bilan ko'rsatadi.</li>
+	<li>Kunlik arxiv sahifasi-ma'lum bir kun uchun barcha yozuvlarni ko'rsatadi.</li>
+	<li>Izohlar bilan qilingan harakatlar-ushbu yozuvga sharhlar joylashtirishni ko'rib chiqadi.</li>
+</ul>
+<p>Bizning so'rov dasturimizda quyidagi to'rtta taqdimot bo'ladi:</p>
+<ul class="mr-5">
+<li>Savollarning asosiy sahifasi-so'nggi bir nechta savollarni aks ettiradi.</li>
+<li>Savol sahifasi-savolning matnini natijasiz, ammo ovoz berish shakli bilan ko'rsatadi.</li>
+<li>Savol natijalari sahifasi-muayyan savol uchun natijalarni ko'rsatadi.</li>
+<li>Ovoz berish-muayyan masala bo'yicha muayyan tanlov uchun ovoz beradi.</li>
+</ul>
+<p>Django-da veb-sahifalar va boshqa kontent ko'rinishlarga ko'ra yetkaziladi. Har bir vakillik Python funktsiyasi bilan ifodalanadi (yoki sinflarga asoslangan ko'rinishda usul). Django so'ralgan URLni (aniqrog'i, domen nomidan keyin URLning bir qismini) o'rganib, ko'rinishni tanlaydi.</p>
+<p>Endi internetda bo'lish "ME2/Sites/dirmod" kabi go'zallikka duch kelishi mumkin.asp?sid=&type=gen&mod=Core+Pages&gid=A6CD4967199A42D9B65B1B». Django sizga juda oqlangan URL shablonlarini yaratishga imkon beradi.</p>
+<p>URL shabloni umumiy URL shaklidir, masalan:/News archive/<year>/<month>/.</p>
+<p>URLdan taqdimotga o'tish uchun Django URLconfs deb ataladi. URLconf URL shablonlarini taqdimotlar bilan mos keladi.</p>
+<p>Ushbu ta'lim URLconfs foydalanish bo'yicha asosiy ko'rsatmalarni o'z ichiga oladi, va siz uchun murojaat qilishingiz mumkin URL dispatcher qo'shimcha ma'lumot olish uchun.</p>
+<div class="text-center">
+	<h3><strong>Loyixamiz uchun taqdimot (views) yozamiz</strong></h3>
+</div>
+<p>Keling, bir nechta fikrlarni qo'shamiz polls/views.py. ushbu fikrlar bir-biridan farq qiladi, chunki ular argumentni qabul qilishadi:</p>
+
+<pre id="sublime">
+	
+
+polls/views.py¶
+
+def detail(request, question_id):
+    return HttpResponse("You're looking at question %s." % question_id)
+
+def results(request, question_id):
+    response = "You're looking at the results of question %s."
+    return HttpResponse(response % question_id)
+
+def vote(request, question_id):
+    return HttpResponse("You're voting on question %s." % question_id)
+
+
+</pre>
+<p>Ushbu yangi ko'rinishlarni polls moduliga ulang.quyidagi yo'l qo'shib URL () qo'ng'iroqlar:</p>
+
+<pre id="sublime">
+	
+
+polls/urls.py¶
+
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    # ex: /polls/
+    path('', views.index, name='index'),
+    # ex: /polls/5/
+    path('<int:question_id>/', views.detail, name='detail'),
+    # ex: /polls/5/results/
+    path('<int:question_id>/results/', views.results, name='results'),
+    # ex: /polls/5/vote/
+    path('<int:question_id>/vote/', views.vote, name='vote'),
+]
+
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="text-center">
+	<h4><strong><a href="{% url 'edu:django' number=5 slug='djangoda-birinchi-web-dastur-3-qism' %}">Djangoda birinchi web dastur 4-qism</a></strong></h4>
+</div>
+
+
+<div class="footer-post" style="float:right;">
+	<p>Foydalanilgan manbalar: <a href="https://docs.djangoproject.com" target="_blank">docs.djangoproject.com</a><br>
+		<a href="https://django.fun" target="_blank">django.fun</a></p>
+</div>
+
+
+
+</div>
+	<div class="col-md-3">
+
+	</div>		
+</div>
+</div>
+</section>
+{% endblock %}	

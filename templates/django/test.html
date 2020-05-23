@@ -1,0 +1,16 @@
+{% extends 'base-wrap.html' %}
+{% load static %}
+   {% block meta %}
+    <meta name="description" content="Django xaqida">
+    {% endblock %}
+    {% block title %}
+    <title>eduPy |Nima uchun Djangoni  o'rganishim kerak</title>
+    {% endblock %}
+{% block content %}
+<section id="lesson">
+  
+   <p><h3>{{ post.title}}</h3></p>
+ 
+    <p><h3> {% autoescape off %} {{ post.text.display_my_safefield }}{% endautoescape %}</h3></p>
+</section>
+{% endblock %}

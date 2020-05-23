@@ -1,0 +1,82 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 30/01/2019 08:44
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: 20px;
+    font-style: normal;
+    margin-left: 20px;
+}
+
+.flaticon-001-charger:before { content: "\f100"; }
+.flaticon-002-plug:before { content: "\f101"; }
+.flaticon-003-switch:before { content: "\f102"; }
+.flaticon-004-battery:before { content: "\f103"; }
+.flaticon-005-viewer:before { content: "\f104"; }
+.flaticon-006-amplifier:before { content: "\f105"; }
+.flaticon-007-usb:before { content: "\f106"; }
+.flaticon-008-smartwatch:before { content: "\f107"; }
+.flaticon-009-fridge:before { content: "\f108"; }
+.flaticon-010-coffee-maker:before { content: "\f109"; }
+.flaticon-011-mixer:before { content: "\f10a"; }
+.flaticon-012-resistor:before { content: "\f10b"; }
+.flaticon-013-transducer:before { content: "\f10c"; }
+.flaticon-014-fuse:before { content: "\f10d"; }
+.flaticon-015-transformer:before { content: "\f10e"; }
+.flaticon-016-multimeter:before { content: "\f10f"; }
+.flaticon-017-varistor:before { content: "\f110"; }
+.flaticon-018-galvanometer:before { content: "\f111"; }
+.flaticon-019-battery-1:before { content: "\f112"; }
+.flaticon-020-analyzer:before { content: "\f113"; }
+.flaticon-021-virtual-reality:before { content: "\f114"; }
+.flaticon-022-chip:before { content: "\f115"; }
+.flaticon-023-robot:before { content: "\f116"; }
+.flaticon-024-mouse:before { content: "\f117"; }
+.flaticon-025-router:before { content: "\f118"; }
+.flaticon-026-thermometer:before { content: "\f119"; }
+.flaticon-027-switch-1:before { content: "\f11a"; }
+.flaticon-028-gamepad:before { content: "\f11b"; }
+.flaticon-029-television:before { content: "\f11c"; }
+.flaticon-030-vending-machine:before { content: "\f11d"; }
+.flaticon-031-ssd:before { content: "\f11e"; }
+.flaticon-032-sata:before { content: "\f11f"; }
+.flaticon-033-computer:before { content: "\f120"; }
+.flaticon-034-nfc-card:before { content: "\f121"; }
+.flaticon-035-heating:before { content: "\f122"; }
+.flaticon-036-air-conditioner:before { content: "\f123"; }
+.flaticon-037-cable:before { content: "\f124"; }
+.flaticon-038-sewing-machine:before { content: "\f125"; }
+.flaticon-039-doorkeeper:before { content: "\f126"; }
+.flaticon-040-washing-machine:before { content: "\f127"; }
+.flaticon-041-vitroceramic:before { content: "\f128"; }
+.flaticon-042-american-plug:before { content: "\f129"; }
+.flaticon-043-remote-control:before { content: "\f12a"; }
+.flaticon-044-gps:before { content: "\f12b"; }
+.flaticon-045-car-key:before { content: "\f12c"; }
+.flaticon-046-mp4:before { content: "\f12d"; }
+.flaticon-047-smartphone:before { content: "\f12e"; }
+.flaticon-048-mixer-1:before { content: "\f12f"; }
+.flaticon-049-speaker:before { content: "\f130"; }
+.flaticon-050-tablet:before { content: "\f131"; }

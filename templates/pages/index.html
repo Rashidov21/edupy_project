@@ -1,0 +1,397 @@
+{% extends 'wrappers/wrapper.html' %}
+{% load static %}
+{% block content %}
+       <div class="mt-auto header-top-height"></div>
+        <main class="container mb-auto">
+            <div class="carousel carousel-main">
+                <div class="carousel-cell">
+
+                </div>
+            </div>
+        </main>
+        <div class="mt-auto"></div>
+    </div><!-- end header -->
+    <section class="padding-70-0 position-relative " style="background-color: #fff;">
+        <div class="container">
+
+            <div class="row justify-content-between">
+
+                <div class="col-md-6 about-us-img-section">
+                    <img src="./static/svg/edupy_logo.svg" alt="" />
+                </div>
+
+                <div class="col-md-6 side-text-right-container d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <h2 class="side-text-right-title f-size25">Dasturlashni o'rganish  ,<br> istagidagilar uchun!</h2>
+                    <p class="side-text-right-text f-size16">
+                       <b>eduPy</b> orqali siz dasturlash tillarini masofadan turib atroflicha o'rganishingiz mumkin. Biz kengaytirilgan adabiyotlardan foydalanib tajribali ustozlarni jalb qilganmiz. Talabalar uchun qulay usulda darslar olib borishni yo'lga qo'yganmiz. <br>Kerakli <b><a href="{% url 'edu:page_views' 'courses' %}">kurslarga</a></b>  yoziling , topshiriqlarni vaqtida bajaring va qiziqtirgan yo'nalishingiz asosida qisqa muddatlarda shaxsiy loyihalaringizni yo'lga qo'ying! 
+                    </p>
+                    <p>
+                        <a class="side-text-right-button" href="{% url 'edu:page_views' 'beginners' %}">Boshlovchilarga</a>
+                    </p>
+                    <div class="mt-auto"></div>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+     
+    <section class="section-wth-amwaj">
+       
+        <div class="container">
+            <div class="row justify-content-between mr-tp-50">
+
+                <div class="col-md-6 side-text-right-container">
+                    <h2 class="side-text-right-title">Online kurslar<br> Bu qanday ishlaydi?</h2>
+                    <p class="side-text-right-text">
+                      Doimiy ijtimoiy tarmoqlar yoki boshqa usullar bilan aloqada bo'lib turiladi. <b>O'quvchining</b> dars o'zlashtirishi har bir biriktirilgan <b>ustoz</b> tomonidan kuzatiladi.Faol va tez o'zlashtirgan o'quvchilar umumiy proektlarga jalb qilinadi va jamoaviy ish shakillantiriladi. 
+                        <br>
+                        <br>   
+                         <ul class="web-hosting-options">
+                            <li><i class="far fa-clock"></i> Haftada 6 kun online yordam</li>
+                            <li><i class="fa fa-reply"></i> Indevidual tushuntirish ishlari </li>
+                            <li><i class="fab fa-telegram"></i> Ijtimoiy tarmoqlar orqali muloqot </li>
+                            
+                            <li><i class="fa fa-file-code"></i> Doimiy uyga vazifa/topshiriqlar </li>
+                            <li><i class="fa fa-eye"></i> O'quvchini o'sishi kuzatiladi </li>
+                    </ul>
+                        <p>
+                        
+                </div>
+
+                <div class="col-md-5">
+                    <p>
+                          <img src="/static/svg/iphone-how-to.svg" class="mb-5" alt="">
+                        <a class="side-text-right-button" href="{% url 'edu:page_views' 'courses' %}">Kurslarga yozilish</a>
+                    </p>
+                  
+                  
+                </div>
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+    <section>
+    <div class="container">
+    <div class="row justify-content-start futures-version-2">
+    <div class="col-md-4">
+    <div class="futures-version-2-box">
+        <span class="free-badge"><b></b>free</span>
+    <img src="/static/img/svgs/Detailed/Download.svg" class="mt-3 mb-3 pl-5" alt="">
+    <h5>Qo'l ostingizda</h5>
+    <p>Darslarga istalgan vaqtda kirish imkoniyati, mavzuni yuklab olish offline takrorlash.</p>
+    <div class="text-right">
+    <a class="more-btn" href="{% url 'edu:page_views' 'courses' %}">Kurslar</a>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-md-4">
+    <div class="futures-version-2-box">
+    
+    <img src="/static/img/svgs/Detailed/Battery.svg" class="mt-3 mb-3 pl-5" alt="">
+    <h5>Vaqtingizni tejang!</h5>
+    <p>Uyingizdan chiqmasdan Dasturlashni o'rganing va yuqori maoshli ishga ega bo'ling.</p>
+    <div class="text-right">
+    <a class="more-btn" href="{% url 'edu:page_views' 'courses' %}">Kurslar</a>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-md-4">
+    <div class="futures-version-2-box">
+    <img src="/static/img/svgs/Detailed/VR.svg" class="mt-3 mb-3 pl-5" alt="">
+    <h5>Qulay Kontent</h5>
+    <p>Video/Audio/Text/Images <br> Istalgan usulda o'rganing!</p>
+    <div class="text-right">
+    <a class="more-btn" href="{% url 'edu:page_views' 'courses' %}">Kurslar</a>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    </div>  
+    </section>
+    
+ 
+     <section class="section-wth-amwaj">
+      
+
+        <div class="container">
+                <div class="row justify-content-between">
+                <div class="col-md-6 side-text-right-container d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <h2 class="side-text-right-title f-size25">eduPy logotipidagi "kalla" kim? </h2>
+                    <p class="side-text-right-text f-size16">
+                       <b>RANGO</b>  degan multfilm qahramonini bilsangiz kerak. Jamoamiz bilan ushbu python uchun onlayn kurs tashkil etishni boshlaganimizda ilk g'oyamiz logotip va umuman brend uchun ushbu qahramon obrazi bo'lgan. eduPy o'rniga rangoEDU deb nomlamoqchi bo'lganmiz. Qanaqangi brend bo'lishidan qatiiy nazar muhimi bu emas, muhimi kontent ya'ni foydalanuvchilarga beriladgan bilimlar. Bu eng birinchi o'rinda. Bizni prioritet ham shu. Eng sifatli kontent. Boshqa joydagi qimmat, qisqa, va sifatsiz bo'lgan kontentlarni aksini foydalanuvchilarga yetkazish! RANGOni maqsadi shu Pythonni sizlarga yetkazish!
+                    </p>
+                    <p>
+                        <a class="side-text-right-button" href="{% url 'edu:page_views' 'beginners' %}">Boshlovchilarga</a>
+                    </p>
+                    <div class="mt-auto"></div>
+                </div>
+                <div class="col-md-6 about-us-img-section">
+                    <img src="./static/svg/rango.jpg" alt="" class="w-75 h-100 "  />
+                </div>
+            </div>
+            <div class="row justify-content-between mr-tp-50">
+                <div class="col-md-6">
+                    <p>
+                          <img src="/static/svg/python-coder.png" class="mb-5 w-100 h-50" alt="">
+                        <a class="side-text-right-button" href="{% url 'edu:page_views' 'courses' %}">BATAFSIL</a>
+                    </p>
+                  
+                  
+                </div>
+                <div class="col-md-6 side-text-right-container">
+                    <h2 class="side-text-right-title">Python dasturchi</h2>
+                    <p class="side-text-right-text">
+                      Python va uni kutubxonalarini intensiv tarzda mukammal o'rganing. Kurs sizga <b>YouTube</b> dagi qisqa va tushunarsiz videodarslardan farqli o'laroq atroflicha bilimlar beradi.<br>Agar siz boshqa kursda bir mavzuga oid 1 sahifa ma'lumot olsangiz bizning kursda 5 sahifa ma'lumot topa olasiz. Ishonmaysizmi? Sinab ko'ring.
+                        <br>
+                        <br>   
+                         <ul class="web-hosting-options">
+                            <li><i class="fa fa-book"></i> Kengaytirilgan adabiyotlar: Michael Dawson, Mark Luts</li>
+                            <li><i class="fa fa-film"></i> Videogayd , Matn va Screenshotlar bilan </li>
+                            <li><i class="fa fa-tasks"></i> Doimiy topshiriqlar. Har yangi mavzudan so'ng </li>
+                            
+                            <li><i class="fab fa-telegram"></i> Telegram orqali tushunmagan joyingizni so'rang! </li>
+                            <li><i class="fa fa-users"></i> Boshqa talabalar bilan tajriba almashish </li>
+                    </ul>
+                        <p>
+                        
+                </div>
+
+              
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+  <section class="home-ads-section">
+        <h1>Nega endi Python ni o'rganishim kerak ?</h1>
+    </section>
+
+    <section class="perlex-efect-section parallax-window padding-100-0 position-relative" data-parallax="scroll" data-image-src="/static/img/demo/office.jpg">
+        <!-- start parallax section -->
+        <h6 class="d-none">video section</h6>
+        <span class="perlex-hidden-iverlow"></span>
+        <a class="play-button-in-section video-btn" data-toggle="modal" data-src="https://www.youtube.com/watch?v=rlDSn485oTc" data-target="#videomodal" href="https://www.youtube.com/watch?v=rlDSn485oTc">
+            <i class="fas fa-play"></i>
+            <span class="waves wave-1"></span>
+            <span class="waves wave-2"></span>
+            <span class="waves wave-3"></span>
+            <span class="waves wave-4"></span>
+        </a>
+    </section>
+   <section class="section-wth-amwaj">
+         <div class="container">
+            <div class="row justify-content-between mr-tp-50">
+                
+                <div class="col-md-6 side-text-right-container">
+                    <h2 class="side-text-right-title"><br> WEB Full-Stack dasturchi</h2>
+                    <p class="side-text-right-text">
+                        Front-end hamda Back-end ni mukammal o'rganing va yuqori darajadagi WEB dasturchiga aylaning.<br>Biz sizga xozir dunyodagi eng talab yuqori bo'lgan dasturlash tillarida ta'lim beramiz. Bu sizning maqsadingizga erishishingizda muhim ro'l o'ynaydi. 
+                        <br>
+                        <br>   
+                         <ul class="web-hosting-options">
+                            <li><i class="fab fa-html5"></i> HTML/CSS/BOOTSTRAP bo'yicha to'liq kurs</li>
+                            <li><i class="fab fa-css3"></i> CSS media so'rovlar va animations lar</li>
+                            <li><i class="fa fa-bold"></i> BOOTSTRAP 4 yangi klasslari </li>
+                            
+                            <li><i class="fa fa-file-code"></i> PHP yoki Django , Django uchun to'liq kurs </li>
+                            <li><i class="fas fa-database"></i> MySQL, PostgreSQL, SQL ma'lumotlar omborlari bilan ishlash </li>
+                            <li><i class="fa fa-users"></i> Boshqa talabalar bilan tajriba almashish </li>
+                    </ul>
+                        <p>
+                        
+                </div>
+
+              <div class="col-md-6">
+                    <p>
+                          <img src="/static/svg/php-sql-coder.png" class="mb-5 w-100 h-50" alt="">
+                        <a class="side-text-right-button" href="{% url 'edu:page_views' 'courses' %}">BATAFSIL</a>
+                    </p>
+                  
+                  
+                </div>
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section>
+  
+        <section class="footer-section-banner bg-primary">
+        <div class="container">
+            <div class="row free-trial-footer-banner">
+                <div class="col-md-8">
+                    <h5 class="free-trial-footer-banner-title">Bepul sinov kurslarini boshlash uchun hoziroq ro'yhatdan o'ting</h5>
+                    <p class="free-trial-footer-banner-text">Chegirmalar vaqti chegaralangan. Dasturlashni o'rganmoqchimisiz? Unda hoziroq ro'yhatdan o'ting. </p>
+                </div>
+
+                <div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <div class="mb-auto">
+                <a class="sign-btn" href="{% url 'edu:page_views' 'signup' %}">Ro'yhatdan o'tish</a>
+            <a class="log-btn" href="{% url 'edu:page_views' 'signin' %}">Kirish</a>
+                    </div>
+                    <div class="mt-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="padding-100-0 gray-bg">
+    <div class="container">
+    <h5 class="title-default-coodiv-two">Yangilik va E'lonlar<span>Aksiyalar , Chegirmalar , Yani qo'llanma va maqolalar.</span></h5>
+    <div class="row justify-content-start blog-items-home"><!-- start row -->
+            
+                <div class="col-md-4"><!-- col -->
+                    <div class="home-blog-te"><!-- blog container -->
+                        <div class="post-thumbn parallax-window" style="background: url(/static/img/blog/blog4.png) no-repeat center;"></div><!-- post thumbnail -->
+                        <div class="post-bodyn">
+                            <h5><a href="#">Up and Running With WooCommerce</a></h5><!-- post title -->
+                            <p><i class="far fa-calendar"></i>Mars 22,2019</p><!-- post date -->
+                        </div>
+                    </div><!-- end blog container -->
+                </div><!-- end col -->
+                
+                <div class="col-md-4"><!-- col -->
+                    <div class="home-blog-te"><!-- blog container -->
+                        <div class="post-thumbn parallax-window" style="background: url(/static/img/blog/blog3.png) no-repeat center;"></div><!-- post thumbnail -->
+                        <div class="post-bodyn">
+                            <h5><a href="#">Up and Running With WooCommerce</a></h5><!-- post title -->
+                            <p><i class="far fa-calendar"></i>Mars 22,2019</p><!-- post date -->
+                        </div>
+                    </div><!-- end blog container -->
+                </div><!-- end col -->
+
+                <div class="col-md-4"><!-- col -->
+                    <div class="home-blog-te"><!-- blog container -->
+                        <div class="post-thumbn parallax-window" style="background: url(/static/img/blog/blog2.png) no-repeat center;"></div><!-- post thumbnail -->
+                        <div class="post-bodyn">
+                            <h5><a href="#">Up and Running With WooCommerce</a></h5><!-- post title -->
+                            <p><i class="far fa-calendar"></i>Mars 22,2019</p><!-- post date -->
+                        </div>
+                    </div><!-- end blog container -->
+                </div><!-- end col -->
+
+    </div>  
+    </div>
+    </section>
+   <section class="padding-60-0-100 position-relative">
+        <div class="container">
+
+      
+
+            <div class="row">
+                <div class="col-md-12 help-center-header">
+                    <h5 class="help-center-title"><span>HAMKORLIK</span>biz tajribali dasturchilarni hamkorlikga chorlaymiz</h5>
+                    <p class="help-center-text"> bu sizga o'z dasturlash qobilyatingzini ayniqsa hozirda O'zbekistonda juda ko'plab ushbu sohaga qiziqish bildirayotgan yoshlarga o'rgatishingiz imkonini beradi.</p>
+                </div>
+            </div>
+
+
+            <div class="row justify-content-start mr-tp-80">
+                <div id="nav-tabContent" class="col-md-9 tab-content">
+
+                    <div class="tab-pane fade show active" id="nav-first-help-categorie" role="tabpanel" aria-labelledby="nav-first-help-categorie-tab">
+                        <span class="help-center-box-popular">foydali tomonlari</span>
+
+                        <div class="help-center-box-item">
+                            <!-- start the help center box  -->
+                            <div class="help-center-box-icon">
+                                <!-- start the help center icon  -->
+                                <i class="fas fa-server"></i>
+                                <!-- help center item icon  -->
+                            </div>
+                            <!-- end the help center icon  -->
+
+                            <div class="help-center-box-text">
+                                <span>yosh dasturchilar yetishtirish </span>
+                                <!-- help center item title  -->
+                                <span>Kurslaringizga yozilgan talabalarga darslaringiz orqali tajriba ulashing</span>
+                                <!-- help center item sub title  -->
+                            </div>
+                            <a class="help-center-box-link" href="#"><i class="fas fa-angle-right"></i></a>
+                            <!-- help center item link  -->
+                        </div>
+                        <!-- end the help center box  -->
+
+                        <div class="help-center-box-item">
+                            <!-- start the help center box  -->
+                            <div class="help-center-box-icon">
+                                <!-- start the help center icon  -->
+                                <i class="fa fa-credit-card"></i>
+                                <!-- help center item icon  -->
+                            </div>
+                            <!-- end the help center icon  -->
+
+                            <div class="help-center-box-text">
+                                <span>qo'shimcha daromad turi </span>
+                                <!-- help center item title  -->
+                                <span>Bizni o'qitish metodimiz orqali bir marta darslar tayyorlang va soting</span>
+                                <!-- help center item sub title  -->
+                            </div>
+                            <a class="help-center-box-link" href="#"><i class="fas fa-angle-right"></i></a>
+                            <!-- help center item link  -->
+                        </div>
+                        <!-- end the help center box  -->
+
+                        <div class="help-center-box-item">
+                            <!-- start the help center box  -->
+                            <div class="help-center-box-icon">
+                                <!-- start the help center icon  -->
+                                <i class="fa fa-user-plus"></i>
+                                <!-- help center item icon  -->
+                            </div>
+                            <!-- end the help center icon  -->
+
+                            <div class="help-center-box-text">
+                                <span>Boshqa dasturchilar bilan tajriba almashtirish </span>
+                                <!-- help center item title  -->
+                                <span>Forumda ishtirok eting, safingizni kengaytiring, sheriklar-shogirdlar ortiring</span>
+                                <!-- help center item sub title  -->
+                            </div>
+                            <a class="help-center-box-link" href="#"><i class="fas fa-angle-right"></i></a>
+                            <!-- help center item link  -->
+                        </div>
+                        <!-- end the help center box  -->
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+                    <h5 class="immediate-help-center-title">Yaxshi tushunmadizmi? <br>savollar bormi ?</h5>
+                    <p class="immediate-help-center-text">biz yordamga tayyormiz 24/7</p>
+
+                    <a class="immediate-help-center-link" href="#">+998 93 911 31 23</a>
+                    <a class="immediate-help-center-link" href="#">rashidovabdurakhmon@gmail.com</a>
+                    <a class="immediate-help-center-link" href="{% url 'edu:page_views' 'contact' %}">Aloqa sahifasiga o'tish</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer-section-banner">
+        <div class="container">
+            <div class="row free-trial-footer-banner">
+                <div class="col-md-8">
+                    <h5 class="free-trial-footer-banner-title">Bepul sinov kurslarini boshlash uchun hoziroq ro'yhatdan o'ting</h5>
+                    <p class="free-trial-footer-banner-text">Chegirmalar vaqti chegaralangan. Dasturlashni o'rganmoqchimisiz? Unda hoziroq ro'yhatdan o'ting. </p>
+                </div>
+
+                <div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <div class="mb-auto">
+                        <a class="sign-btn" href="{% url 'edu:page_views' 'signup' %}">Ro'yhatdan o'tish</a>
+                        <a class="log-btn" href="{% url 'edu:page_views' 'signin' %}">Kirish</a>
+                    </div>
+                    <div class="mt-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   {% endblock %}

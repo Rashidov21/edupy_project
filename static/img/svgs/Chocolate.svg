@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="43" viewBox="0 0 31 43">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="_Chocolate" data-name=" Chocolate" class="cls-1" d="M908,3377H883a3,3,0,0,0-3,3v37a3,3,0,0,0,3,3h25a3,3,0,0,0,3-3v-37A3,3,0,0,0,908,3377Zm-4,20v-7h4v7h-4Zm-3,0h-4v-7h4v7Zm-7,0h-4v-7h4v7Zm-7,0h-4v-7h4v7Zm-4,3h4v7h-4v-7Zm7,0h4v7h-4v-7Zm7,7v-7h4v7h-4Zm7-7h4v7h-4v-7Zm-14,10h4v7h-4v-7Zm7,0h4v7h-4v-7Zm11-30v7h-4v-7h4Zm-7,0v7h-4v-7h4Zm-7,0v7h-4v-7h4Zm-7,0v7h-4v-7h4Zm-4,30h4v7h-4v-7Zm21,7v-7h4v7h-4Z" transform="translate(-880 -3377)"/>
+</svg>

@@ -1,0 +1,139 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 18/07/2018 08:23
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-001-bug-1:before { content: "\f100"; }
+.flaticon-002-error-404:before { content: "\f101"; }
+.flaticon-003-bandwidth:before { content: "\f102"; }
+.flaticon-004-servers-10:before { content: "\f103"; }
+.flaticon-005-servers-9:before { content: "\f104"; }
+.flaticon-006-cloud:before { content: "\f105"; }
+.flaticon-007-download:before { content: "\f106"; }
+.flaticon-008-upload:before { content: "\f107"; }
+.flaticon-009-devices:before { content: "\f108"; }
+.flaticon-010-server-6:before { content: "\f109"; }
+.flaticon-011-globe-2:before { content: "\f10a"; }
+.flaticon-012-protection:before { content: "\f10b"; }
+.flaticon-013-database-4:before { content: "\f10c"; }
+.flaticon-014-calendar:before { content: "\f10d"; }
+.flaticon-015-shield:before { content: "\f10e"; }
+.flaticon-016-database-3:before { content: "\f10f"; }
+.flaticon-017-servers-8:before { content: "\f110"; }
+.flaticon-018-increase:before { content: "\f111"; }
+.flaticon-019-uptime:before { content: "\f112"; }
+.flaticon-020-bug:before { content: "\f113"; }
+.flaticon-021-browser:before { content: "\f114"; }
+.flaticon-022-server-5:before { content: "\f115"; }
+.flaticon-023-database-2:before { content: "\f116"; }
+.flaticon-024-lifesaver-1:before { content: "\f117"; }
+.flaticon-025-server-4:before { content: "\f118"; }
+.flaticon-026-web:before { content: "\f119"; }
+.flaticon-027-database-1:before { content: "\f11a"; }
+.flaticon-028-servers-7:before { content: "\f11b"; }
+.flaticon-029-https:before { content: "\f11c"; }
+.flaticon-030-ssl-certificate:before { content: "\f11d"; }
+.flaticon-031-servers-6:before { content: "\f11e"; }
+.flaticon-032-server-3:before { content: "\f11f"; }
+.flaticon-033-lifesaver:before { content: "\f120"; }
+.flaticon-034-server-2:before { content: "\f121"; }
+.flaticon-035-tech-support:before { content: "\f122"; }
+.flaticon-036-globe-1:before { content: "\f123"; }
+.flaticon-037-database:before { content: "\f124"; }
+.flaticon-038-server-1:before { content: "\f125"; }
+.flaticon-039-servers-5:before { content: "\f126"; }
+.flaticon-040-server:before { content: "\f127"; }
+.flaticon-041-computer:before { content: "\f128"; }
+.flaticon-042-servers-4:before { content: "\f129"; }
+.flaticon-043-servers-3:before { content: "\f12a"; }
+.flaticon-044-globe:before { content: "\f12b"; }
+.flaticon-045-hosting-1:before { content: "\f12c"; }
+.flaticon-046-help:before { content: "\f12d"; }
+.flaticon-047-servers-2:before { content: "\f12e"; }
+.flaticon-048-hosting:before { content: "\f12f"; }
+.flaticon-049-servers-1:before { content: "\f130"; }
+.flaticon-050-servers:before { content: "\f131"; }
+    
+    $font-Flaticon-001-bug-1: "\f100";
+    $font-Flaticon-002-error-404: "\f101";
+    $font-Flaticon-003-bandwidth: "\f102";
+    $font-Flaticon-004-servers-10: "\f103";
+    $font-Flaticon-005-servers-9: "\f104";
+    $font-Flaticon-006-cloud: "\f105";
+    $font-Flaticon-007-download: "\f106";
+    $font-Flaticon-008-upload: "\f107";
+    $font-Flaticon-009-devices: "\f108";
+    $font-Flaticon-010-server-6: "\f109";
+    $font-Flaticon-011-globe-2: "\f10a";
+    $font-Flaticon-012-protection: "\f10b";
+    $font-Flaticon-013-database-4: "\f10c";
+    $font-Flaticon-014-calendar: "\f10d";
+    $font-Flaticon-015-shield: "\f10e";
+    $font-Flaticon-016-database-3: "\f10f";
+    $font-Flaticon-017-servers-8: "\f110";
+    $font-Flaticon-018-increase: "\f111";
+    $font-Flaticon-019-uptime: "\f112";
+    $font-Flaticon-020-bug: "\f113";
+    $font-Flaticon-021-browser: "\f114";
+    $font-Flaticon-022-server-5: "\f115";
+    $font-Flaticon-023-database-2: "\f116";
+    $font-Flaticon-024-lifesaver-1: "\f117";
+    $font-Flaticon-025-server-4: "\f118";
+    $font-Flaticon-026-web: "\f119";
+    $font-Flaticon-027-database-1: "\f11a";
+    $font-Flaticon-028-servers-7: "\f11b";
+    $font-Flaticon-029-https: "\f11c";
+    $font-Flaticon-030-ssl-certificate: "\f11d";
+    $font-Flaticon-031-servers-6: "\f11e";
+    $font-Flaticon-032-server-3: "\f11f";
+    $font-Flaticon-033-lifesaver: "\f120";
+    $font-Flaticon-034-server-2: "\f121";
+    $font-Flaticon-035-tech-support: "\f122";
+    $font-Flaticon-036-globe-1: "\f123";
+    $font-Flaticon-037-database: "\f124";
+    $font-Flaticon-038-server-1: "\f125";
+    $font-Flaticon-039-servers-5: "\f126";
+    $font-Flaticon-040-server: "\f127";
+    $font-Flaticon-041-computer: "\f128";
+    $font-Flaticon-042-servers-4: "\f129";
+    $font-Flaticon-043-servers-3: "\f12a";
+    $font-Flaticon-044-globe: "\f12b";
+    $font-Flaticon-045-hosting-1: "\f12c";
+    $font-Flaticon-046-help: "\f12d";
+    $font-Flaticon-047-servers-2: "\f12e";
+    $font-Flaticon-048-hosting: "\f12f";
+    $font-Flaticon-049-servers-1: "\f130";
+    $font-Flaticon-050-servers: "\f131";

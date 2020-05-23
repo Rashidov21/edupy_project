@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bredh flat responsive HTML & WHMCS hosting and domains template">
+    <meta name="author" content="coodiv.net (nedjai mohamed)">
+    <link rel="icon" href="favicon.ico">
+    <title>bredh | 404 error page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- main css file -->
+    <link href="css/main.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- start body -->
+
+    <!-- start modal video -->
+    <div class="modal fade" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="videomodal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" id="video"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal video -->
+
+    <div class="preloader">
+        <!-- start preloader -->
+        <div class="preloader-container">
+            <svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                <circle fill="#675cda" stroke="none" cx="6" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1" />
+                </circle>
+                <circle fill="#675cda" stroke="none" cx="30" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2" />
+                </circle>
+                <circle fill="#675cda" stroke="none" cx="54" cy="50" r="6">
+                    <animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3" />
+                </circle>
+            </svg>
+            <span>loading</span>
+        </div>
+    </div>
+    <!-- end preloader -->
+
+    <div id="coodiv-header" class="subpages-header-min">
+        <div class="bg_overlay_header">
+            <img src="img/header/h_bg_01.svg" alt="img-bg">
+        </div>
+        <!-- Fixed navbar -->
+        <nav id="coodiv-navbar-header" class="navbar navbar-expand-md fixed-header-layout">
+            <div class="container main-header-coodiv-s">
+                <a class="navbar-brand" href="index.html"><img src="img/header/logo.png" alt="" /></a>
+                <button class="navbar-toggle offcanvas-toggle menu-btn-span-bar ml-auto" data-toggle="offcanvas" data-target="#offcanvas-menu-home">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-offcanvas" id="offcanvas-menu-home">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" id="header-first-drop-down" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home<span class="sr-only">(current)</span></a>
+                            <ul class="dropdown-menu coodiv-dropdown-header" aria-labelledby="header-first-drop-down">
+                                <li><a class="dropdown-item" href="index.html">homepage 01</a></li>
+                                <li><a class="dropdown-item" href="../HTML_02/index.html">homepage 02<span class="nav-new-tag">new</span></a></li>
+								<li><a class="dropdown-item" href="../HTML_02/index-video.html">homepage 03<span class="nav-soon-tag">new</span></a></li>
+                                <li><a class="dropdown-item" href="https://coodiv.net/whmcs/index.php?systpl=bredh-standard-moon">WHMCS version</a></li>
+                            </ul>
+                        </li>
+
+                       <li class="nav-item megamenu dropdown">
+                            <a class="nav-link" href="#" role="button" id="services-megamenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services <span class="megamenu-toggle"></span></a>
+                            <div class="dropdown-menu coodiv-dropdown-megamnu default-megamenu" aria-labelledby="services-megamenu">
+							<div class="d-flex justify-content-center bd-highlight mb-3 megamenu-items-header">
+ 							<div class="p-2 bd-highlight">
+							<a href="hosting.html">
+							<i class="bredhicon-sun"></i>
+							<h5>web hosting</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium.</p>
+							</a>
+							</div>
+							
+							<div class="p-2 bd-highlight">
+							<a href="ssl.html">
+							<i class="bredhicon-award-empty"></i>
+							<h5>SSL Certificate</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium.</p>
+							</a>
+							</div>
+							
+							<div class="p-2 bd-highlight">
+							<a href="games.html">
+							<i class="bredhicon-steering-wheel"></i>
+							<h5>gaming servers</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium.</p>
+							</a>
+							</div>
+							
+							<div class="p-2 bd-highlight">
+							<a href="voice.html">
+							<i class="bredhicon-headphones"></i>
+							<h5>voice servers</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium.</p>
+							</a>
+							</div>
+							
+  							</div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="status.html">Status</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" role="button" id="webhosting-megamenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Hosting <span class="nav-new-tag">New</span></a>
+                            <div class="dropdown-menu coodiv-dropdown-header web-menu" aria-labelledby="webhosting-megamenu">
+                            <ul class="web-hosting-menu-header">
+							<li><i class="fas fa-server"></i> <a href="hosting.html">shared hosting <span>Lorem ipsum dolor sit amet, consectetur adipisicing</span></a></li>
+							<li><i class="fab fa-squarespace"></i> <a href="dedicated.html">dedicated hosting <span>Lorem ipsum dolor sit amet, consectetur adipisicing</span></a></li>
+							<li><i class="fas fa-gamepad"></i> <a href="games.html">games servers <span>Lorem ipsum dolor sit amet, consectetur adipisicing</span></a></li>
+							<li><i class="fas fa-cloud"></i> <a href="servers.html">cloud servers <span>Lorem ipsum dolor sit amet, consectetur adipisicing</span></a></li>
+							<li><i class="fab fa-cpanel"></i> <a href="cpanel.html">cPanel Resellers <span>Lorem ipsum dolor sit amet, consectetur adipisicing</span></a></li>
+							</ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" id="header-help-drop-down" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help<span class="sr-only">(current)</span></a>
+                            <ul class="dropdown-menu coodiv-dropdown-header" aria-labelledby="header-help-drop-down">
+                                <li><a class="dropdown-item" href="help-center.html">help center</a></li>
+                                <li><a class="dropdown-item" href="knowledgebase.html">knowledgebase</a></li>
+                                <li><a class="dropdown-item" href="Privacy.html">privacy</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" id="header-pages-drop-down" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages<span class="sr-only">(current)</span></a>
+                            <ul class="dropdown-menu coodiv-dropdown-header" aria-labelledby="header-pages-drop-down">
+                                <li><a class="dropdown-item" href="404.html">404</a></li>
+                                <li><a class="dropdown-item" href="about.html">about us</a></li>
+                                <li><a class="dropdown-item" href="dedicated.html">dedicated hosting</a></li>
+                                <li><a class="dropdown-item" href="cloud-vps.html">cloud vps</a></li>
+								<li><a class="dropdown-item" href="games.html">gaming servers</a></li>
+								<li><a class="dropdown-item" href="ssl.html">SSL Certificate</a></li>
+								<li><a class="dropdown-item" href="status.html">services status</a></li>
+								<li><a class="dropdown-item" href="voice.html">TeamSpeak Servers</a></li>
+                                <li><a class="dropdown-item" href="servers.html">cloud servers</a></li>
+                                <li><a class="dropdown-item" href="contact.html">contact us</a></li>
+                                <li><a class="dropdown-item" href="domains.html">domains</a></li>
+                                <li><a class="dropdown-item" href="help-center.html">help center</a></li>
+                                <li><a class="dropdown-item" href="knowledgebase.html">knowledgebase</a></li>
+                                <li><a class="dropdown-item" href="privacy.html">Privacy</a></li>
+                                <li><a class="dropdown-item" href="hosting.html">web hosting</a></li>
+                                <li><a class="dropdown-item" href="wordpress.html">WordPress-hosting</a></li>
+                                <li><a class="dropdown-item" href="signin.html">signin</a></li>
+                                <li><a class="dropdown-item" href="signup.html">signup</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="header-user-info-coodiv">
+                    <li class="dropdown"><a role="button" id="header-login-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">sign in</a> <span>12365-8448</span>
+                        <!-- user header dropdown -->
+                        <div class="dropdown-menu coodiv-dropdown-header user-login-dropdown" aria-labelledby="header-login-dropdown">
+                            <form class="user-login-dropdown-form" action="signin.html" data-form="validate">
+                                <div class="form-group username">
+                                    <input type="email" name="username" placeholder="Your Email" class="form-control">
+                                    <i class="fas fa-at"></i>
+                                </div>
+
+                                <div class="form-group password">
+                                    <input type="password" name="password" placeholder="Password" class="form-control">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+
+                                <button data-toggle="tooltip" data-placement="left" title="login" class="user-login-dropdown-form-button" type="submit"><i class="fas fa-angle-right"></i></button>
+
+                            </form>
+                        </div>
+                        <!-- end user header dropdown -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <section class="padding-100-0 position-relative">
+        <div class="container">
+            <div class="page-404-styles text-center">
+                <img src="img/header/404.png" alt="">
+                <h6 class="megssage-error">Ooops! sorry this page does not found <small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetue</small></h6>
+                <a class="btn-order-default-nuhost" href="index.html">GO HOME NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section-banner">
+        <div class="container">
+            <div class="row free-trial-footer-banner">
+                <div class="col-md-8">
+                    <h5 class="free-trial-footer-banner-title">join now and have free month of deluxe hosting</h5>
+                    <p class="free-trial-footer-banner-text">We offers a free month of service for new customers.* Sign up for your trial offer and instantly have deluxe hosting in your account with free domain included.</p>
+                </div>
+
+                <div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <div class="mb-auto">
+                        <a class="sign-btn" href="signup.html">sign up</a>
+                        <a class="log-btn" href="signin.html">log in</a>
+                    </div>
+                    <div class="mt-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 quiq-links-footer">
+                    <h5 class="quiq-links-footer-title">Quick Links</h5>
+                    <div class="row">
+                        <ul class="col-md-6 quiq-links-footer-ul">
+                            <li><a href="#">our company announcements</a></li>
+                            <li><a href="#">Knowledgebase</a></li>
+                            <li><a href="#">Downloads</a></li>
+                            <li><a href="#">Network Status</a></li>
+                            <li><a href="#">My Support Tickets</a></li>
+                            <li><a href="#">Register a New Domain</a></li>
+                            <li><a href="#">Transfer New Domain</a></li>
+                            <li><a href="#">Software Products</a></li>
+                            <li><a href="#">Dedicated Hosting</a></li>
+                        </ul>
+
+                        <ul class="col-md-6 quiq-links-footer-ul">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Network Status</a></li>
+                            <li><a href="#">Forgot Password?</a></li>
+                            <li><a href="#">Create an account with us</a></li>
+                            <li><a href="#">Login to your account</a></li>
+                            <li><a href="#">make a new payment</a></li>
+                            <li><a href="#">Review & Checkout</a></li>
+                            <li><a href="#">client area</a></li>
+                            <li><a href="#">manage your account</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h5 class="quiq-links-footer-title">secure and contact</h5>
+                    <p class="secure-img-footer-area">
+                        <img src="img/footer/secure.png" alt="" />
+                        <span>this is for demo reason only</span>
+                    </p>
+
+                    <div class="footer-contact-method">
+                        <a href="#">
+                            <span>email us :</span>
+                            <b>support@coodiv.net</b>
+                            <i class="fas fa-at"></i>
+                        </a>
+
+                        <a href="#">
+                            <span>call us :</span>
+                            <b>00123 45 67 89 91</b>
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mr-tp-40 row justify-content-between footer-area-under">
+                <div class="col-md-4">
+                    <a href="#"><img class="footer-logo-blue" src="img/header/logo-w-f.png" alt="" /></a>
+                    <div class="footer-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 row">
+                    <ul class="col-md-6 under-footer-ullist">
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                    </ul>
+                    <ul class="col-md-6 under-footer-ullist text-right">
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">terms of sevice</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-between final-footer-area mr-tp-40">
+                <div class="final-footer-area-text">
+                    © Copyright 2019 coodiv , made with love in ageria
+                </div>
+
+                <div class="footer-lang-changer">
+                    <div class="lang-changer-drop-up">
+                        <a class="menu-btn-changer" role="button" id="dropupmenulagchanger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fas fa-globe-asia"></i> english</a>
+                        <div class="dropdown-menu dropupmenulagchanger" aria-labelledby="dropupmenulagchanger">
+                            <a class="dropdown-item" href="#">english</a>
+                            <a class="dropdown-item" href="#">العربية</a>
+                            <a class="dropdown-item" href="#">Español</a>
+                            <a class="dropdown-item" href="#">Nederlands</a>
+                            <a class="dropdown-item" href="#">Français</a>
+                            <a class="dropdown-item" href="#">Dansk</a>
+                            <a class="dropdown-item" href="#">Português</a>
+                            <a class="dropdown-item" href="#">Deutsch</a>
+                        </div>
+                    </div>
+
+                    <div class="lang-changer-drop-up">
+                        <a class="menu-btn-changer" href="#"><img src="img/flags/usa.svg" alt="" /> united states</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- template JavaScript -->
+    <script src="js/template-scripts.js"></script>
+    <!-- flickity JavaScript -->
+    <script src="js/flickity.pkgd.min.js"></script>
+    <!-- carousel JavaScript -->
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <!-- parallax JavaScript -->
+    <script src="js/parallax.min.js"></script>
+    <!-- mailchamp JavaScript -->
+    <script src="js/mailchamp.js"></script>
+    <!-- bootstrap offcanvas -->
+    <script src="js/bootstrap.offcanvas.min.js"></script>
+    <!-- touchSwipe JavaScript -->
+    <script src="js/jquery.touchSwipe.min.js"></script>
+</body>
+
+</html>

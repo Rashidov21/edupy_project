@@ -1,0 +1,224 @@
+{% extends 'base-wrap.html' %}
+{% load static %}
+{% block content %}
+<!-- <div class="mt-auto header-top-height"></div> -->
+<!--         <main class="container mb-auto">
+            <h3 class="mt-3 main-header-text-title"><span> <b>eduPy</b> Dasturlash bo'yicha onlayn o'quv markaz</span>Mening profilim
+              <p class="sub-page-breadcrumb"><a href="#">Bosh sahifa</a> - Kurslar</p>
+            </h3>
+
+        </main>
+        <div class="mt-auto"></div> -->
+<style>
+    #student-profile{
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom:100px;
+
+    }
+    .student-info{
+        list-style-type: square;
+
+    }
+    .info-box{
+      margin-top: 10px;
+      max-width: 100%;
+      opacity: 1;
+      border-radius: 5px;
+      padding: 10px;
+    }
+.info-box .progress {
+    background: rgba(0, 0, 0, .2);
+    margin: 5px -10px 5px 0;
+    height: 2px;
+}
+.info-box .progress, .info-box .progress .progress-bar {
+    border-radius: 0;
+}
+.info-box .progress .progress-bar {
+    background: #fff;
+}
+.info-box-icon {
+    float: left;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 74px;
+    background: rgba(0, 0, 0, .2);
+}
+.info-box-icon.push-bottom {
+    margin-top: 20px;
+}
+.info-box-icon>img {
+    max-width: 100%
+    color:#fff;
+  }
+.info-box-content {
+    padding: 10px 10px 10px 0;
+    margin-left: 90px;
+}
+.info-box-number {
+    font-weight: 300;
+    font-size: 21px;
+}
+.info-box-text, .progress-description {
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-weight: 300;
+}
+.progress-description {
+    margin: 5px;
+}
+.img-responsive{
+  max-width: 150px;
+  max-height: 150px;
+  margin-bottom: 25px;
+}
+.box-title{
+  color: #171F32;
+}
+.like-list>li{
+  display: inline-block;
+}
+.padding-50-0{
+  background-image: url(/static/svg/snake.svg);  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+</style>
+<section id="student-profile">
+  <div class="container h-100">
+      <div class="row justify-content-start futures-version-2">
+       
+
+    <section class="padding-50-0" style=";">
+  <div class="container">
+  
+    <div class="time-line-status">
+        <div class="box text-center">
+             <div class="box-header with-border" >
+              <p><img src="/static/course-img/positive.svg" width="50" height="50" alt=""></p>
+              <h3 class="box-title mb-5 mt-3">2-dars (Asosiy bilimlar va Sintaksis)</h3>
+            </div>
+          </div>
+    <div class="tt-time-status">
+        <div class="row justify-content-center">
+        
+            <div class="col-md-2">
+                <span class="title-status">Sintaksis</span>
+            </div>
+            <div class="col-md-10">
+                <h5 class="title-status-h5">Pythonning sintaksisi </h5>
+                <p class="title-status-p">  </p>
+            </div>
+            <div class="status-div-optionel chck">
+                <p><b>Tabulyatsiya va bo'sh joy </b> Python tili sintaksisi o`zi kabi sodda
+                  <ul class="list-unstyled mt-2">
+                    <li>- Satr oxiri instruksiyaning oxiri hisoblanadi (nuqta vergul shart emas)</li> 
+                  <li>- Har bir qator boshidagi bo`sh joy(отступ) muhim ahamiyatga ega.</li> 
+                  </ul>
+                   Kiritilgan 
+                  amallar bo`sh joylarning kattaligiga qarab bloklarga birlashadi. Bo`sh joy 
+                  istalgancha bo`lishi mumkin asosiysi bitta kiritilgan blok chegarasida bo`sh joy bir 
+                  xil bo`lishi kerak. Noto`g`ri qo`yilgan bo`sh joylar xatolik yuz berishiga olib kelishi 
+                  mumkin. Bitta probel bilan bo`sh joy hosil qilish yaxshi qaror emas uni o`rniga 
+                  to`rtta <b class="text-uppercase">probel</b>  yoki <b class="text-uppercase">Tab </b> belgisini ishlatish kerak. </p>
+            </div>
+            <div class="status-div-optionel chck">
+                <p><b>IDLE 'tili' </b> Pythonnning shaxsiy IDLE sida dastur yozadigan bo'lsak har bir "atoqli otlar" har hil ranglarda aks etishini ko'ramiz , bu bizga kod yozishda juda katta yordam beradi. Funksiyalar alohida , metodlar, klasslarni ajralib turishi muhim narsa hisoblanadi. Shuningdek ushbu qulayliklarni Visual Studio Code va shunga o'xshash kod muharrirlari ham beradi. </p>
+            </div>
+            <div class="status-div-optionel non">
+                <p><b> Kommentariy.</b> Kommentariy # simvolidan keyin yoziladi va dastur kodini 
+                  o'qiyotgan dasturchi uchun eslatma bo'lib xizmat qiladi. Misol uchun: <br>
+                   <p>print('salom dunyo!') # print — bu funksiya <br>
+                  yoki: <br>
+                  # print — bu funksiya <br>
+                  print('salom dunyo! ')</p>
+                  Komentariy dastur kodini o'qiyotganlar uchun foydali bo'ladi va dastur nima 
+                  qilishini oson tushunishga yordam beradi. Unga yechimdagi muhim joylarni, muhim 
+                  bo'lgan qismlarni yozish mumkin.
+                  <p>Komentariylardan foydalaning. Bu yozilmagan qonun desak ham bo'ladi. Har qanday o'zini va boshqa dasturchilarni hurmat qiladigan dasturchi kodida komentariy(sharxlardan) foydalanadi. Sharxlarni ishlatishda e'tibor bering: <br>
+                  <ul class="list-unstyled mt-2">
+                      <li>- Aniq va lo'nda gaplardan foydalaning</li> 
+                      <li>- Uzundan uzoq bo'lishi mumkin emas</li> 
+                      <li>- Yaxshi komentariy dastur kabi muhim sanaladi</li> 
+                      
+                  </ul>
+                  </p></p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="tt-time-status">
+        <div class="row justify-content-center">
+            <div class="col-md-2">
+                <span class="title-status">Asosiy</span>
+            </div>
+            <div class="col-md-10">
+                <h5 class="title-status-h5">O'zgaruvchilar,Qavslar, Apostrof, Qator, Konstanta, ma'lumot kiritish aks ettirish </h5>
+                <p class="title-status-p"></p>
+            </div>
+            
+            <div class="status-div-optionel chck">
+                <p><b>Konstanta</b> Konstanta deb har qanday holatda ham bir hil qiymatda turuvchi ma'lumotlarga aytamiz. Masalan 2 raqami 2 dan boshqa narsani bizga anglatmaydi. Yoki "Bu qator" qatori qatordan boshqa narsa emas. Chunki ular tom ma'noda o'z qiymatlaridadir. Bular biz uchun Literal konstanta dir.</p>
+            </div>
+             <div class="status-div-optionel chck">
+                <p><b>O'zgaruvchi</b>Biror ma'lumotni saqlash va uning ustida turli amallarni bajarish uchun bizga 
+                <b>o'zgaruvchilar</b> yordam beradi. O'zgaruvchining qiymati, o'z nomi bilan aytib 
+                turibdiki, o'zgarishi mumkin. Unda xohlagan qiymatni saqlash mumkin.
+                O'zgaruvchilar kompyuter xotirasidagi joy bo'lib, u yerda siz biror ma'lumotni 
+                saqlaysiz. O'zgaruvchining konstantadan farqi, o'zgaruvchiga dastur ishlashi 
+                davomida (run time) murojaat qilib, uning qiymatini o'zgartira olamiz. Konstantaga 
+                esa oldindan ma'lum bir qiymat beriladi va bu qiymatni o'zgartirib bo'lmaydi. O'zgaruvchilarni nomlashda: <br>
+              <ul class="list-unstyled mt-2">
+                      <li>- O'zgaruvchi nomi faqat  harflardan , raqamlardan va ostki chiziqdan( _ ) tashkil topadi </li> 
+                      <li>- Nom raqamlardan boshlanishi mumkin emas</li> 
+                      <li>- Nom kichik registerdan boshlanadi.Masalan: olmaDaraxti_123</li> 
+                      <li>- Nom to'g'ri ma'noni berishi kerak ya'ni boshqa mavzudagi nom yarashmaydi.</li>
+                      <li>- Tushunarli yozing. olmaDaraxti bilan olma_daraxti o'zgaruvchilarida farq katta olma_daraxti ni o'qish oson. Shaxsan men ostki chiziq ishlataman chunki shu ma'qul. O'zim va boshqalar o'qishi uchun qulay.</li>
+                      <li>- Raqam ishlatmagan ma'qul va iloji boricha ingliz tilida bo'lishi kerak : apple</li>
+                      
+                  </ul>
+                  <b>O'zgaruvchi yaratish</b> <br>
+                  <div class="img mt-3 mb-5 text-center">
+                  <img src="/static/course-img/var.png" class="w-75 h-75"  alt="">
+                </div>
+                </p>
+            </div>
+             <div class="status-div-optionel chck">
+                <p><b>Windows</b> operatsion tizimiga o'rnatish uchun <a href="www.python.org/downloads">www.python.org/downloads</a>
+                web sahifasiga o'tamiz va u yerdan oxirgi python versiyasini yuklab olamiz. 
+                Pythonni o'rnatish odatiy dasturlarni o'rnatish kabi kechadi. Hech qanday qiyin joyi 
+                yo'q.</p>
+                <div class="img mt-3 mb-5 text-center">
+                  <img src="/static/course-img/setup1.png" class="w-50 h-50"  alt="">
+                </div>
+                <p>Ko'rib turganingizdek menda avvaldan Python o'rnatilgan. Dasturni o'rnatish oynasi barcha dasturlardagi kabi oddiy , birgina e'tibor qilish kerak holat bu <br> <b>Add to PATH</b>  qatorini belgilash esdan chiqmasligi kerak. Aks holatda Python noto'g'ri o'rnaydi! </p>
+            </div>
+             <div class="status-div-optionel chck">
+                <p><b>Barchasi tayyor!</b>Endi sizning sistemangizda Python bor. Windows da buni tekshirish uchun Console ni ochib unga <b>python</b> deb yozish kifoya .</p>
+                <div class="img mt-3 mb-5 text-center">
+                  <img src="/static/course-img/cmd.png" class="w-50 h-50"  alt="">
+                </div>
+                <p>2+2 deb yozib ENTER ni bosishingiz bilan python 4 ni Console ga qaytaradi.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+  </div>
+  </section>
+   </div>      
+ </div>
+</section>
+
+  
+  {% endblock %}

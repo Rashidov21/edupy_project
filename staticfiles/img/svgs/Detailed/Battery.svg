@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="151px" height="149px" viewBox="0 0 151 149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Battery</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Battery" transform="translate(2.000000, 2.000000)">
+            <g id="Group" transform="translate(0.000000, 144.000000)" stroke="#91C2FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                <path d="M1.4,0.7 L0.4,0.7" id="Shape"></path>
+                <path d="M114.3,0.7 L7.3,0.7" id="Shape"></path>
+                <path d="M141.3,0.7 L119,0.7" id="Shape"></path>
+                <path d="M147.3,0.7 L145.7,0.7" id="Shape"></path>
+            </g>
+            <g id="Group" transform="translate(40.000000, 20.000000)">
+                <path d="M50.1,15.7 C53.8,15.7 57.1,15.6 60.3,15.7 C64.1,15.8 65.5,17.2 65.5,20.9 C65.5,53.8 65.5,86.7 65.5,119.6 C65.5,123.2 63.9,124.8 60.2,124.8 C41.9,124.8 23.6,124.8 5.3,124.8 C1.5,124.8 -9.09494702e-13,123.2 -9.09494702e-13,119.3 C-9.09494702e-13,86.5 -9.09494702e-13,53.7 -9.09494702e-13,21 C-9.09494702e-13,17.3 1.4,15.9 5.2,15.8 C8.5,15.7 11.7,15.8 15.2,15.8 C15.2,12.3 15.2,9.1 15.2,6 C15.3,2.2 16.8,0.5 20.6,0.5 C28.6,0.4 36.7,0.4 44.7,0.5 C48.3,0.5 49.8,2.1 49.9,5.8 C50.2,8.8 50.1,12 50.1,15.7 Z M41.2,9.2 C35.5,9.2 30,9.2 24.3,9.2 C24.3,10.8 24.3,12.2 24.3,13.8 C30,13.8 35.5,13.8 41.2,13.8 C41.2,12.2 41.2,10.8 41.2,9.2 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M65.6,25 C65.6,21.2 64.2,19.9 60.4,19.8 C57.1,19.7 53.9,19.8 50.2,19.8 C50.2,16.1 50.3,14 50.2,10.8 C50.1,7.1 48.6,5.5 44.9,5.5 C36.9,5.4 30.7,5.4 22.7,5.5 C18.9,5.5 18.6,7.2 18.6,11 C18.5,14.2 18.6,16.3 18.6,19.8 C15.1,19.8 12.5,19.7 9.2,19.8 C5.4,19.9 4,21.3 4,25 C4,51.9 4,76.8 4,104.6 C4,109.4 4,114.2 4,119.1 C4,123 5.4,124.6 9.3,124.6 C27.6,124.7 42.1,124.7 60.4,124.6 C64.1,124.6 65.7,123 65.7,119.4 C65.7,108.7 65.7,98.4 65.7,88.2 C65.6,66.8 65.6,46.6 65.6,25 Z M24.3,9.2 L41.2,9.2 L41.2,13.8 L24.3,13.8 L24.3,9.2 Z" id="Shape" fill="#BAD8FF" fill-rule="nonzero"></path>
+                <path d="M65.6,25 C65.6,21.2 64.2,19.9 60.4,19.8 C57.1,19.7 53.9,19.8 50.2,19.8 C50.2,16.1 50.3,14 50.2,10.8 C50.1,7.1 48.6,5.5 44.9,5.5 C36.9,5.4 30.7,5.4 22.7,5.5 C18.9,5.5 18.6,7.2 18.6,11 C18.5,14.2 18.6,16.3 18.6,19.8 C15.1,19.8 12.5,19.7 9.2,19.8 C5.4,19.9 4,21.3 4,25 C4,51.9 4,76.8 4,104.6 C4,108.5 5.4,110.1 9.3,110.1 C27.6,110.2 42.1,110.2 60.4,110.1 C64.1,110.1 65.7,108.5 65.7,104.9 C65.7,99.2 65.7,93.7 65.7,88.3 C65.6,66.8 65.6,46.6 65.6,25 Z M41.2,13.8 L24.3,13.8 L24.3,9.2 L41.2,9.2 L41.2,13.8 Z" id="Shape" fill="#DDECFE" fill-rule="nonzero"></path>
+                <path d="M50.1,15.7 C53.8,15.7 57.1,15.6 60.3,15.7 C64.1,15.8 65.5,17.2 65.5,20.9 C65.5,53.8 65.5,86.7 65.5,119.6 C65.5,123.2 63.9,124.8 60.2,124.8 C41.9,124.8 23.6,124.8 5.3,124.8 C1.5,124.8 -9.09494702e-13,123.2 -9.09494702e-13,119.3 C-9.09494702e-13,86.5 -9.09494702e-13,53.7 -9.09494702e-13,21 C-9.09494702e-13,17.3 1.4,15.9 5.2,15.8 C8.5,15.7 11.7,15.8 15.2,15.8 C15.2,12.3 15.2,9.1 15.2,6 C15.3,2.2 16.8,0.5 20.6,0.5 C28.6,0.4 36.7,0.4 44.7,0.5 C48.3,0.5 49.8,2.1 49.9,5.8 C50.2,8.8 50.1,12 50.1,15.7 Z M41.2,9.2 C35.5,9.2 30,9.2 24.3,9.2 C24.3,10.8 24.3,12.2 24.3,13.8 C30,13.8 35.5,13.8 41.2,13.8 C41.2,12.2 41.2,10.8 41.2,9.2 Z" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M27.3,97 L52.1,62.9 C52.9,61.9 52.1,60.4 50.8,60.4 L37.9,60.6 L41.3,38.8 C41.5,37.2 39.5,36.4 38.6,37.7 L13.8,71.8 C13.1,72.8 13.8,74.3 15.1,74.3 L27.8,74.2 L24.7,95.9 C24.4,97.4 26.4,98.3 27.3,97 Z" id="Shape" stroke="#7DB7FF" fill="#7DB7FF" fill-rule="nonzero"></path>
+                <path d="M25,56.4 L24.7,56.8" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M37.4,63.9 L41.3,38.8 C41.5,37.2 39.5,36.4 38.6,37.7 L31,48.1" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M20.4,62.8 L13.8,71.9 C13.1,72.9 13.8,74.4 15.1,74.4 L27.8,74.3 L24.7,96 C24.5,97.6 26.5,98.4 27.4,97.1 L52.2,63 C53,62 52.2,60.5 50.9,60.5 L44.3,60.6" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <rect id="Rectangle-path" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" x="72" y="0.1" width="1" height="11.7"></rect>
+            <polygon id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="77.9 5.9 77.9 5.9 66.2 5.9 66.2 5.9"></polygon>
+            <g id="Group" transform="translate(97.000000, 6.000000)" stroke="#91C2FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                <path d="M0,0 L0.5,0" id="Shape"></path>
+                <path d="M7.4,0 L14.7,0 C18.5,0 21.7,3.1 21.7,7 L21.7,87.3" id="Shape" stroke-dasharray="0.9801,6.8605"></path>
+                <path d="M21.6,90.7 L21.6,91.2" id="Shape"></path>
+            </g>
+            <circle id="Oval" stroke="#91C2FF" stroke-width="3" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" cx="96.1" cy="6" r="3.2"></circle>
+            <circle id="Oval" stroke="#91C2FF" stroke-width="3" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" cx="118.5" cy="99.4" r="3.2"></circle>
+            <g id="Group" transform="translate(26.000000, 54.000000)" stroke="#91C2FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                <path d="M0.2,0.1 L0.2,0.6" id="Shape"></path>
+                <path d="M0.2,7.5 L0.2,67.1" id="Shape" stroke-dasharray="0.9845,6.8916"></path>
+                <path d="M0.2,70.5 L0.2,71" id="Shape"></path>
+            </g>
+            <circle id="Oval" stroke="#91C2FF" stroke-width="3" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" cx="26" cy="127.3" r="3.2"></circle>
+            <circle id="Oval" stroke="#91C2FF" stroke-width="3" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" cx="26" cy="50.9" r="3.2"></circle>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,474 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+   {% block meta %}
+    <meta name="description" content="|Djangoda birinchi web dastur 2-qism, django xaqida, django,djangoni o'rganish">
+    {% endblock %}
+    {% block title %}
+    <title>eduPy |Djangoda birinchi web dastur 2-qism </title>
+    {% endblock %}
+{% block content %}
+<section id="lesson">
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="text-center">
+	<h3><strong>Djangoda birinchi web dastur 2-qism </strong></h3>
+</div>
+			<p>Ushbu qo'llanma "Django birinchi web dastur" ning ikkinchi qismi, <a href="{% url 'edu:django' number=3 slug='djangoda-birinchi web-dastur'%}">birinchi qismni  ushbu manzilda</a> o'qiysiz. Bu erda biz ma'lumotlar bazasini o'rnatamiz, birinchi modelni yaratamiz va avtomatik ravishda generatsiya qilinadigan Django boshqaruv sayti(admin paneli) bilan tezkor tanishuv o'tqazamiz.</p>
+			<div class="text-center">
+				<h3><strong>Ma'lumotlar bazasini sozlash</strong></h3>
+			</div>
+		<br>
+		<p>Endi ushbu faylni oching mysite/settings.py. Bu Django konfugratsiyalarini (sozlamalarini) ifodalovchi  Python moduli.
+		</p>
+		<p>Konfiguratsiyada oldindan o'rnatilgan sozlamalar bo'yicha loyixamizga SQLite ma'lumotlar bazasi ulangan. Agar ma'lumotlar bazalari bilan ishlashda tajribangiz bo'lmasa yoki faqat Django sinab ko'rishi niyatida bo'lsangiz, SQLite eng yaxshi tanlov. SQLite Python-ga kiritilgan, shuning uchun siz ma'lumotlar bazasini qo'llab-quvvatlash uchun boshqa hech narsa o'rnatishingiz shart emas. Biroq, birinchi haqiqiy loyihani boshlaganingizda, kelajakda ma'lumotlar bazasini almashtirishingiz ,muammolarini bartaraf etish uchun PostgreSQL kabi yanada kuchliroq ma'lumotlar bazasidan foydalanishingiz mumkin.</p>
+
+<p><i class="fa fa-info"></i> SQLite da qolmoqchi bo'lsangiz xech narsani o'zgartirish shart emas<br> Agar siz boshqa ma'lumotlar bazasidan foydalanmoqchi bo'lsangiz, kerakli <a href="https://db-engines.com/en/system/MongoDB%3BMySQL%3BPostgreSQL" target="_blank"> ma'lumotlar bazasini o'rnating</a> va  DATABASES "default" parametridagi quyidagi kalit so'zlarni o'rnatilgan ma'lumotlar bazasiga mos keladiganlariga o'zgartiring: </p>
+
+<ul class="mr-5">
+	<li>ENGINE - 'django.db.backends.sqlite3', 'django.db.backends.postgresql', 'django.db.backends.mysql', yoki 'django.db.backends.oracle'.Boshqa ma'lumotlar bazasi ulanishi xam mumkin.</li>
+	<li>NAME - Ma'lumotlar ombori nomi.Agar siz SQLite dan foydalansangiz, ma'lumotlar bazasi  kompyuteringizda yagona fayl xolatida saqlanadi.</li>
+</ul>
+
+<p>SQLite dan boshqa ma'lumotlar bazasini  ishlatsangiz, foydalanuvchi, parol va xost kabi qo'shimcha sozlamalarni kiritishingiz kerak. Qo'shimcha ma'lumot olish uchun <a href="https://docs.djangoproject.com/en/3.0/ref/databases/" target="_blank">DATABASES uchun django rasmiy hujjatlarini ko'rib</a> chiqing.</p>
+
+<p>mysite/settings.py ni ko'rib chiqish  paytida , TIME_ZONE-ni o'z vaqt zonangizga o'zgartiring Masalan Asia/Tashkent.</p>
+<p>Bundan tashqari, faylning yuqori qismidagi INSTALLED_APPS parametriga e'tibor bering. Django loyihamizning  faollashtirilgan barcha Django ilovalarining (application) nomlari mavjud.Bu ilovalar Djangoning stabil ishlashi uchun kerak</p>
+
+<h5>Odatda, INSTALLED_APPS quyidagi ilovalarni o'z ichiga oladi, ularning barchasi Django bilan birga o'rnatilgan:</h5>
+<ul class="mr-5">
+	<li>django.contrib.admin - saytning admin	 qismi. Tez orada uni ishlatamiz.</li>
+	<li>django.contrib.auth - autentifikatsiya tizimi.</li>
+	<li>django.contrib.contenttypes - ma'lumotlar turlari frameworki.</li>
+	<li>django.contrib.sessions - sessiyalar uchun framework.</li>
+	<li>django.contrib.messages - xabarlar bilan ishlash uchun framework</li>
+	<li>django.contrib.staticfiles - statik fayllar bilan ishlash uchun framework.</li>
+</ul>
+<p>Ushbu ilovalar eng asosiy vazifalarni bajarish va ko'plab qulayliklar yaratish  uchun avvaldan yozib loyixamizga kiritilgan.</p>
+<p>Ushbu ilovalarning ba'zilari  ma'lumotlar bazasining kamida bitta jadvalidan(tablitsa) foydalanadi, shuning uchun biz ularni ishlatishdan oldin ma'lumotlar bazasida jadvallarni yaratishimiz kerak. Buning uchun quyidagi buyruqni bajaring:</p>
+<pre id="console">
+	
+$ python manage.py migrate
+
+</pre>
+<p>Migrate buyrug'i INSTALLED_APPSga kiritilgan ilovalarni ko'rib chiqadi va mysite/settings.py faylimizdagi ma'lumotlar bazasi sozlamalariga(DATABASES) muvofiq, barcha kerakli  jadvallarini ma'lumotlar bazamizda yaratadi.Ilovalar uchun ma'lumotlar bazasi migratsiyalarini  keyinroq batafsil ko'rib chiqamiz. Har bir bajarilgan migratsiya uchun ma'lumotlarni terminalda ko'rishingiz mumkin. Agar Django tomonidan ma'lumotlar bazasida yaratilayotgan jadvallarni ko'rmoqchi bo'lsangiz yuqoridagi buyruqqa quyidagi ishlatayotgan bazangizga mos buyruqni qo'shimcha qilishingiz mumkin \dt (PostgreSQL), Show TABLES; (MariaDB, MySQL), .schema (SQLite) yoki SELECT TABLE_NAME FROM USER_TABLES (Oracle).</p>
+
+<div class="text-center">
+	<h3><strong>Djangoda Modellarni yaratish</strong></h3>
+</div>
+<p>Endi modellarimizni -bir gap bilan aytganda qo'shimcha metadatalar bilan ma'lumotlar bazamiznning tuzilishi aniqlab olsak.</p>
+
+<pre id="console">
+		
+
+	<p>	Model bu ma'lumotlar haqidagi yagona va ishonchli  manbaidir. U ma'lumotlar bazasidagi <br>siz saqlagan ma'lumotlarning asosiy maydonlarini va xatti-harakatlarini o'z ichiga oladi.
+
+	Qisqa qilib tushuntirganda siz modellar yordamida ma'lumotlar bazasidagi <br>jadvallar(tablitsalar) maydonlari qanday tuzilishda bo'lishini tariflaysiz. <br>Migratsiya vaqtida Django  ma'lumotlar bazasida jadvallar va maydonlarni siz yozgan model<br>bo'yicha yaratib beradi.Ma'lumotlarni bazaga yozish,taxrirlash va o'chirish kabi amallar<br>xam modellar orqali amalga oshiriladi
+
+	Django Don’t repeat yourself(DRY)-O'zingizni takrorlamang tamoyilga amal qiladi.<br> Maqsad sizning ma'lumot modelingizni faqat bir joyda aniqlash va undan avtomatik <br>ravishda ma'lumotlarni yechib olishdir.
+	
+
+</pre>
+
+<p>So'rov dasturimizda biz ikkita modelni yaratamiz: Question va Choice. Question savol va sanani saqlash uchun ishlatamiz. Choice ikkita maydonni o'z ichiga oladi: tanlov matni va berilgan ovozlarni hisoblash. Har bir Choice  Question bilan bog'langan.</p>
+<p>Ushbu tushunchalar Python klasslari bilan ifodalanadi. polls/models.py fayliga ushbu kodni kiriting:</p>
+<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>polls/models.py</p></div>
+
+	<pre id="sublime">
+
+<b class="text-danger">from</b> django.db <b class="text-danger">import</b> models
+
+<b class="text-info">class</b> <b class="text-success">Question(models.Model)</b>:
+    question_text = <b class="text-info">models.CharField</b>(max_length=200)
+    pub_date =<b class="text-info"> models.DateTimeField</b>(<b class="text-warning">'date published'</b>)
+
+
+<b class="text-info">class</b> <b class="text-success">Choice(models.Model)</b>:
+    question = <b class="text-info">models.ForeignKey</b>(Question,on_delete=models.CASCADE)
+    headline = <b class="text-info">models.CharField</b>(max_length=200)
+    choice_text = <b class="text-info">models.CharField</b>(max_length=200)
+    votes = <b class="text-info">models.IntegerField</b>(default=0)
+
+	
+	</pre>
+<p>Bu erda har bir modelimiz  django.db.models.Model klassidan vorislik olgan klass xisoblanadi.Har bir model bir nechta o'zgaruvchiga ega, ularning har biri  ma'lumotlar bazasidagi (jadvaldagi) maydonini tuzilishini ifodalaydi.</p>
+
+<p>Har bir maydon (masalan question_text yoki pub_date va x/z) Field klassinig namunasi(ekzemplyar) xisoblanadi.Maydonlar o'zida qanday ma'lumot turi saqlanishi xaqida Djangoga xabar beradi  masalan, belgilar,xarflar uchun CharField , sana va vaqt uchun  DateTimeField kabi.</p>
+<p>Har bir Field namunasining nomi (masalan, question_text yoki pub_date) – Django uchun xam ma'lumotlar bazasi uchun xam qulay formatda. Ushbu namunani siz Python kod sifatida ishlatasiz , ma'lumotlar bazasi esa uni jadvalda(tablitsada) ustun(maydon,stolbets) nomi sifatida ishlatadi.</p>
+
+<p>Ba'zi Field klasslari ko'rsatilishi kerak bo'lgan majburiy argumentlarga ega. Misol uchun, CharField  max_length argumentini berishni talab qiladi. Bu faqat ma'lumotlar bazasi sxemasida emas, balki tekshirishda ham qo'llaniladi.</p>
+<p>Field shuningdek, turli ixtiyoriy argumentlarga ega bo'lishi mumkin.Masalan yuqorida votes uchun default qiymat 0 deb belgiladik.</p>
+<p>Modellar orasidagi aloqa ForeignKey yordamida o'rnatilganligiga e'tibor qarating. Bu Djangoga har bir Choice obyekti bitta Question obyekti bilan bog'liqligi xaqida xabar beradi.Django  ma'lumotlar bazasida jadvallar orasidagi barcha bog'lanish usullarini qo'llab-quvvatlaydi: ko'p obyektga ko'p obyektlarni bog'lash, ko'p-obyektlarni bitta obyektga bog'lash va  bitta obyektga bitta obyektni bog'lash.</p>
+<div class="text-center">
+	<h3><strong>Djangoda modellarni aktivlashtirish</strong></h3>
+</div>
+
+<p>models.py dagi kichik kodimiz Djangoga juda ko'p ma'lumot beradi. Uning yordami bilan Django ushbu amallarni bajaradi</p>
+<ul class="mr-5">
+	<li>Ushbu ilova uchun ma'lumotlar bazasi sxemasini(jadvallarini) (CREATE TABLE operatori) yaratadi.</li>
+	<li> Ma'lumotlar bazasiga, Question va Choice ob'ektlariga, kirish uchun Python  API yaratadi.</li>
+
+</ul>
+<p>Lekin birinchi navbatda loyihamizga polls ilovasi qo'shiganligi haqida xabar berishimiz kerak</p>
+<p>Ilovani loyihamizga qo'shish uchun INSTALLED_APPS sozlamalariga ilovamiz konfiguratsiyalariga havolani(sslkani) ko'rsatib qo'yishimiz kerak.mysite/settings.py faylni tahrirlang  va ilovamiz konfiguratsiyalariga havolani(sslkani) INSTALLED_APPS parametriga qo'shing. Bu shunday ko'rinishda bo'ladi:</p>
+<div class="code_title bg-success" style="margin:0px; bottom:0px;"><p>mysite/settings.py</p></div>
+<pre id="console">
+	
+
+INSTALLED_APPS = [
+    <u>'polls.apps.PollsConfig',</u>
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+
+</pre>
+<p>Endi Django polls ilovasini qanday ulashni biladi. Keling, boshqa buyruqni bajaramiz</p>
+<pre id="console">
+
+$ python manage.py makemigrations polls
+
+</pre>
+<p>Terminalda shunday satrlani ko'rishingiz mumkin</p>
+<pre id="console">
+
+Migrations for 'polls':
+  polls/migrations/0001_initial.py:
+    - Create model Choice
+    - Create model Question
+    - Add field question to choice
+
+</pre>
+<!--  dalshe -->
+<p>Makemigrations- buyrug'ini ishga tushirib biz Djangoga  modellarimizda ba'zi o'zgarishlar kiritganligi (teparoqda yangi modellar yaratdik) va o'zgarishlarni * migratsiya*sifatida saqlashni xoxlashimizni 'aytamiz'.</p>
+<p>Migratsiya-bu Django modellarimizdagi o'zgarishlarni saqlab, kuzatib borishi(mos ravishda ma'lumotlar bazasi sxemasida xam). Agar xohlasangiz, yangi modelingiz uchun amalga oshirilgan migratsiyalni o'qib tanishib chiqishingiz  mumkin.Buning uchun polls/migrations/0001_initial.py faylini ochish kifoya xavotir olmang, Django ularni har safar yaratganida ularni o'qishigiz xaqida 'o`ylamaydi', bu fayllar  migratsiyalarda biror narsani tartibga solish zarurati tug'ulsa dasturchi tomonidan qo'lda o'zgartirilishi uchun mo'ljallangan.</p>
+
+<p>Endi ma'lumotlar bazasida bu jadval modellari yaratish uchun migrate buyrug'ini yana ishga tushiring:</p>
+<pre id="console">
+	
+	$ python manage.py migrate
+
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, polls, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying polls.0001_initial... OK
+
+</pre>
+<p>Migrate buyrug'i qo'llanilmagan barcha migratsiyalarni tanlab oladi(Django ma'lumotlar bazasida django_migrations deb nomlangan  maxsus jadval yordamida qaysi biri qo'llanilgan qaysi biri qo'llanilmaganligini kuzatib boradi) va ularni ma'lumotlar bazasida ishga tushiradi <br>Qisqa qilib tushuntirganda,migrate bu modellaringizdagi o'zgarishlarni ma'lumotlar bazasi sxemasi bilan sinxronizatsiya qilishdir.Makemigrations  esa yuqorida aytilgandek modellarimizda o'zgarish borligi migrate 'qilish kerakligi' xaqida Djangoga xabar beramiz.Django bu o'zgarishlarni saqlab qoladi va migrate qilganizda ushbu o'zgarishlarni ma'lumotlar bazasiga xam kiritib chiqadi</p>
+
+<p>Migratsiya bu juda kuchli va foydali vosita.U loyihani ishlab chiqish mobaynida,modellaringizni o'zgartirishga va ma'lumotlar bazasini yoki jadvallarni yo'qotmasdan real vaqtda  yangilashga ixtisoslashgan. Biz ularni afzalliklarini keyingi qismida batafsilroq ko'rib chiqamiz</p>
+<p>Modelga o'zgartirish kiritish uchun uch bosqichli qo'llanmani eslab qoling</p>
+
+<ul class="mr-5">
+	<li>Modelni o'zgarishi (models.py).</li>
+	<li>Python buyrug'ini ishga tushirish manage.py makemigrations  o'zgarishlar uchun migratsilar yaratishga kerak</li>
+	<li>Python buyrug'ini bajarish manage.py migrate ma'lumotlar bazasida ushbu o'zgarishlarni amalga oshirish uchun .</li>
+</ul>
+
+<p>manage.py utilitasi yana  nimalar qilishi mumkinligi haqida to'liq ma'lumot olish uchun <a href="https://django.fun/docs/django/en/3.0/ref/django-admin/" target="_blank">django-admin hujjatlarini</a> o'qing .</p>
+
+<div class="text-center">
+	<h3><strong>API bilan tanishish</strong></h3>
+</div>
+<p>Keling, Python interaktiv qobig'iga (shell) o'tamiz va Django tomonidan taqdim etilgan API bilan ozroq "o'ynaymiz". Python qobig'ini (shell) chaqirish uchun ushbu buyruqdan foydalaning:</p>
+<pre id="console">
+	
+$ python manage.py shell
+
+</pre>
+
+<p>E'tibor bering shell ga kirish uchun "python" ni yoniga manage.py qo'shyapmiz. Chunki manage.py  DJANGO_SETTINGS_MODULE qobig'ini xam 'ulaydi', bu Pythonga Djangoning mysite/settings.py modulini import qilish imkonini beradi.</p>
+<p>Shell ga kirib ma'lumotlar bazasi API-sini o'rganing:</p>
+<pre id="console">
+	
+>>> <b class="text-danger">from</b> <b class="text-primary">polls.models</b> <b class="text-danger">import</b> Choice, Question  # Import the model classes we just wrote.
+
+# No questions are in the system yet.
+>>> Question.objects.all()
+&ltQuerySet []>
+
+# Create a new Question.
+# Support for time zones is enabled in the default settings file, so
+# Django expects a datetime with tzinfo for pub_date. Use timezone.now()
+# instead of datetime.datetime.now() and it will do the right thing.
+>>> <b class="text-danger">from</b> <b class="text-primary">django.utils</b> <b class="text-danger">import</b> timezone
+>>> q = Question(question_text=<b class="text-warning">"What's new?"</b>, pub_date=timezone.now())
+
+# Save the object into the database. You have to call save() explicitly.
+>>> q.save()
+
+# Now it has an ID.
+>>> q.id
+1
+
+# Access model field values via Python attributes.
+>>> q.question_text
+"What's new?"
+>>> q.pub_date
+datetime.datetime(2012, 2, 26, 13, 0, 0, 775217, tzinfo=&ltUTC>)
+
+# Change values by changing the attributes, then calling save().
+>>> q.question_text = <b class="text-warning">"What's up?"</b>
+>>> q.save()
+
+# objects.all() displays all the questions in the database.
+>>> Question.objects.all()
+&ltQuerySet [&ltQuestion: Question object (1)>]>
+
+</pre>
+
+<p>E'tibor bering. <b class="text-info">Question.objects.all()</b> yani Questionni barcha obyektlarini so'rasak bizga &ltQuestion: Question object (1)> taqdim etilyapti mantiqan bu to'g'ri (chunki Questionga bitta obyekt qoshdik) biroq taqdim etilayotgan ma'lumot tushunarsiz xolatda. Question va Choice modellariga (models.py faylida) tahrirlash orqali __str__ () usuli (method) qo'shib qo'yamiz:</p>
+
+	<pre id="sublime">
+
+<b class="text-danger">from</b> django.db <b class="text-danger">import</b> models
+
+<b class="text-info">class</b> <b class="text-success">Question(models.Model)</b>:
+    #...
+
+    <b class="text-info">def __str__</b>(<b class="text-warning">self</b>):
+        <b class="text-danger">return</b> <b class="text-warning">self</b>.question_text
+
+
+<b class="text-info">class</b> <b class="text-success">Choice(models.Model)</b>:
+   #...
+	 <b class="text-info">def __str__</b>(<b class="text-warning">self</b>):
+        <b class="text-danger">return</b> <b class="text-warning">self</b>.choice_text
+	
+	</pre>
+<p>Modellarga __str_ () methodlarini qo'shish nafaqat o'zimiz uchun qulay, balki, shuningdek Django admin panelining barcha avtomatik tarzda yaratilgan sahifalarida ishlatilganligi  ushbu ( __str_ () ) methodini qo'shish muhimdir</p>
+
+<p>Keling, ushbu modelga o'zimizning methodni xam qo'shaylik:</p>
+<pre id="sublime">
+
+<b class="text-danger">import</b> datetime	
+<b class="text-danger">from</b> django.db <b class="text-danger">import</b> models
+<b class="text-danger">from</b> django.utils <b class="text-danger">import</b> timezone
+
+<b class="text-info">class</b> <b class="text-success">Question(models.Model)</b>:
+    #...
+
+    <b class="text-info">def was_published_recently</b>(<b class="text-warning">self</b>):
+        <b class="text-danger">return</b> <b class="text-warning">self</b>.pub_date >= timezone.<b class="text-info">now()</b> - datetime.<b class="text-info">timedelta</b>(days=1)
+
+</pre>
+<p>Ushbu o'zgarishlarni saqlang va python anage.py shell buyrug'i yordamida Python interaktiv qobig'ini ishga tushiring :</p>
+
+<pre id="console">
+	
+	>>> from polls.models import Choice, Question
+
+# Make sure our __str__() addition worked.
+>>> Question.objects.all()
+&ltQuerySet [&ltQuestion: What's up?>]>
+
+# Django provides a rich database lookup API that's entirely driven by
+# keyword arguments.
+>>> Question.objects.filter(id=1)
+&ltQuerySet [&ltQuestion: What's up?>]>
+>>> Question.objects.filter(question_text__startswith='What')
+&ltQuerySet [&ltQuestion: What's up?>]>
+
+# Get the question that was published this year.
+>>> from django.utils import timezone
+>>> current_year = timezone.now().year
+>>> Question.objects.get(pub_date__year=current_year)
+&ltQuestion: What's up?>
+
+# Request an ID that doesn't exist, this will raise an exception.
+>>> Question.objects.get(id=2)
+Traceback (most recent call last):
+    ...
+DoesNotExist: Question matching query does not exist.
+
+# Lookup by a primary key is the most common case, so Django provides a
+# shortcut for primary-key exact lookups.
+# The following is identical to Question.objects.get(id=1).
+>>> Question.objects.get(pk=1)
+&ltQuestion: What's up?>
+
+# Make sure our custom method worked.
+>>> q = Question.objects.get(pk=1)
+>>> q.was_published_recently()
+True
+
+# Give the Question a couple of Choices. The create call constructs a new
+# Choice object, does the INSERT statement, adds the choice to the set
+# of available choices and returns the new Choice object. Django creates
+# a set to hold the "other side" of a ForeignKey relation
+# (e.g. a question's choice) which can be accessed via the API.
+>>> q = Question.objects.get(pk=1)
+
+# Display any choices from the related object set -- none so far.
+>>> q.choice_set.all()
+&ltQuerySet []>
+
+# Create three choices.
+>>> q.choice_set.create(choice_text='Not much', votes=0)
+&ltChoice: Not much>
+>>> q.choice_set.create(choice_text='The sky', votes=0)
+&ltChoice: The sky>
+>>> c = q.choice_set.create(choice_text='Just hacking again', votes=0)
+
+# Choice objects have API access to their related Question objects.
+>>> c.question
+&ltQuestion: What's up?>
+
+# And vice versa: Question objects get access to Choice objects.
+>>> q.choice_set.all()
+&ltQuerySet [&ltChoice: Not much>, &ltChoice: The sky>, &ltChoice: Just hacking again>]>
+>>> q.choice_set.count()
+3
+
+# The API automatically follows relationships as far as you need.
+# Use double underscores to separate relationships.
+# This works as many levels deep as you want; there's no limit.
+# Find all Choices for any question whose pub_date is in this year
+# (reusing the 'current_year' variable we created above).
+>>> Choice.objects.filter(question__pub_date__year=current_year)
+&ltQuerySet [&ltChoice: Not much>, &ltChoice: The sky>, &ltChoice: Just hacking again>]>
+
+# Let's delete one of the choices. Use delete() for that.
+>>> c = q.choice_set.filter(choice_text__startswith='Just hacking')
+>>> c.delete()
+
+</pre>
+
+<p>Modellardagi aloqalar haqida ko'proq ma'lumot olish uchun <a href="https://django.fun/docs/django/en/3.0/ref/models/relations/" target="_blank">tegishli qo'llanmani</a> o'qib chiqing</p>
+<div class="text-center">
+	<h3><strong>Django admin paneli</strong></h3>
+</div>
+<pre id="console">
+<p id="mr5">	
+Sizning xodimlaringiz yoki mijozlaringiz uchun kontentni qo'shish,o'zgartirish<br>va o'chirish uchun admin paneli  yaratish qo'shimcha va<br>zerikarli ishdir. Shu sababli Django modellar uchun<br>administrator interfeyslarini yaratishni to'liq avtomatlashtiradi.
+
+Django frameworki "muxarrirlar" va "sayt foydalanuvchilari"  o'rtasida masofa juda aniq <br>belgilangan  yangiliklar  muhitida  tayyorlangan. Sayt menejerlari yangiliklar, voqealar, <br>sport natijalari va boshqalarni qo'shish uchun admin paneli tizimidan foydalanadilar.<br>Foydalanuvchilar esa sayt kontentini xamma uchun 'ochiq' (publication) qismida bemalol <br>kuzatib boradilar.Django kontentni tahrirlash uchun sayt administratorlari uchun qo'shimcha <br>interfeys (admin panel) yaratish muammosini hal qiladi.
+
+Administrator qismi(admin panel) saytga tashrif buyuruvchilar tomonidan <br>foydalanish uchun mo'ljallanmagan. Bu admin va menejerlar uchun.</p>
+
+</pre>
+
+<div class="text-center">
+	<h3><strong>Administrator huquqlariga ega foydalanuvchi (admin) yaratish</strong></h3>
+</div>
+<p>Avval administrator veb-saytiga kira oladigan foydalanuvchi (admin) yaratishimiz kerak. Quyidagi buyruqni ishga tushiring:</p>
+
+<pre id="console">
+	
+$ python manage.py createsuperuser
+
+</pre>
+<p>Kerakli foydalanuvchi nomini kiriting va Enter ni bosing.</p>
+
+<pre id="console">
+	
+Username: admin
+
+</pre>
+<p>Sizdan kerakli elektron pochta manzilini ko'rsatish talab qilinadi:</p>
+<pre id="console">
+	
+Email address: admin@example.com
+
+</pre>
+<p>Oxirgi qadam parolingizni kiritishdir. Sizdan parolni ikki marta, (ikkinchi marta tasdiqlash uchun)  kiritish talab qilinadi.</p>
+<pre id="console">
+	
+Password: **********
+Password (again): *********
+Superuser created successfully.
+
+</pre>
+<div class="text-center">
+	<h3><strong>Django web-serverini ishlatamiz</strong></h3>
+</div>
+<p>Django administrator sayti avvaldan o'rnatilgan sozlamalar bo'yicha faollashtirilgan. Keling, web-serverni ishga tushiramiz va admin-panelni o'rganamiz.</p>
+<p>Agar web-server ishlamayotgan bo'lsa uni ishga tushiring:</p>
+<pre id="console">
+	
+$ python manage.py runserver
+
+</pre>
+<p>Endi veb-brauzerni oching va lokal domenda "/admin/" havolasiga o'ting - <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a>. Administrator paneliga kirish saxifasini ko'rishingiz kerak</p>
+<div class="text-center">
+	<h3><strong>Django admin-paneliga kirish</strong></h3>
+</div>
+<p>Endi siz yuqorida yaratgan superuser login paroli bilan tizimga kirishga harakat qiling.Login parolni to'g'ri kiritsangiz Django administratorining asosiy sahifasini ko'rishingiz kerak</p>
+<p>Guruhlar va foydalanuvchilar:Tahrirlash mumkin bo'lgan kontent turlari.Userlar va guruxlarni boshqarish uchun. Ular django.contrib.auth, Django tomonidan taqdim etilgan autentifikatsiya infratuzilmasi xisoblanadi.</p>
+<div class="text-center">
+	<h3><strong>Django administrator paneliga web-ilova qo'shish</strong></h3>
+</div>
+<p>Lekin bizning ovoz berish web-ilovamiz qaerda? Bu administratorning asosiy sahifasida ko'rinmaydi.</p>
+<p>Yana bir narsa qilish kerak: Administrator paneliga Question ob'ektlarida administrator interfeysi mavjudligi haqida xabar berish kerak. Buning uchun  polls/admin.py faylini oching va uni quyidagicha tahrirlang:</p>
+<div class="bg-success"><p id="mr5">polls/admin.py</p></div>
+<pre id="console">
+	
+
+from django.contrib import admin
+
+from .models import Question
+
+admin.site.register(Question)
+
+
+</pre>
+<div class="text-center">
+	<h3><strong>Django administrator paneli funksiyalarini bilan tanishamiz</strong></h3>
+</div>
+<p>Endi biz "Question" ni ro'yxatdan o'tkazdik, Django uni asosiy sahifada ko'rsatish kerakligini biladi:</p>
+<div class="img">
+	<img src="{% static 'img/django/obr.png'%}" class="img-responsive" alt="">
+</div><br>
+<p>"Questions" ustiga bosing. Endi siz savollar uchun "o'zgarishlar ro'yxati" sahifasida turibsiz. Ushbu sahifada ma'lumotlar bazasidagi barcha savollar ko'rsatiladi va uni o'zgartirish uchun ulardan birini tanlashingiz mumkin.Ushbu saxifada  biz yuqorida qo'shgan "What’s up?" savoli bor</p>
+<div class="img">
+	<img src="{% static 'img/django/quest2.png'%}" class="img-responsive" alt="">
+</div>
+<br>
+<p>"What’s up?"ni tahrirlash uchun  ustiga bosing:</p>
+<p>Bu erda nimani ta'kidlash kerak</p>
+<ul class="mr-5">
+	<li>Savol qo'shadigan maydonlar avtomatik ravishda Questions modelidan olib yaratiladi.</li>
+	<li>Model maydonlarining turli xil turlari (DateTimeField, CharField) HTML formalariga (input) mos keladi. Har bir maydon turi Django administrator panelida o'zini qanday ko'rinishda bo'lishini biladi.</li>
+	<li>Har bir DateTimeFieldga  JavaScript ulangan. Sana tugmasi bosilganda taqvim (kalendar) paydo bo'ladi. Vaqt  yorlig'i esa oxirgi marta tez-tez kiritilgan vaqtlarni ko'rsatadigan qilib qulaylashtirilgan.</li>
+</ul>
+<div class="img">
+	<img src="{% static 'img/django/buttons.png'%}" class="img-responsive" alt="">
+</div>
+<p>Sahifaning pastki qismida bir nechta variantni(buttonlar) topasiz:</p>
+<ul class="mr-5">
+	<li>Save and another - Saqlash va boshqa qo'shish o'zgarishlarni saqlaydi va ushbu turdagi ma'lumot qo'shish uchun yangi, bo'sh maydonlarni qaytadan yuklaydi.</li>
+	<li>Save and contiune editing -Saqlash va tahrirlashni davom ettirish o'zgarishlarni saqlaydi va ushbu ob'ekt uchun ushbu saxifani (qayta taxrirlash uchun) qayta ishga tushiradi.</li>
+	<li>Save -Saqlash  o'zgarishlarni saqlaydi va ushbu turdagi ob'ekt uchun o'zgarishlar ro'yxati sahifasiga qaytadi.</li>
+	<li>Delete - Ma'lumotni o'chirishni tasdiqlash sahifasiga olib o'tadi .</li>
+</ul>
+<p>Agar "Date published" ya'ni sana va vaqt bilan muammo tug'ilsa mysite/settings.py dagi TIME_ZONE sozlash uchun noto'g'ri ma'lumotlar kiritgan bo'lishingiz mumkin. Uni o'zgartiring, sahifani qayta ishga tushiring va to'g'ri sana va vaqtlar ko'rsatilganligiga ishonch hosil qiling.</p>
+<p>"Date published"dagi "today" va "now" yorliqlarini bosish orqali sana va vaqtni  o'zgartiring. Keyin "saqlash va tahrirlashni davom ettirish"tugmasini bosing. Keyin yuqoridagi o'ng burchakdagi "History" tugmasini bosing. Django administratori orqali ushbu ob'ektga kiritilgan barcha o'zgarishlar ro'yxati chiqarilgan sahifani ko'rasiz, ozgartirishlar vaqti  va o'zgarishlarni amalga oshirgan foydalanuvchi nomi xam yozilgan</p>
+<p>History page for question object</p>
+
+<p>Agar siz modellarning APIsi bilan  va administrator web-sayti xaqida yetarli ma'lumot o'zlashtirgan bo'lsangiz, tayyorlayotgan loyixamizga ko'proq funksiyalarni qo'shishni o'rganish uchun <a href="">3 qismini o'qing.</a></p>
+
+<div class="text-center">
+	<h4><strong><a href="{% url 'edu:django' number=5 slug='djangoda-birinchi-web-dastur-3-qism' %}">Djangoda birinchi web dastur 3-qism</a></strong></h4>
+</div>
+
+
+<div class="footer-post" style="float:right;">
+	<p>Foydalanilgan manbalar: <a href="https://docs.djangoproject.com" target="_blank">docs.djangoproject.com</a><br>
+		<a href="https://django.fun" target="_blank">django.fun</a></p>
+</div>
+
+
+
+</div>
+	<div class="col-md-3">
+
+	</div>		
+</div>
+</div>
+</section>
+{% endblock %}	

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="151px" height="103px" viewBox="0 0 151 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Laptop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Laptop" transform="translate(1.000000, 2.000000)">
+            <path d="M147.9,88.6 L147.9,92.4 C147.9,95.9 144.9,98.7 141.3,98.7 L7.5,98.7 C3.8,98.7 0.9,95.9 0.9,92.4 L0.9,88.6 L61.4,88.6 C61.9,90 63.3,91 65,91 L83.9,91 C85.6,91 87,90 87.5,88.6 L147.9,88.6 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M140.4,88.6 L8.4,88.6 L8.4,5.7 C8.4,2.7 10.8,0.2 13.9,0.2 L134.9,0.2 C137.9,0.2 140.4,2.6 140.4,5.7 L140.4,88.6 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M140.4,88.6 L11.7,88.6 L11.7,6.4 C11.7,4.5 13.3,2.9 15.2,2.9 L135,2.9 C137.9,2.9 140.3,5.3 140.3,8.2 L140.3,88.6 L140.4,88.6 Z" id="Shape" fill="#DDECFE" fill-rule="nonzero"></path>
+            <polyline id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="56.8 88.6 8.4 88.6 8.4 45.6"></polyline>
+            <path d="M8.4,25 L8.4,5.6 C8.4,2.6 10.8,0.1 13.9,0.1 L134.9,0.1 C137.9,0.1 140.4,2.5 140.4,5.6 L140.4,88.5 L105.4,88.5" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M8.4,34 L8.4,33.4" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M147.9,91.6 L147.9,94.3 C147.9,96.8 145,98.8 141.4,98.8 L11,98.8 C7.4,98.8 4.5,96.8 4.5,94.3 L4.5,91.6 L59.9,91.6 C60.4,92.6 61.8,93.3 63.4,93.3 L85.4,93.3 C87,93.3 88.4,92.6 88.9,91.6 L147.9,91.6 Z" id="Shape" fill="#99C7FF" fill-rule="nonzero"></path>
+            <path d="M14.6,7.1 L133.7,7.1" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <polyline id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="107.5 88.9 14.6 88.9 14.6 7.1 133.7 7.1 133.7 88.9 121.2 88.9"></polyline>
+            <polyline id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="54.1 88.5 14.6 88.5 14.6 7.1 133.7 7.1 133.7 25.9"></polyline>
+            <path d="M98,88.5 L97.2,88.5" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M133.7,88.5 L102.8,88.5" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M133.7,34.8 L133.7,88.6" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M133.7,88.6 L147.9,88.6 L147.9,92.4 C147.9,95.9 144.9,98.7 141.3,98.7 L7.5,98.7 C3.8,98.7 0.9,95.9 0.9,92.4 L0.9,88.6 L61.4,88.6 C61.9,90 63.3,91 65,91 L83.9,91 C85.1,91 86.1,90.5 86.8,89.6" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

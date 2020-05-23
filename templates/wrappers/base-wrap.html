@@ -1,0 +1,376 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="eduPy onlayn dasturlash kurslari, Program Master">
+    <meta name="author" content="pmaster.uz (Abdurakhmon Rashidov)">
+    <meta name="Abdurakhmon Rashidov" content="edupy.uz pmaster.uz " keywords="onlayn, dasturlash, dasturchi, kurslar, Onlayn, Dasturlash, онлайн,дастурлаш, курслар">
+    <link rel="icon" href="/static/catana.ico">
+    <title>eduPy | Online dasturlash platformasi</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- main css file -->
+    <link href="{% static 'css/main.min.css' %}" rel="stylesheet">
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+
+</head>
+
+<body>
+    <!-- start body -->
+
+    <!-- start modal video -->
+    <div class="modal fade" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="videomodal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal video -->
+
+    <style>
+  
+        body{
+            font-style: sans-serif;
+        }
+        pre{
+            padding-left:5px;
+        }
+        #lesson{
+            margin-top:150px;
+            margin-bottom:100px;
+        }
+        #sublime{
+            background-color:#282920;
+            color:white;
+        }
+        #html{
+
+            color:white;
+            background-color:#282911;
+        }
+        #console{
+            background-color:#D5FFBE;
+        }
+        p{
+            font-family: Arial;
+            font-size:17px;
+        }
+        .mr-5>li{
+            font-family:'Times New Roman';
+            font-size:17px;
+
+        }
+        #mr5{
+        margin-left:10px;
+        }
+
+    .loader{
+        -webkit-animation-name: fadeOut;
+        -o-animation-name: fadeOut;
+        animation-name: fadeOut;
+        -webkit-animation-duration: 2s;
+        -o-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        -o-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-iteration-count: 25;
+        -o-animation-iteration-count: 25;
+        animation-iteration-count: 25;
+
+    }
+    @-webkit-keyframes fadeOut{
+        0%{opacity: 1;}
+        100%{opacity: 0;}
+    }
+      @keyframes fadeOut{
+        0%{opacity: 1;}
+        100%{opacity: 0;}
+    }
+</style>
+    <div class="preloader">
+        <div class="preloader-container">
+            <svg version="1.1" id="L5" xmlns="www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                <div class="loader">
+                    <img src="/static/svg/hand-washshsh.svg" width="50" height="50" fill="#675cda" stroke="none" cx="6" cy="50" r="6">                
+                </div>
+            
+            </svg>
+            <span>yuklayapmiz</span>
+        </div>
+    </div>
+    <!-- end preloader -->
+    
+
+    <div id="coodiv-header" class="d-flex mx-auto flex-column moon-edition"><!-- start header -->
+         <div class="bg_overlay_header">
+        <div id="particles-bg"></div>
+        <img src="/static/img/header/h_bg_02.svg"  alt="img-bg">
+        
+        <span class="header-shapes shape-02"></span>
+        <span class="header-shapes shape-03"></span>
+        </div>
+        <!-- Fixed navbar -->
+        <nav id="coodiv-navbar-header" class="navbar navbar-expand-md fixed-header-layout">
+            <div class="container main-header-coodiv-s">
+                <a class="navbar-brand" href="{% url 'edu:index' %}"><img src="/static/img/header/logo.png"   alt="" /></a>
+                <button class="navbar-toggle offcanvas-toggle menu-btn-span-bar ml-auto" data-toggle="offcanvas" data-target="#offcanvas-menu-home">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-offcanvas" id="offcanvas-menu-home">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link" href="#" > <i class="fa fa-home"></i>   Bosh sahifa<span class="sr-only">(current)</span></a>
+                            
+                        </li>
+
+                       <li class="nav-item megamenu dropdown">
+                            <a class="nav-link" href="{% url 'edu:course_view' 'python' %}" role="button" id="services-megamenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Python <span class="megamenu-toggle"></span></a>
+                            <div class="dropdown-menu coodiv-dropdown-megamnu default-megamenu" aria-labelledby="services-megamenu">
+                            <div class="d-flex justify-content-center bd-highlight mb-3 megamenu-items-header">
+                            <div class="p-2 bd-highlight">
+                            <a href="{% url 'edu:course_view' 'python' %}">
+                            <i class="fa fa-desktop"></i>
+                            <h5>Python</h5>
+                            <p>Yuqori darajali dasturlash tilini "ipidan-ignasigacha" bizda o'rganing. 100+ soat darslar ketma-ketligi.</p>
+                            </a>
+                            </div>
+                            
+                            <div class="p-2 bd-highlight">
+                            <a href="{% url 'edu:course_view' 'python' %}">
+                            <i class="fa fa-globe"></i>
+                            <h5>Python-Django</h5>
+                            <p>Oddiy "Hashtmelshik" dan WEB full-stack dasturchiga qadar. Djangoda yozing va buyurtmachilar mamnun!</p>
+                            </a>
+                            </div>
+                            
+                            <div class="p-2 bd-highlight">
+                            <a href="{% url 'edu:course_view' 'python' %}">
+                            <i class="fa fa-image (alias)"></i>
+                            <h5>PyQt5</h5>
+                            <p>Kompyuterlar uchun istalgan usuldagi ilovalarni yarating.</p>
+                            </a>
+                            </div>
+                            
+                            <div class="p-2 bd-highlight">
+                            <a href="{% url 'edu:page_views' 'beginners' %}">
+                            <i class="fa fa-user-plus"></i>
+                            <h5>Boshlovchilarga</h5>
+                            <p>Ishni nimadan boshlash kerak bilib oling. </p>
+                            </a>
+                            </div>
+                            
+                            </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'edu:page_views' 'about' %}">Biz haqimizda</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" role="button" id="webhosting-megamenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'edu:page_views' 'courses' %}">Kurslar <span class="nav-new-tag">+</span></a>
+                            <div class="dropdown-menu coodiv-dropdown-header web-menu" aria-labelledby="webhosting-megamenu">
+                            <ul class="web-hosting-menu-header">
+                            <li><i class="fas fa-server"></i> <a href="{% url 'edu:course_view' 'python' %}">Python <span>Bazoviy bilimlar + yordamchi kutubxonalari.</span></a></li>                     
+                            <li><i class="fas fa-server"></i> <a href="{% url 'edu:course_view' 'javascript' %}">JavaScript <span>Ko'p tarmoqli ,kuchli til...</span></a></li>
+                            <li><i class="fas fa-server"></i> <a href="{% url 'edu:course_view' 'cpp' %}">C++ <span>Keng kutubxonali, mashxur til...</span></a></li>
+                           
+                            <li><i class="fa fa-server"></i> <a href="{% url 'edu:course_view' 'html' %}">HTML <span>Endi brauzer tilida yoza olasiz!</span></a></li>
+                            <li><i class="fa fa-server"></i> <a href="{% url 'edu:course_view' 'css' %}">CSS <span>Yaratoyatgan sahifalaringizga "jon" bering.</span></a></li>
+                            <li><i class="fa fa-server"></i> <a href="{% url 'edu:course_view' 'bs4' %}">BOOTSTRAP <span>Adaptiv sahifalar yaratasiz.</span></a></li>
+                            <li><i class="fa fa-server"></i> <a href="{% url 'edu:course_view' 'php' %}">PHP <span>Back-End , scriptlari uchun maxsus.</span></a></li>
+                            </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" id="header-help-drop-down" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Yordam </a>
+                            <ul class="dropdown-menu coodiv-dropdown-header" aria-labelledby="header-help-drop-down">
+                                <li><a class="dropdown-item" href="{% url 'edu:page_views' 'faq' %}">FAQ</a></li>
+                                <li><a class="dropdown-item" href="{% url 'edu:page_views' 'faq' %}">Savollar to'plami</a></li>
+                                <li><a class="dropdown-item" href="{% url 'edu:page_views' 'faq' %}">Qoidalar</a></li>
+                            </ul>
+                        </li>
+
+                
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'edu:page_views' 'contact' %}"> Aloqa</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="header-user-info-coodiv">
+                    {% if request.user.is_authenticated %}
+                    <li class="dropdown"><a role="button" id="header-login-dropdown"  href="{% url 'edu:student_account' user.id %}"><i class="fa fa-user"></i></a> <span>id:562</span>
+                        <!-- 
+                    
+                        <div class="dropdown-menu coodiv-dropdown-header user-login-dropdown" aria-labelledby="header-login-dropdown">
+                            <form class="user-login-dropdown-form" action="" data-form="validate">
+                                <div class="form-group username">
+                                    <input type="email" name="username" placeholder="Your Email" class="form-control">
+                                    <i class="fas fa-at"></i>
+                                </div>
+
+                                <div class="form-group password">
+                                    <input type="password" name="password" placeholder="Password" class="form-control">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+
+                                <button data-toggle="tooltip" data-placement="left" title="login" class="user-login-dropdown-form-button" type="submit"><i class="fas fa-angle-right"></i></button>
+
+                            </form>
+                        </div> 
+                         -->
+                    </li>
+                    {% else %}
+                               <li class="dropdown"><a role="button" id="header-login-dropdown"  href="{% url 'edu:page_views' 'signin' %}"><i class="fa fa-user"></i></a> <span>id:562</span>
+            
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+             <div class="mt-auto header-top-height"></div>
+        <main class="container mb-auto">
+            <div class="carousel carousel-main">
+                <div class="carousel-cell">
+                    <div class="row justify-content-center domain-search-row">
+                        <div class="banner_logo ">
+                            <img src="/static/img/header/logo.png" class="logo-animation"  alt="">
+                            <div class="mt-5"><h3 class="text-center text-white">dasturlashni o'rgatadigan online platforma</h3></div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="mt-auto"></div>
+</div>
+<style>
+    .no-area{
+        width: 100%;
+        height: 400px;
+    }
+</style>
+{% block content %}
+{% endblock %}
+
+
+ <section class="footer-section">
+        <div class="container">
+            <div class="mr-tp-40 row justify-content-between footer-area-under">
+                <div class="col-md-4">
+                    <a href="{% url 'edu:index' %}"><img class="footer-logo-blue" src="/static/img/header/logo-w-f.png" alt="" /></a>
+                    <div class="footer-social-icons">
+                        <a href="https:\\www.facebook.com\abduraxmon.rashidov" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https:\\t.me\pmaster_uz"><i class="fab fa-telegram" target="_blank"></i></a>
+                        <a href="https:\\instagram.com\rashidov_21"><i class="fab fa-instagram" target="_blank"></i></a>
+                        <a href="https://www.youtube.com/channel/UCkvaGPHv4mCwy9qjX6ztUww" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:rashidovabdurakhmon@gmail.com"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 row">
+                   <section class="padding-20-0 ">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-md-12 text-light">
+                                
+                                <p class="text-light">Biz bilan bog'laning <br><b>Dush-Shan</b> </p>
+                                <p class="text-light"><i class="fa fa-coffee"></i>  <b>09:00 - 17:00</b> </p>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </div>
+                <div class="col-md-4" >
+                    <a class="immediate-help-center-link" style="font-size: 19px;" href="#"> <i class="fa fa-phone"></i> +998 93 911 31 23</a>
+                    <a class="immediate-help-center-link" style="font-size: 19px;" href="#"><i class="fa fa-envelope"></i>  rashidovabdurakhmon@gmail.com</a>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-between final-footer-area mr-tp-40">
+                <div class="final-footer-area-text">
+                    © Make a Program Master , <a href="https:\\t.me\pmaster_uz">Abdurakhmon Rashidov</a>
+                </div> 
+
+                <div class="footer-lang-changer">
+
+                    <div class="lang-changer-drop-up">
+                        <a class="menu-btn-changer" href="#"><img src="/static/svg/uzbekistan.svg" alt="" />uzb</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script type="text/javascript">
+function clock() {
+var d = new Date();
+var month_num = d.getMonth()
+var day = d.getDate();
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var seconds = d.getSeconds();
+
+month=new Array("Yanvar", "Fevral", "Mart", "Aprel", "May", "Iyun",
+"Iyul", "Avgust", "Sentabr", "Oktabr", "Noyabr", "Dekabr");
+
+if (day <= 9) day = "0" + day;
+if (hours <= 9) hours = "0" + hours;
+if (minutes <= 9) minutes = "0" + minutes;
+if (seconds <= 9) seconds = "0" + seconds;
+
+date_time = "Bugun - " + day + " " + month[month_num] + " " + d.getFullYear() +
+" y.&nbsp;&nbsp;&nbsp; - "+ hours + ":" + minutes + ":" + seconds;
+if (document.layers) {
+ document.layers.doc_time.document.write(date_time);
+ document.layers.doc_time.document.close();
+}
+else document.getElementById("doc_time").innerHTML = date_time;
+ setTimeout("clock()", 1000);
+}
+</script>
+<script type="text/javascript">
+ clock();
+</script>
+    <!-- jquery -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- bootstrap JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- template JavaScript -->
+    <script src="{% static 'js/template-scripts.js' %}"></script>
+    <!-- flickity JavaScript -->
+    <script src="{% static 'js/flickity.pkgd.min.js' %}"></script>
+    <!-- carousel JavaScript -->
+    <script src="{% static 'owlcarousel/owl.carousel.min.js' %}"></script>
+    <!-- parallax JavaScript -->
+    <script src="{% static 'js/parallax.min.js' %}"></script>
+    <!-- mailchamp JavaScript -->
+    <script src="{% static 'js/mailchamp.js' %}"></script>
+    <!-- bootstrap offcanvas -->
+    <script src="{% static 'js/bootstrap.offcanvas.min.js' %}"></script>
+    <!-- touchSwipe JavaScript -->
+    <script src="{% static 'js/jquery.touchSwipe.min.js' %}"></script>
+   
+</body>
+
+</html>

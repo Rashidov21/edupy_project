@@ -1,0 +1,38 @@
+<p></p>
+<script>
+    /* Article FructCode.com */
+$( document ).ready(function() {
+    $("#btn").click(
+        function(){
+            sendAjaxForm('form_messages', 'ajax_contact', '{% url "edu:query_result"%}');
+            return false; 
+        }
+    );
+});
+ 
+function sendAjaxForm(form_messages, ajax_contact, url) {
+    $.ajax({
+        url:     url, //url страницы (action_ajax_form.php)
+        type:     "POST", //метод отправки
+        dataType: "html", //формат данных
+        data: $("#"+ajax_contact).serialize(),  // Сеарилизуем объект
+        success: function(response) { //Данные отправлены успешно
+            result = $.parseJSON(response);
+            console.log(result.status)
+            if(result.status == 'ok'){
+              // document.getElementById('ul_testing').style='display:none'
+              $('#ul_testing').css({'display':'none','transition':'2s'});
+              $('#next_lesson').css({'display':'block'});
+              $('#my_btn').click();
+            }
+            // $('#name').val('');
+            // $('#email').val('');
+            // $('#message').val('');
+            $('#form_messages').html('<h5 class="text-success">Qabul qilindi</h5>');
+        },
+        error: function(response) { // Данные не отправлены
+            $('#form_messages').html('<h5 class="text-warning">Xatolik ! <br>Boshqatdan urinib ko`ring</h5>');
+        }
+    });
+}
+</script>

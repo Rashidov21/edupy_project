@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="152px" height="127px" viewBox="0 0 152 127" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Phones</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Phones" transform="translate(1.000000, 2.000000)">
+            <g id="Group" transform="translate(0.000000, 118.000000)" stroke="#91C2FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+                <path d="M1.8,0.1 L0.7,0.1" id="Shape"></path>
+                <path d="M20.6,0.1 L6,0.1" id="Shape"></path>
+                <path d="M26.1,0.1 L25.1,0.1" id="Shape"></path>
+                <path d="M110.3,0.1 L31.7,0.1" id="Shape"></path>
+                <path d="M138.1,0.1 L114.8,0.1" id="Shape"></path>
+                <path d="M143.8,0.1 L142.2,0.1" id="Shape"></path>
+                <path d="M148.6,0.1 L148.3,0.1" id="Shape"></path>
+            </g>
+            <path d="M122.4,118.1 L74.7,118.1 C69.6,118.1 65.4,113.9 65.4,108.8 L65.4,9.7 C65.4,4.6 69.6,0.4 74.7,0.4 L122.4,0.4 C127.5,0.4 131.7,4.6 131.7,9.7 L131.7,108.8 C131.8,113.9 127.6,118.1 122.4,118.1 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M131.8,9.6 L131.8,108.8 C131.8,113.9 127.6,118.1 122.5,118.1 L74.8,118.1 C69.7,118.1 65.5,113.9 65.5,108.8 L65.5,9.6 C65.5,4.5 69.7,0.3 74.8,0.3 L122.5,0.3 C127.6,0.3 131.8,4.5 131.8,9.6 Z" id="Shape" fill="#6BADFF" fill-rule="nonzero"></path>
+            <rect id="Rectangle-path" fill="#99C7FF" fill-rule="nonzero" x="65.5" y="12.4" width="66.3" height="89.9"></rect>
+            <path d="M82.3,35.7 L82.3,115.1 C82.3,116.2 82.1,117.2 81.8,118.1 L74.8,118.1 C69.7,118.1 65.5,113.9 65.5,108.8 L65.5,26.4 L73,26.4 C78.1,26.4 82.3,30.6 82.3,35.7 Z" id="Shape" fill="#5CA5FF" fill-rule="nonzero"></path>
+            <path d="M122.4,118.1 L74.7,118.1 C69.6,118.1 65.4,113.9 65.4,108.8 L65.4,9.7 C65.4,4.6 69.6,0.4 74.7,0.4 L122.4,0.4 C127.5,0.4 131.7,4.6 131.7,9.7 L131.7,108.8 C131.8,113.9 127.6,118.1 122.4,118.1 Z" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M124.2,11.1 L131.1,11.1" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M72,11.1 L118.7,11.1" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M115.3,101.9 L66.1,101.9" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M131.1,101.9 L121.1,101.9" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M92.4,5.7 L100.5,5.7" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M102.5,112.7 L92.2,112.7 C91.3,112.7 90.6,112 90.6,111.1 L90.6,108 C90.6,107.1 91.3,106.4 92.2,106.4 L102.5,106.4 C103.4,106.4 104.1,107.1 104.1,108 L104.1,111.1 C104.1,112 103.4,112.7 102.5,112.7 Z" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M67.6,122.6 L27.1,122.6 C22,122.6 17.8,118.4 17.8,113.3 L17.8,33.9 C17.8,28.8 22,24.6 27.1,24.6 L67.6,24.6 C72.7,24.6 76.9,28.8 76.9,33.9 L76.9,113.3 C76.9,118.4 72.7,122.6 67.6,122.6 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M76.9,33.9 L76.9,113.3 C76.9,118.4 72.7,122.6 67.6,122.6 L27.1,122.6 C22,122.6 17.8,118.4 17.8,113.3 L17.8,33.9 C17.8,28.8 22,24.6 27.1,24.6 L67.6,24.6 C72.7,24.6 76.9,28.8 76.9,33.9 Z" id="Shape" fill="#C2DDFF" fill-rule="nonzero"></path>
+            <rect id="Rectangle-path" fill="#FFFFFF" fill-rule="nonzero" x="17.8" y="34.9" width="59.1" height="72.8"></rect>
+            <path d="M67.6,122.6 L27.1,122.6 C22,122.6 17.8,118.4 17.8,113.3 L17.8,33.9 C17.8,28.8 22,24.6 27.1,24.6 L67.6,24.6 C72.7,24.6 76.9,28.8 76.9,33.9 L76.9,113.3 C76.9,118.4 72.7,122.6 67.6,122.6 Z" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle id="Oval" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" cx="47.9" cy="114.9" r="3.1"></circle>
+            <path d="M69.3,35.4 L76.3,35.4" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M24.4,35.4 L63.8,35.4" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M60.5,107.3 L18.5,107.3" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M76.3,107.3 L66.3,107.3" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M44.8,30 L52.9,30" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M39.4,30 L40,30" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

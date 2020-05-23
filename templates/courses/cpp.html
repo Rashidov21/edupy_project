@@ -1,0 +1,115 @@
+{% extends 'wrappers/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="mt-auto header-top-height"></div>
+        <main class="container mb-auto">
+            <h3 class="mt-3 main-header-text-title"><span> <b>eduPy</b> Dasturlash bo'yicha onlayn o'quv markaz</span>&lt;c++/&gt;
+              <p class="sub-page-breadcrumb"><a href="#">Bosh sahifa</a> - Kurslar</p>
+            </h3>
+
+        </main>
+        <div class="mt-auto"></div>
+    
+    <section class="padding-100-0-50 position-relative">
+        <div class="container pt-5 pb-5">
+                 <div class="row justify-content-between mr-tp-50">
+                <div class="col-md-6">
+                    <p>
+                          <img src="/static/svg/cpp-boy.svg" class="mb-5 w-100 h-50" alt="">
+                        <a class="side-text-right-button" href="{% url 'edu:courses' %}">Kursga yozilish</a>
+                    </p>
+                  
+                  
+                </div>
+                <div class="col-md-6 side-text-right-container">
+                    <h2 class="side-text-right-title">C++   tili kursi   <span class="badge badge-pill">BEPUL</span></h2>
+                    <p class="side-text-right-text">
+                       Hozirgi kunda juda ko‘p algoritmik tillar mavjud. Bular ichida Java
+                        va C++ dasturlash tillari universal tillar hisoblanib, boshqa tillarga
+                        qaraganda imkoniyatlari kengroqdir. So‘ngi yillarda
+                        Java va C++
+                        dasturlash tillari juda takomillashib, tobora ommalashib bormoqda.
+                        Mazkur tillardagi vositalar zamonaviy kompyuter texnologiyasining
+                        hamma talablarini o‘z ichiga olgan va unda dastur tuzuvchi uchun ko‘pgina
+                        qulayliklar yaratilgan. C++ ni <b>BIZNING BUTUNLAY BEPUL</b> kurslarimizda o'rganing.
+                      </p>
+                        <br>
+                        <br>   
+                         <ul class="web-hosting-options">
+                            <li><i class="fa fa-book"></i> Kengaytirilgan adabiyotlar</li>
+                            <li><i class="fa fa-film"></i> Videogayd , Matn va Screenshotlar bilan </li>
+                            <li><i class="fa fa-tasks"></i> Doimiy topshiriqlar. Har yangi mavzudan so'ng </li>
+                            
+                            <li><i class="fab fa-telegram"></i> Telegram orqali tushunmagan joyingizni so'rang! </li>
+                            <li><i class="fa fa-users"></i> Boshqa talabalar bilan tajriba almashish </li>
+                    </ul>
+                        <p>
+                        
+                </div>
+
+              
+
+            </div><!-- end row -->
+            <div class="row mt-5 mb-5"> 
+
+                <div class="container">
+                    <h4 class=" side-text-right-title">Qo'shimcha:</h4>
+                </div>
+                <div class="col-md-6">
+                     <div class="container">
+                        <ul class="web-hosting-options">
+                            <li><i class="fa fa-clock"></i> Intensiv (doimiy) kurs</li>
+                            <li><i class="fa fa-user"></i> Doimiy guruh rahbari bilan aloqa </li>
+                            <li><i class="fa fa-tasks"></i> Doimiy topshiriqlar. Har yangi mavzudan so'ng </li>
+                            
+                            <li><i class="fab fa-telegram"></i> Telegram orqali guruhdoshlar bilan aloqa </li>
+                            <li><i class="fa fa-handshake"></i> Shaxsiy loyihalar tuzish</li>
+                            <li><i class="fa fa-graduation-cap"></i> Yaxshi o'zlashtirgan talabalarni ish bilan ta'minlash</li>
+                            <li><i class="fa fa-mouse-pointer"></i> Shaxsiy loyihalarga ko'maklashish</li>
+                    </ul>
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container">
+                        <p class="side-text-right-text"> C++ funksiya va obyektlarning juda boy kutubhonasiga ega. Yani
+                        C++ dasturlash tilida dasturlashni o’rganish ikki qismga bo’linadi.
+                        Birinchisi bu C++ tilini o’zini o’rganish, ikkinchisi esa C++ ning standart
+                        kutubhonasidagi tayyor obyekt va funksiyalarni qo’llashni o’rganishdir.
+                            U haqida to'liq ma'lumotlarni <a href="https://ru.wikipedia.org/wiki/C%2B%2B" target="_blank">Wikipediyadan</a> oling.
+                        </p>
+                      <p>
+                          <a class="side-text-right-button" href="{% url 'edu:courses' %}">Kursga yozilish</a>
+                      </p>
+                    </div>
+                </div>
+               
+            </div>
+        
+
+        </div>
+    </section>
+<section class="footer-section-banner">
+        <div class="container">
+            <div class="row free-trial-footer-banner">
+                <div class="col-md-8">
+                    <h5 class="free-trial-footer-banner-title">Bepul sinov kurslarini boshlash uchun hoziroq ro'yhatdan o'ting</h5>
+                    <p class="free-trial-footer-banner-text">Chegirmalar vaqti chegaralangan. Dasturlashni o'rganmoqchimisiz? Unda hoziroq ro'yhatdan o'ting. </p>
+                </div>
+
+                <div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <div class="mb-auto">
+                        <a class="sign-btn" href="{% url 'edu:signup' %}">Ro'yhatdan o'tish</a>
+                        <a class="log-btn" href="{% url 'edu:signin' %}">Kirish</a>
+                    </div>
+                    <div class="mt-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

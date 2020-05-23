@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="151px" height="145px" viewBox="0 0 151 145" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Download</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Download" transform="translate(1.000000, 1.000000)">
+            <g id="Group" transform="translate(0.000000, 39.000000)">
+                <path d="M1.5,66.3 L17.3,9.7 C18.7,4.5 23.4,0.9 28.7,0.9 L120.1,0.9 C125.4,0.9 130.1,4.4 131.5,9.6 L147.4,66.9" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M147.4,66.9 L3.4,66.4 L19.9,13.4 C21.2,8.5 25.9,5.1 31.2,5.1 L120.5,5.1 C125.7,5.1 130.3,8.4 131.7,13.2 L147.4,66.9 Z" id="Shape" fill="#ADD2FF" fill-rule="nonzero"></path>
+                <path d="M112,5.1 C110.8,16.6 104.3,26.6 95.1,32.7 C89.1,36.6 82,38.9 74.3,38.9 C54.7,38.9 38.7,24.1 36.6,5.1 L112,5.1 Z" id="Shape" fill="#91C4FF" fill-rule="nonzero"></path>
+                <path d="M147.9,91.5 C147.9,97.6 143,102.5 136.9,102.5 L11.8,102.5 C5.7,102.5 0.8,97.6 0.8,91.5 L0.8,70.3 C0.8,64.2 5.7,59.3 11.8,59.3 L136.9,59.3 C143,59.3 147.9,64.2 147.9,70.3 L147.9,91.5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M147.9,92.2 C147.9,97.9 143.3,102.5 137.6,102.5 L14.7,102.5 C9,102.5 4.4,97.9 4.4,92.2 L4.4,74.1 C4.4,68.4 9,63.8 14.7,63.8 L137.6,63.8 C143.3,63.8 147.9,68.4 147.9,74.1 L147.9,92.2 Z" id="Shape" fill="#D4E7FF" fill-rule="nonzero"></path>
+                <path d="M46,59.4 L47,59.4" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M109.6,102.5 L11.8,102.5 C5.7,102.5 0.8,97.6 0.8,91.5 L0.8,70.3 C0.8,64.2 5.7,59.3 11.8,59.3 L33.9,59.3" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M63,59.4 L136.9,59.4 C143,59.4 147.9,64.3 147.9,70.4 L147.9,91.6 C147.9,97.7 143,102.6 136.9,102.6 L120.5,102.6" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M7.8,40.3 L17.4,9.7 C18.8,4.5 23.5,0.9 28.8,0.9 L120.2,0.9 C125.5,0.9 130.2,4.4 131.6,9.6 L147.5,66.9" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M3.7,53.1 L5.1,48.9" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M14.2,72.1 L14.2,89.8" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M24.3,72.1 L24.3,89.8" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M34.3,72.1 L34.3,89.8" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M44.4,72.1 L44.4,89.8" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="126" cy="80.9" r="10.1"></circle>
+                <path d="M134.7,75.7 C135.6,77.2 136.1,79 136.1,80.9 C136.1,86.5 131.6,91 126,91 C120.4,91 115.9,86.5 115.9,80.9 C115.9,79.4 116.2,77.9 116.9,76.6" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M121.5,71.9 C122.9,71.2 124.4,70.8 126.1,70.8 C127.3,70.8 128.4,71 129.5,71.4" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+            <g id="Group" transform="translate(39.000000, 0.000000)">
+                <path d="M54.5,64.9 C49,68.5 42.4,70.6 35.3,70.6 C16,70.6 0.3,55 0.3,35.6 C0.3,16.2 15.9,0.6 35.3,0.6 C54.7,0.6 70.3,16.2 70.3,35.6 C70.3,47.9 64,58.7 54.5,64.9" id="Shape" fill="#6BADFF" fill-rule="nonzero"></path>
+                <path d="M46.4,68.9 C46.1,69 45.8,69.1 45.5,69.2 C42.3,70.2 38.9,70.7 35.4,70.7 C27.6,70.7 20.4,68.2 14.6,63.9" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M0.8,40.8 C0.6,39.1 0.4,37.4 0.4,35.6 C0.4,16.3 16,0.6 35.4,0.6 C54.8,0.6 70.4,16.2 70.4,35.6 C70.4,46.4 65.5,56.1 57.7,62.5" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M6.7,55.6 C6.3,55 5.9,54.4 5.6,53.8" id="Shape" stroke="#1676EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                <g transform="translate(18.000000, 14.000000)" fill-rule="nonzero" id="Shape">
+                    <path d="M17.4,41.6 C16.1,41.6 14.9,41.1 14,40.2 L3.7,29.9 C2.8,29 2.3,27.8 2.3,26.5 C2.3,25.2 2.8,24 3.7,23.1 C4.6,22.2 5.8,21.7 7.1,21.7 C8.4,21.7 9.6,22.2 10.5,23.1 L12.7,25.3 L12.7,6.6 C12.7,4 14.8,1.8 17.5,1.8 C20.2,1.8 22.3,3.9 22.3,6.6 L22.3,25.3 L24.5,23.1 C25.4,22.2 26.6,21.7 27.9,21.7 C29.2,21.7 30.4,22.2 31.3,23.1 C32.2,24 32.7,25.2 32.7,26.5 C32.7,27.8 32.2,29 31.3,29.9 L21,40.2 C19.8,41.1 18.6,41.6 17.4,41.6 Z" fill="#FFFFFF"></path>
+                    <path d="M17.4,3.2 C19.2,3.2 20.7,4.7 20.7,6.5 L20.7,28.9 L25.4,24.2 C26,23.6 26.9,23.2 27.7,23.2 C28.5,23.2 29.4,23.5 30,24.2 C30.6,24.8 31,25.7 31,26.5 C31,27.3 30.7,28.2 30,28.8 L19.7,39.1 C19.1,39.7 18.3,40.1 17.4,40.1 C16.5,40.1 15.7,39.8 15.1,39.1 L4.8,28.8 C3.5,27.5 3.5,25.4 4.8,24.2 C5.4,23.6 6.3,23.2 7.1,23.2 C7.9,23.2 8.8,23.5 9.4,24.2 L14.1,28.9 L14.1,6.5 C14.1,4.7 15.6,3.2 17.4,3.2 Z M17.4,0.2 C13.9,0.2 11.1,3 11.1,6.5 L11.1,21.6 C10,20.6 8.6,20.1 7.1,20.1 C5.4,20.1 3.8,20.8 2.7,21.9 C0.3,24.3 0.3,28.3 2.7,30.8 L13,41.1 C14.2,42.3 15.8,42.9 17.4,42.9 C19.1,42.9 20.7,42.2 21.8,41.1 L32.1,30.8 C33.3,29.6 33.9,28 33.9,26.4 C33.9,24.7 33.2,23.1 32.1,22 C30.9,20.8 29.3,20.2 27.7,20.2 C26.2,20.2 24.8,20.7 23.7,21.7 L23.7,6.6 C23.6,3.1 20.8,0.2 17.4,0.2 Z" fill="#1676EE"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,188 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+{% block content %}
+<!-- <div class="mt-auto header-top-height"></div> -->
+<!--         <main class="container mb-auto">
+            <h3 class="mt-3 main-header-text-title"><span> <b>eduPy</b> Dasturlash bo'yicha onlayn o'quv markaz</span>Mening profilim
+              <p class="sub-page-breadcrumb"><a href="#">Bosh sahifa</a> - Kurslar</p>
+            </h3>
+
+        </main>
+        <div class="mt-auto"></div> -->
+<style>
+    #student-profile{
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom:100px;
+
+    }
+    .student-info{
+        list-style-type: square;
+
+    }
+    .info-box{
+      margin-top: 10px;
+      max-width: 100%;
+      opacity: 1;
+      border-radius: 5px;
+      padding: 10px;
+    }
+.info-box .progress {
+    background: rgba(0, 0, 0, .2);
+    margin: 5px -10px 5px 0;
+    height: 2px;
+}
+.info-box .progress, .info-box .progress .progress-bar {
+    border-radius: 0;
+}
+.info-box .progress .progress-bar {
+    background: #fff;
+}
+.info-box-icon {
+    float: left;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 74px;
+    background: rgba(0, 0, 0, .2);
+}
+.info-box-icon.push-bottom {
+    margin-top: 20px;
+}
+.info-box-icon>img {
+    max-width: 100%
+    color:#fff;
+  }
+.info-box-content {
+    padding: 10px 10px 10px 0;
+    margin-left: 90px;
+}
+.info-box-number {
+    font-weight: 300;
+    font-size: 21px;
+}
+.info-box-text, .progress-description {
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-weight: 300;
+}
+.progress-description {
+    margin: 5px;
+}
+.img-responsive{
+  max-width: 150px;
+  max-height: 150px;
+  margin-bottom: 25px;
+}
+.box-title{
+  color: #171F32;
+}
+.like-list>li{
+  display: inline-block;
+}
+</style>
+<section id="student-profile">
+    <div class="container">
+      <div class="row justify-content-start futures-version-2">
+        <div class="col-md-3">
+            <div class="box">
+            <div class="box-header with-border">
+              <h4 class="box-title mb-2 mt-3">Guruhni tanlash</h4>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form" class="form-element">
+              <div class="box-body">
+                    <div class="form-group">
+                  <label>Kursni tanlang</label>
+                  <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select>
+                </div>
+                   <div class="form-group">
+                  <label>Guruhni tanlang</label>
+                  <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select>
+                </div>
+                 <div class="box-footer">
+                <button type="submit" class="btn btn-success">Tanlash</button>
+              </div>
+              </div>
+            </form>
+              <div class="help-area mb-3 mt-2">
+                <p class="side-text-right-text"> <i class="fa fa-info text-primary h3 pr-3"></i>  Kurs va guruhni tanlab talabalar ro'yhatidan barcha talabalarni uyga topshiriqlarini tekshirib chiqing. Topshiriq raqami o'tgan mavzu bilan bir xil bo'ladi. Yuklash tugmasi orqali talabani topshig'ini yuklab olib unga kerakli ball bering.</p>
+                <ul class="list-unstyled like-list">
+                  <li><a href="#" ><i class="fa fa-thumbs-up text-primary h3 pr-3"></i></a></li>
+                  <li><i class="fa fa-thumbs-down text-primary h3 pr-3"></i></li>
+                </ul>
+                
+              </div>
+          </div>
+        </div>
+          <div class="col-md-9">
+                <div class="row justify-content-between mr-tp-50">
+                    <div class="table-responsive">
+                      <div class="container">
+                        <h4 class="mb-2 mt-1" >Uyga topshiriqlarni tekshirish</h4>
+                      </div>
+                        <table class="table pricing_table_domain">
+                            <thead>
+                                <tr>
+                                    <th>Guruh</th>
+                                    <th>Ismi</th>
+                                    <th>Topshiriq</th>
+                                    <th>Ball berish <i class="fa fa-star text-primary"></i></th>
+                                    <th>Saqlash</th>
+                                    <th>Yuklash</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Python N1</th>
+                                    <td>To'raqul</td>
+                                    <td>N:4</td>
+                                    <td>
+                                     <select class="form-control">
+                                          <option value="3"> 3  ball</option>
+                                          <option value="4"> 4  ball</option>
+                                          <option value="5"> 5  ball</option>
+                                          <option value="6"> 6  ball</option>
+                                          <option value="7"> 7  ball</option>
+                                          <option value="8"> 8  ball</option>
+                                          <option value="9"> 9  ball</option>
+                                          <option value="10"> 10  ball</option>
+                                      </select>
+                                    </td>
+                                     <td><a href="#"><i class="fa fa-check"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-download"></i></a></td>
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                      <div class="box-footer align-items-end">
+                        <button type="submit" class="btn btn-success">Tamomlash</button>
+                      </div>
+                </div>
+          </div>
+  
+        
+      </div>
+</div>
+</section>
+  
+  {% endblock %}

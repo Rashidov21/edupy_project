@@ -1,0 +1,211 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+{% block content %}
+<!-- <div class="mt-auto header-top-height"></div> -->
+<!--         <main class="container mb-auto">
+            <h3 class="mt-3 main-header-text-title"><span> <b>eduPy</b> Dasturlash bo'yicha onlayn o'quv markaz</span>Mening profilim
+              <p class="sub-page-breadcrumb"><a href="#">Bosh sahifa</a> - Kurslar</p>
+            </h3>
+
+        </main>
+        <div class="mt-auto"></div> -->
+<style>
+    #student-profile{
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom:100px;
+
+    }
+    .student-info{
+        list-style-type: square;
+
+    }
+    .info-box{
+      margin-top: 10px;
+      max-width: 100%;
+      opacity: 1;
+      border-radius: 5px;
+      padding: 10px;
+    }
+.info-box .progress {
+    background: rgba(0, 0, 0, .2);
+    margin: 5px -10px 5px 0;
+    height: 2px;
+}
+.info-box .progress, .info-box .progress .progress-bar {
+    border-radius: 0;
+}
+.info-box .progress .progress-bar {
+    background: #fff;
+}
+.info-box-icon {
+    float: left;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 74px;
+    background: rgba(0, 0, 0, .2);
+}
+.info-box-icon.push-bottom {
+    margin-top: 20px;
+}
+.info-box-icon>img {
+    max-width: 100%
+    color:#fff;
+  }
+.info-box-content {
+    padding: 10px 10px 10px 0;
+    margin-left: 90px;
+}
+.info-box-number {
+    font-weight: 300;
+    font-size: 21px;
+}
+.info-box-text, .progress-description {
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-weight: 300;
+}
+.progress-description {
+    margin: 5px;
+}
+.img-responsive{
+  max-width: 150px;
+  max-height: 150px;
+  margin-bottom: 25px;
+}
+.box-title{
+  color: #171F32;
+}
+.like-list>li{
+  display: inline-block;
+}
+#lesson-area{
+  background-image: url(/static/svg/snake.svg);  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+</style>
+<section id="student-profile">
+  <div class="container h-100">
+      <div class="row justify-content-start futures-version-2">
+       
+      <section class="padding-50-0" id="lesson-area" >
+        <div class="container">
+        
+          <div class="time-line-status">
+              <div class="box text-center">
+                   <div class="box-header with-border" >
+                    <p><img src="/static/course-img/smile.svg" width="50" height="50" alt=""></p>
+                    <h3 class="box-title mb-5 mt-3">1-dars (Kirish)</h3>
+                  </div>
+                </div>
+          <div class="tt-time-status">
+              <div class="row justify-content-center">
+              
+                  <div class="col-md-2">
+                      <span class="title-status">Kirish</span>
+                  </div>
+                  <div class="col-md-10">
+                      <h5 class="title-status-h5">Python bu nima? </h5>
+                      <p class="title-status-p">  </p>
+                  </div>
+                  <div class="status-div-optionel chck">
+                      <p><b>Python </b> bu umumiy maqsadli dasturlash uchun keng tarzda 
+                          foydalaniladigan yuqori darajali dasturlash tili, chunki o'rganish oson va qulay 
+                          sintaksisga ega. Undan tashqari skriptli dasturlash tillariga kiradi. Python dinamik 
+                          tipizatsiyaga ega, obyektga yo'naltirilgan dasturlash, funksional dasturlash, 
+                          strukturali, avtomatik xotirani boshqarish va albatta ko'p patokli dasturlash tillaridan 
+                          biri. </p>
+                  </div>
+                  <div class="status-div-optionel non">
+                      <p><b>Keng ko'lamli</b>  har xil platformalar uchun yozilgan masalan Windows, Linux, Mac 
+                          OSX, Palm OS, Mac OS va hokazo. Python Microsoft.NET platformasi uchun 
+                          yozilgan realizatsiyasi ham bor uni nomi IronPython. Bugungi kunda dunyoga 
+                          mashhur ko`plab kompaniyalar NASA, Google, Yandex, CERN, Apple computer, 
+                          Dream Works, kosmik teleskop institutlari Pythonni ishlatishadi.</p>
+                  </div>
+                  <div class="status-div-optionel non-chck">
+                      <p><b>Yengil va ommabop</b>  
+                          rivojlangan mamlakatlari AQSH (Koliforniya Universiteti, Florida Universiteti, 
+                          Lova Universiteti, Massachustva Texnologiya Universiteti), Kanada (Toronto 
+                          Universiteti, Alberto Universiteti), Buyuk Britaniya (Oksford Universiteti), 
+                          4
+                          5
+                          Fransiya, Rossiya, Avstraliya, Ispaniyaning universitet va kollejlarida o`qitishda 
+                          Python dasturlash tili qo`llaniladi. Pythonning o`ziga xos jihatlaridan biri bu 
+                          dasturni yozish davomida quyi darajadagi detallarni, misol uchun xotirani 
+                          boshqarishni hisobga olishga hojat qolmaydi. Shuningdek dasturni yozish davomida 
+                          ortiqcha kod yozishdan xalos bo`linadi.. </p>
+                  </div>
+              </div>
+          </div>
+          <div class="tt-time-status">
+              <div class="row justify-content-center">
+                  <div class="col-md-2">
+                      <span class="title-status">O'rnatish</span>
+                  </div>
+                  <div class="col-md-10">
+                      <h5 class="title-status-h5">Ishlash muhiti, o'rnatish </h5>
+                      <p class="title-status-p"></p>
+                  </div>
+                  <div class="status-div-optionel chck">
+                      <p><b>Visual Studio Code</b> dasturlash tilida dastur tuzish uchun 
+                        WingWare, Paycharm, Paydev, Notepad++ , Sublime Text 3 , VS code studio va boshqa muhitlari. Dasturlarni 
+                        tuzishda va muhitlar bilan ishlashda kompyuter texnologiyalari, shu bilan birgalikda 
+                        eng zamonaviy usullardan foydalanish. Biz tadqiqot obyekti sifatida VS Code Studio 
+                        muhitida ishlab dastur natijalarini olishga harakat qildik.</p>
+                  </div>
+                   <div class="status-div-optionel chck">
+                      <p><b>Linux</b>Python dasturlash tilini o`rnatish.
+                      Agar siz biror GNU/Linux distributivini ishlatayotgan bo'lsangiz ko'p xollarda 
+                      sizning tizimingizda python o'rnatilgan bo'ladi. Buni tekshirib ko'rish uchun 
+                      terminalingizdan quyidagi buyruqni ishga tushirib ko'ring. python -V
+                      Agar sizda Python 3.4.3 yozuvi yoki shunga o'xshash yozuv hosil bo'lsa unda 
+                      hammasi joyida.</p>
+                  </div>
+                   <div class="status-div-optionel chck">
+                      <p><b>Windows</b> operatsion tizimiga o'rnatish uchun <a href="https://python.org/downloads">www.python.org/downloads</a>
+                      web sahifasiga o'tamiz va u yerdan oxirgi python versiyasini yuklab olamiz. Sistemangiz arxetikturasiga qarab (32bit/64bit) mos keluvchi versiyani tanlang. Python Windows 7 OS lardan boshlab ishlaydi , XP larda yo'q!
+                      <div class="img mt-3 mb-5 text-center">
+                        <img src="/static/course-img/site.jpg" class="w-50 h-50"  alt="">
+                      </div> 
+                      Pythonni o'rnatish odatiy dasturlarni o'rnatish kabi kechadi. Hech qanday qiyin joyi 
+                      yo'q.</p>
+                      <div class="img mt-3 mb-5 text-center">
+                        <img src="/static/course-img/addtopath.png" class="w-50 h-50"  alt="">
+                      </div>
+                      <p> Dasturni o'rnatish oynasi barcha dasturlardagi kabi oddiy , birgina e'tibor qilish kerak holat bu <br> <b>Add to PATH</b>  qatorini belgilash esdan chiqmasligi kerak. Aks holatda Python noto'g'ri o'rnaydi! </p>
+                      <div class="img mt-3 mb-5 text-center">
+                        <img src="/static/course-img/progress.jpg" class="w-50 h-50"  alt="">
+                      </div>
+                  </div>
+                   <div class="status-div-optionel chck">
+                      <p><b>Barchasi tayyor!</b>Endi sizning sistemangizda Python bor. Windows da buni tekshirish uchun Console ni ochib unga <b>python</b> deb yozish kifoya .</p>
+                      <div class="img mt-3 mb-5 text-center">
+                        <img src="/static/course-img/cmd.png" class="w-50 h-50"  alt="">
+                      </div>
+                      <p>2+2 deb yozib ENTER ni bosishingiz bilan python 4 ni Console ga qaytaradi. Yoki PUSK orqali pythonning shaxsiy IDLE sini ishga tushirish:</p>
+                      <div class="img mt-3 mb-5 text-center">
+                        <img src="/static/course-img/idle.jpg" class="w-50 h-50"  alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+
+
+        </div>
+      </section>
+    </div>      
+  </div>
+</section>
+  
+  {% endblock %}

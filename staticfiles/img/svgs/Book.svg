@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="44" viewBox="0 0 36 44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="_Book" data-name=" Book" class="cls-1" d="M357,3112l-7,7v32a5,5,0,0,0,5,5h21a7.82,7.82,0,0,0,3-1s7-5,7-8v-35H357Zm26,3v31c0,1.26-2,3-2,3v-33H357.312a2.216,2.216,0,0,1,1.849-1H383Zm-16,4h4v8.88l-2-1.88-2,2v-9Zm-12,34a2,2,0,0,1-2-2v-30a2,2,0,0,1,2-2h9v15l5-4,5,4v-15h4v32a2,2,0,0,1-2,2H355Z" transform="translate(-350 -3112)"/>
+</svg>

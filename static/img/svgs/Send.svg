@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37" height="40" viewBox="0 0 37 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Send" class="cls-1" d="M911.443,1350.37l-31-17a2.994,2.994,0,0,0-2.971.05A3,3,0,0,0,876,1336v34a3,3,0,0,0,3,3,2.964,2.964,0,0,0,1.443-.37l31-17A3,3,0,0,0,911.443,1350.37ZM879,1370v-15h13a1.5,1.5,0,0,0,0-3H879v-16l31,17Z" transform="translate(-876 -1333)"/>
+</svg>

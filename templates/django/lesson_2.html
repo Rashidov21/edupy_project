@@ -1,0 +1,118 @@
+{% extends 'wrappers/base-wrap.html' %}
+{% load static %}
+   {% block meta %}
+    <meta name="description" content="Djangoni o'rnatish, Ustanovka django,djangoni o'rganish">
+    {% endblock %}
+    {% block title %}
+    <title>eduPy |Djangoni  o'rnatish qo'llanmasi </title>
+    {% endblock %}
+{% block content %}
+<section id="lesson">
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="text-center">
+				<h3><strong>Djangoni tezkor o'rnatish qo'llanmasi </strong></h3>
+			</div>
+<p>Djangodan foydalanishingiz  uchun avval u o'rnatilgan bo'lishi kerak bo'ladi.Barcha imkoniyatlarni o'z ichiga olgan <a href="https://docs.djangoproject.com/en/3.0/topics/install/" target="_blank">to'liq o'rnatish qo'llanmasini</a>  bu yerda o'qishingiz mumkin.Ushbu qo'llanma  esa sizga djangoni minimal va tezkor usulda  o'rnatishingiz uchun sizga yo'l ko'rsatadi.</p>
+
+<p>Django Python  <a href="https://ru.wikipedia.org/wiki/Фреймворк" target="_blank">web-frameworki</a> bo'lgani uchun u  Python dasturlash muxitini talab qiladi.Pythonning <a href="https://docs.djangoproject.com/en/3.0/faq/install/" target="_blank">qaysi versiyalarini Django bilan ishlatish mumkinligini</a> ko'rib chiqishingiz mumkin. Ushbu Python versiyalari SQLite ma'lumotlar bazasini o'z ichiga oladi, Shuning uchun Django bilan tanishish uchun ma'lumotlar bazasini o'rnatishingiz shart emas.</p>
+<p>Pythonning eng so'nggi versiyasini  bu yerdan <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a> ko'chirib olishingiz yoki operatsion tizimi paket menejeri yordamida uni o'rnatish mumkin.Yoki  <a href="#">Pythonni o'rnatishni</a> ko'rib chiqishingiz mumkin.</p>
+<p>Python o'rnatilganligini tekshirish mumkin terminalda python buyrug'ini bajarish  kerak:</p>
+<pre id="console">
+ $ python3
+
+ Python 3.7.5 (default, Nov 20 2019, 09:21:52) 
+ [GCC 9.2.1 20191008] on linux
+ Type "help", "copyright", "credits" or "license" for more information.
+ >>> 
+
+</pre>
+
+<div class="text-center">
+	<h3><strong>Ma'lumotlar bazasini o'rnatish </strong></h3>
+</div>
+<p>Ushbu qadam faqat PostgreSQL, MariaDB, MySQL yoki Oracle kabi "katta" ma'lumotlar bazasi dvigateli bilan ishlashni istasangiz kerak. Bunday ma'lumotlar bazasini o'rnatish uchun, <a href="https://db-engines.com/en/system/MongoDB%3BMySQL%3BPostgreSQL" target="_blank">ma'lumotlar bazasini o'rnatish usullari</a> bilan tanishing.</p>
+
+
+<div class="text-center">
+	<h3><strong>Djangoni o'rnatish</strong></h3>
+</div>
+<p>Pip yordamida o'rnatish.</p>
+<p>Eng oson qulay yechim <a href="https://pip.pypa.io" target="_blank">pip</a> yordamida o'rnatish hisoblanadi.</p>
+<p></p>
+<ul class="mr-5">
+	<li>Buning uchun sizda  <a href="https://pip.pypa.io/en/latest/installing/#installing-with-get-pip-py" target="_blank">pip o'rnatilgan</a> bo'lishi kerak ,agar u eskirgan bo'lsa, yangilash maslaxat beriladi. Chunki pip yangilanmasa Djangoni o'rnatish ishlamasligi mumkin.</li>
+	<br>
+	<li><a href="https://virtualenv.pypa.io" target="_blank">Virtualenv</a> va <a href="https://virtualenvwrapper.readthedocs.io/en/latest/" target="_blank">virtualenvwrapper</a>,kabi narsalarga xam bir ko'z tashlang. Bu vositalar boshqa 'narsalardan' aloxida 'izolatsiyaga' olingan Python muhitlar yaratib beradi. Bundan tashqari, administrator imtiyozlarisiz paketlarni o'rnatish imkonini beradi. Ushbu qo'llanma yordamida <a href="https://django.fun/docs/django/ru/3.0/intro/contributing/" target="_blank"> virtualenv yaratish</a> xaqida ko'proq ma'lumot olishingiz mumkin.</li>
+<br>
+	<li>Virtual muhitni yaratganingizdan va faollashtirganingizdan so'ng buyruqni kiriting:</li>
+	<br>
+</ul>
+<pre id="console">
+ <br>
+ $ python -m pip install Django
+ <br>
+</pre>
+<p>Bu buyruq Djangoning eng oxirgi versiyasini o'rnatadi.Agar sizga Djangoning aynan qaysidur bir versiyasi kerak bolsa unda ushbu buyruqdan foydalanishingiz mumkin</p>
+
+<pre id="console">
+ <br>
+ $ python -m pip install Django==2.2.7
+ <br>
+</pre>
+<p>Ikkita tenglik belgisidan so'ng kerakli versiya ko'rsatiladi</p>
+<div class="text-center">
+	<h3><strong>Djangoni o'rnatilganligini tekshirish</strong></h3>
+</div>
+
+<p>Django Python uchun ishlatilishga tayyorligini tekshirish uchun terminaldan python muxitiga kirib djangoni import qilamiz</p>
+
+<pre id="console">
+$ python3
+
+Python 3.7.5 (default, Nov 20 2019, 09:21:52) 
+[GCC 9.2.1 20191008] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+>>> import django
+>>> print(django.get_version())
+3.0
+</pre>
+<p>!Sizda Djangoning boshqa versiyasi o'rnatilgan bo'lishi mumkin.</p>
+<p>Mana bo'ldi endi <a href="#">Djangoda birinchi web dasturni </a> yozish mumkin</p>
+<div class="footer-post" style="float:right;">
+	<p>Foydalanilgan manbalar: <a href="https://docs.djangoproject.com">docs.djangoproject.com</a><br>
+		<a href="https://django.fun">django.fun</a></p>
+</div>
+		</div>
+		<div class="col-md-3">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</section>
+<style>
+	#lesson{
+		margin-top:150px;
+		margin-bottom:100px;
+	}
+	#sublime{
+		background-color:#282923;
+		color:white;
+	}
+	#html{
+
+		color:white;
+		background-color:#282911;
+	}
+	#console{
+		background-color:#D5FFBE;
+	}
+</style>
+{% endblock %}

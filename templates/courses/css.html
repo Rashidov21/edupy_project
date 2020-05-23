@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="mt-auto header-top-height"></div>
+        <main class="container mb-auto">
+            <h3 class="mt-3 main-header-text-title"><span> <b>eduPy</b> Dasturlash bo'yicha onlayn o'quv markaz</span>&lt;css/&gt;
+              <p class="sub-page-breadcrumb"><a href="#">Bosh sahifa</a> - Kurslar</p>
+            </h3>
+
+        </main>
+        <div class="mt-auto"></div>
+    
+    <section class="padding-100-0-50 position-relative">
+        <div class="container pt-5 pb-5">
+                 <div class="row justify-content-between mr-tp-50">
+                <div class="col-md-6">
+                    <p>
+                          <img src="/static/svg/frontend.png" class="mb-5 w-100 h-50" alt="">
+                        <a class="side-text-right-button" href="{% url 'edu:courses' %}">Kursga yozilish</a>
+                    </p>
+                  
+                  
+                </div>
+                <div class="col-md-6 side-text-right-container">
+                    <h2 class="side-text-right-title">CSS   tili kursi   <span class="badge badge-pill">BEPUL</span></h2>
+                    <p class="side-text-right-text">
+                        CSS (Cascading Style Sheets). Bu til HTML da yaratgan veb sahifalaringizga "jon" berish uchun ishlab chiqilgan. CSS-dan foydalanib, siz matnning rangi, shriftlar stili, paragraflar orasidagi intervali, ustunlar o'lchami va joylashuvi, qanday fon tasvirlari yoki ranglar ishlatilganligi, joylashuv dizayni, shuningdek, turli xil ta'sirlarni o'z ichiga oladi.
+                        CSS-ni o'rganish va tushunish oson, va HTML-hujjat taqdimoti ustidan kuchli nazoratni ta'minlaydi. Odatda, CSS HTML yoki XHTML formatlash tillari bilan birlashtiriladi. CSS da animatsiyalar ham yozsa bo'ladi. Bu bizni yuqoridagi "jon" beradi so'zimizni isboti. CSS da qila oladigan animatsiyalarni va uni imkoniyatlarini <a href="https://www.theappguruz.com/tag-tools/web/CSSAnimations/">bu yerda</a>  ko'rishingiz mumkin. CSS ni bizning <b>BUTUNLAY BEPUL KURS</b> da o'rganing!
+                      </p>
+                        <br>
+                        <br>   
+                         <ul class="web-hosting-options">
+                            <li><i class="fa fa-book"></i> Kengaytirilgan adabiyotlar</li>
+                            <li><i class="fa fa-film"></i> Videogayd , Matn va Screenshotlar bilan </li>
+                            <li><i class="fa fa-tasks"></i> Doimiy topshiriqlar. Har yangi mavzudan so'ng </li>
+                            
+                            <li><i class="fab fa-telegram"></i> Telegram orqali tushunmagan joyingizni so'rang! </li>
+                            <li><i class="fa fa-users"></i> Boshqa talabalar bilan tajriba almashish </li>
+                    </ul>
+                        <p>
+                        
+                </div>
+
+              
+
+            </div><!-- end row -->
+            <div class="row mt-5 mb-5"> 
+
+                <div class="container">
+                    <h4 class=" side-text-right-title">Qo'shimcha:</h4>
+                </div>
+                <div class="col-md-6">
+                     <div class="container">
+                        <ul class="web-hosting-options">
+                            <li><i class="fa fa-clock"></i> Intensiv (doimiy) kurs</li>
+                            <li><i class="fa fa-user"></i> Doimiy guruh rahbari bilan aloqa </li>
+                            <li><i class="fa fa-tasks"></i> Doimiy topshiriqlar. Har yangi mavzudan so'ng </li>
+                            
+                            <li><i class="fab fa-telegram"></i> Telegram orqali guruhdoshlar bilan aloqa </li>
+                            <li><i class="fa fa-handshake"></i> Shaxsiy loyihalar tuzish</li>
+                            <li><i class="fa fa-graduation-cap"></i> Yaxshi o'zlashtirgan talabalarni ish bilan ta'minlash</li>
+                            <li><i class="fa fa-mouse-pointer"></i> Shaxsiy loyihalarga ko'maklashish</li>
+                    </ul>
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container">
+                        <p class="side-text-right-text"> CSS ni biz bilan o'rganing. Shuni aytish kerakki CSS faqatgina veb sahifalarni ko'rinishini belgilash uchun ishlamaydi. Masalan Pythonning PyQt5 kutubxonasi kompyuter qurilmalariga dasturlar yarata oladi va ushbu dasturlarrni tashki ko'rinishini aynan CSS da belgilanadi. CSS haqida ko'proq ma'lumotni
+                          <a href="https://ru.wikipedia.org/wiki/HTML" target="_blank">Wikipediyadan</a> oling.
+                        </p>
+                      <p>
+                          <a class="side-text-right-button" href="{% url 'edu:courses' %}">Kursga yozilish</a>
+                      </p>
+                    </div>
+                </div>
+               
+            </div>
+                <div class="row mt-5 mb-5 "> 
+
+                <div class="container">
+                    <h3 class=" side-text-right-title">CSS haqida</h3>
+                </div>
+                <div class="col-md-8 ">
+                     <div class="container">
+                        <p class="side-text-right-text">
+                            <h5 class="h4">CSS-ning afzalliklari.</h5>                        
+                            CSS vaqtni tejaydi — CSS-ni bir marta yozishingiz va bir nechta HTML sahifalarida qayta ishlatishingiz mumkin. Har bir HTML elementi uchun uslubni belgilashingiz va o’zingiz xohlagancha veb-sahifada qo'llashingiz mumkin.
+                            Sahifalar tezroq ko'chiriladi — Agar siz CSS-dan foydalansangiz, siz HTML yorlig'i (teg) xususiyatlarini har safar yozishingiz shart emas. Faqat bitta CSS qoidasini yozing va uni ushbu tegning barcha ko'rinishlariga qo'llang. Shunday qilib, kamroq kod tezroq yuklab olish vaqtini bildiradi.
+                            Oson ta’mirlash — global o'zgarishlarni amalga oshirish uchun uslubni o'zgartiring va barcha veb-sahifalardagi  barcha elementlar avtomatik yangilanadi.
+                        HTMLga super stillar — CSS HTMLga nisbatan ancha kengroq xususiyatlarga ega, shuning uchun  siz HTML sahifangizga HTML xossalariga nisbatan ancha yaxshiroq ko'rinish bera olasiz.
+                        Global veb-standartlari — Endi HTML sifati eskirgan va CSS-dan foydalanish tavsiya etiladi. Ya'ni, kelajakda brauzerlar bilan moslashishi uchun barcha HTML-sahifalarda CSS-dan foydalanishni boshlash yaxshi fikr.
+                        Oflayn ko’rib chiqish — CSS veb-ilovalarni maxfiy ravishda saqlab qo'yishi mumkin. Buning yordamida biz offline veb-saytlarni ko'rishimiz mumkin. Kesh ham tezroq yuklash va veb-saytning yaxshi ishlashini ta'minlaydi.
+                            Platforma Mustaqillik — Skript puxta platforma mustaqilligini ta'minlaydi va eng so'nggi brauzerlarni ham qo'llab-quvvatlaydi.
+                        </p>
+                    </div>
+                     <div class="container">
+                        <p> <a class="side-text-right-button" href="{% url 'edu:courses' %}">Kursga yozilish</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 css-info-area" >
+                    <img src="/static/svg/css.svg" class="img-responsive w-75 h-75" >
+                </div>
+            </div>
+
+        </div>
+    </section>
+<section class="footer-section-banner">
+        <div class="container">
+            <div class="row free-trial-footer-banner">
+                <div class="col-md-8">
+                    <h5 class="free-trial-footer-banner-title">Bepul sinov kurslarini boshlash uchun hoziroq ro'yhatdan o'ting</h5>
+                    <p class="free-trial-footer-banner-text">Chegirmalar vaqti chegaralangan. Dasturlashni o'rganmoqchimisiz? Unda hoziroq ro'yhatdan o'ting. </p>
+                </div>
+
+                <div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
+                    <div class="mb-auto"></div>
+                    <div class="mb-auto">
+                        <a class="sign-btn" href="{% url 'edu:signup' %}">Ro'yhatdan o'tish</a>
+                        <a class="log-btn" href="{% url 'edu:signin' %}">Kirish</a>
+                    </div>
+                    <div class="mt-auto"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
